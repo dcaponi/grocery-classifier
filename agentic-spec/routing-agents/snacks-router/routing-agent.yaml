@@ -1,5 +1,5 @@
-name: Produce Router
-description: Routes a produce item to fruit or vegetable
+name: Snacks Router
+description: Routes a snack item to chips, candy, cookies_crackers, or nuts
 strategy: llm
 model: gpt-4.1-mini
 temperature: 0

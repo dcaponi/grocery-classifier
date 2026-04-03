@@ -1,5 +1,5 @@
-name: Produce Router
-description: Routes a produce item to fruit or vegetable
+name: Pantry Router
+description: Routes a pantry item to canned, dry_goods, condiments, or baking
 strategy: llm
 model: gpt-4.1-mini
 temperature: 0

@@ -1,0 +1,10 @@
+name: Health & Wellness Router
+description: Routes a health/wellness item to medicine, vitamins, or first_aid
+strategy: llm
+model: gpt-4.1-mini
+temperature: 0
+
+input:
+  item_name:
+    type: string
+    required: true

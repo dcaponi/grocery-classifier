@@ -1,5 +1,5 @@
-name: Produce Router
-description: Routes a produce item to fruit or vegetable
+name: Baby & Pet Router
+description: Routes a baby/pet item to baby or pet
 strategy: llm
 model: gpt-4.1-mini
 temperature: 0

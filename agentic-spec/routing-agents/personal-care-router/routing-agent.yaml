@@ -1,5 +1,5 @@
-name: Produce Router
-description: Routes a produce item to fruit or vegetable
+name: Personal Care Router
+description: Routes a personal care item to hair, oral, or body
 strategy: llm
 model: gpt-4.1-mini
 temperature: 0
