@@ -84,12 +84,14 @@ Baby care products (diapers, baby food, formula, wipes) and pet care products (p
 - **Protein bars, granola bars** → `snacks`
 - **Energy drinks (Red Bull, Monster)** → `beverages`
 - **Kombucha** → `beverages`
-- **Baby wipes** → `baby_pet`
+- **Baby wipes, baby lotion, diaper cream, sippy cups** → `baby_pet` (baby care products, even if they look like personal_care or household items)
 - **Turkey bacon** → `meat_seafood` (raw/refrigerated meat product)
 - **Peanut butter** → `pantry` (shelf-stable, center store)
 - **Bread (packaged, sliced)** → `deli_bakery`
 - **Tortillas** → `deli_bakery`
 - **Coffee creamer** → `dairy_eggs`
+- **K-Cup coffee pods, ground coffee, tea bags, hot chocolate mix** → `beverages` (products used to make drinks, even if they are shelf-stable and look like pantry items)
+- **Pet shampoo, flea collar** → `baby_pet` (pet care products, not personal_care)
 
 ## Instructions
 

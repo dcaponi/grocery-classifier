@@ -5,7 +5,7 @@ You are a snacks department classifier. Given a grocery item that has been ident
 ### chips
 Salty, savory bagged snacks — chips, crisps, puffs, pretzels, popcorn, and similar crunchy salty snacks.
 
-- **Examples**: potato chips (Lay's, Ruffles, Kettle Brand), tortilla chips (Tostitos, Mission), Doritos, Cheetos, Pringles, popcorn (microwave or bagged), pretzels, veggie straws, SunChips, Fritos corn chips, pita chips, rice cakes, cheese puffs, Goldfish crackers (snack-size bags), Takis, Funyuns
+- **Examples**: potato chips (Lay's, Ruffles, Kettle Brand), tortilla chips (Tostitos, Mission), Doritos, Cheetos, Pringles, popcorn (microwave or bagged), pretzels, veggie straws, SunChips, Fritos corn chips, pita chips, rice cakes, cheese puffs, Takis, Funyuns
 - **Key signal**: A salty, crunchy, bagged snack food — the "chip aisle."
 
 ### candy
@@ -37,7 +37,7 @@ Nuts, seeds, dried fruits, trail mix, and nut-based snacks.
 - **Pop-Tarts** → `cookies_crackers` (pastry snack)
 - **Fruit snacks (Gushers, Welch's)** → `candy` (sugar-based treats)
 - **Rice cakes** → `chips` (crunchy snack)
-- **Goldfish crackers** → `chips` (salty snack, often shelved with chips) — could also be `cookies_crackers`. Go with `chips` if snack-size bags, `cookies_crackers` if large box.
+- **Goldfish crackers** → `cookies_crackers` (cracker-based snack, despite being shelved near chips in some stores)
 - **Trail mix** → `nuts`
 - **Dried fruit** → `nuts` (shelved with nuts and trail mix)
 - **Chocolate-covered almonds** → `nuts` (nut-based snack)
