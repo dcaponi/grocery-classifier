@@ -1,7 +1,7 @@
 name: Food Subtype Router
 description: Classifies a food item into meat, produce, canned, or snack
 strategy: llm
-model: gpt-4.1-mini
+model: claude-sonnet-4-5-20250929
 temperature: 0
 
 input:

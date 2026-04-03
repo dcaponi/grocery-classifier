@@ -1,0 +1,1328 @@
+
+########################################################################################################################
+# Model: gpt-4.1-mini
+# Items: 102
+########################################################################################################################
+
+  [1/102] pork chops... both correct
+  [2/102] bacon... both correct
+  [3/102] ham... both correct
+  [4/102] pork loin... both correct
+  [5/102] pork sausage... both correct
+  [6/102] pulled pork... both correct
+  [7/102] pork belly... both correct
+  [8/102] pork rinds... BOTH WRONG
+  [9/102] chicken breast... both correct
+  [10/102] chicken thighs... both correct
+  [11/102] chicken wings... both correct
+  [12/102] rotisserie chicken... both correct
+  [13/102] ground turkey... both correct
+  [14/102] turkey sausage... omni wrong
+  [15/102] chicken nuggets... both correct
+  [16/102] ground beef... both correct
+  [17/102] ribeye steak... both correct
+  [18/102] beef brisket... both correct
+  [19/102] beef jerky... routed wrong
+  [20/102] corned beef... both correct
+  [21/102] filet mignon... both correct
+  [22/102] beef stew meat... both correct
+  [23/102] apples... both correct
+  [24/102] bananas... both correct
+  [25/102] oranges... both correct
+  [26/102] strawberries... both correct
+  [27/102] grapes... both correct
+  [28/102] watermelon... both correct
+  [29/102] blueberries... both correct
+  [30/102] mangoes... both correct
+  [31/102] pineapple... both correct
+  [32/102] lemons... both correct
+  [33/102] avocados... both correct
+  [34/102] kiwi... both correct
+  [35/102] broccoli... both correct
+  [36/102] carrots... both correct
+  [37/102] spinach... both correct
+  [38/102] potatoes... both correct
+  [39/102] onions... both correct
+  [40/102] celery... both correct
+  [41/102] bell peppers... both correct
+  [42/102] mushrooms... both correct
+  [43/102] tomatoes... both correct
+  [44/102] garlic... both correct
+  [45/102] green beans... both correct
+  [46/102] corn on the cob... both correct
+  [47/102] canned corn... both correct
+  [48/102] canned beans... both correct
+  [49/102] canned tomatoes... both correct
+  [50/102] canned peas... both correct
+  [51/102] jarred salsa... both correct
+  [52/102] canned soup... routed wrong
+  [53/102] canned green beans... both correct
+  [54/102] jarred pickles... both correct
+  [55/102] canned tuna... both correct
+  [56/102] canned chicken... both correct
+  [57/102] canned sardines... both correct
+  [58/102] canned salmon... both correct
+  [59/102] spam... both correct
+  [60/102] vienna sausages... both correct
+  [61/102] canned chili... both correct
+  [62/102] canned ham... both correct
+  [63/102] snickers bar... both correct
+  [64/102] gummy bears... both correct
+  [65/102] chocolate truffles... both correct
+  [66/102] skittles... both correct
+  [67/102] jolly ranchers... both correct
+  [68/102] twizzlers... both correct
+  [69/102] m&ms... both correct
+  [70/102] peppermints... both correct
+  [71/102] caramels... both correct
+  [72/102] doritos... both correct
+  [73/102] lays potato chips... both correct
+  [74/102] tortilla chips... both correct
+  [75/102] pringles... both correct
+  [76/102] cheetos... both correct
+  [77/102] popcorn... both correct
+  [78/102] pretzels... both correct
+  [79/102] rice cakes... both correct
+  [80/102] veggie straws... both correct
+  [81/102] aspirin... both correct
+  [82/102] vitamin c tablets... both correct
+  [83/102] cough syrup... both correct
+  [84/102] band-aids... omni wrong
+  [85/102] antacid... both correct
+  [86/102] allergy pills... both correct
+  [87/102] cold medicine... both correct
+  [88/102] ibuprofen... both correct
+  [89/102] eye drops... both correct
+  [90/102] bandage tape... both correct
+  [91/102] thermometer... omni wrong
+  [92/102] hydrogen peroxide... both correct
+  [93/102] paper towels... both correct
+  [94/102] dish soap... both correct
+  [95/102] laundry detergent... both correct
+  [96/102] trash bags... both correct
+  [97/102] aluminum foil... both correct
+  [98/102] light bulbs... both correct
+  [99/102] batteries... both correct
+  [100/102] sponges... both correct
+  [101/102] candy apples... both correct
+  [102/102] caramel apples... omni wrong
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+pork chops                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+bacon                     food > meat > pork           food > meat > pork           food > meat > pork           both correct
+ham                       food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork loin                 food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork sausage              food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pulled pork               food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork belly                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork rinds                food > meat > pork           food > snack > chip          food > snack > chip          BOTH WRONG
+chicken breast            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken thighs            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken wings             food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+rotisserie chicken        food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+ground turkey             food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+turkey sausage            food > meat > chicken        food > meat > chicken        food > meat > pork           omni wrong
+chicken nuggets           food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+ground beef               food > meat > beef           food > meat > beef           food > meat > beef           both correct
+ribeye steak              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef brisket              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef jerky                food > meat > beef           food > snack                 food > meat > beef           routed wrong
+corned beef               food > meat > beef           food > meat > beef           food > meat > beef           both correct
+filet mignon              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef stew meat            food > meat > beef           food > meat > beef           food > meat > beef           both correct
+apples                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+bananas                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+oranges                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+strawberries              food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+grapes                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+watermelon                food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+blueberries               food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+mangoes                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+pineapple                 food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+lemons                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+avocados                  food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+kiwi                      food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+broccoli                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+carrots                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+spinach                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+potatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+onions                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+celery                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+bell peppers              food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+mushrooms                 food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+tomatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+garlic                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+green beans               food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+corn on the cob           food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+canned corn               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned beans              food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned tomatoes           food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned peas               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+jarred salsa              food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned soup               food > canned > vegetable    food > canned                food > canned > vegetable    routed wrong
+canned green beans        food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+jarred pickles            food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned tuna               food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned chicken            food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned sardines           food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned salmon             food > canned > meat         food > canned > meat         food > canned > meat         both correct
+spam                      food > canned > meat         food > canned > meat         food > canned > meat         both correct
+vienna sausages           food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned chili              food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned ham                food > canned > meat         food > canned > meat         food > canned > meat         both correct
+snickers bar              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+gummy bears               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+chocolate truffles        food > snack > candy         food > snack > candy         food > snack > candy         both correct
+skittles                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+jolly ranchers            food > snack > candy         food > snack > candy         food > snack > candy         both correct
+twizzlers                 food > snack > candy         food > snack > candy         food > snack > candy         both correct
+m&ms                      food > snack > candy         food > snack > candy         food > snack > candy         both correct
+peppermints               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+caramels                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+doritos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+lays potato chips         food > snack > chip          food > snack > chip          food > snack > chip          both correct
+tortilla chips            food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pringles                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+cheetos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+popcorn                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pretzels                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+rice cakes                food > snack > chip          food > snack > chip          food > snack > chip          both correct
+veggie straws             food > snack > chip          food > snack > chip          food > snack > chip          both correct
+aspirin                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+vitamin c tablets         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cough syrup               non_food > medicine          non_food > medicine          non_food > medicine          both correct
+band-aids                 non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+antacid                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+allergy pills             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cold medicine             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+ibuprofen                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+eye drops                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+bandage tape              non_food > medicine          non_food > medicine          non_food > medicine          both correct
+thermometer               non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+hydrogen peroxide         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+paper towels              non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+dish soap                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+laundry detergent         non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+trash bags                non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+aluminum foil             non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+light bulbs               non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+batteries                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+sponges                   non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+candy apples              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+caramel apples            food > snack > candy         food > snack > candy         food > produce > fruit       omni wrong
+
+========================================================================================================================
+Summary for gpt-4.1-mini:
+  grocery-classify (routed): 99/102 correct (97%)
+  omni-classify (single):    97/102 correct (95%)
+
+########################################################################################################################
+# Model: gpt-4.1-nano
+# Items: 102
+########################################################################################################################
+
+  [1/102] pork chops... both correct
+  [2/102] bacon... both correct
+  [3/102] ham... both correct
+  [4/102] pork loin... both correct
+  [5/102] pork sausage... both correct
+  [6/102] pulled pork... both correct
+  [7/102] pork belly... both correct
+  [8/102] pork rinds... BOTH WRONG
+  [9/102] chicken breast... both correct
+  [10/102] chicken thighs... both correct
+  [11/102] chicken wings... both correct
+  [12/102] rotisserie chicken... both correct
+  [13/102] ground turkey... omni wrong
+  [14/102] turkey sausage... omni wrong
+  [15/102] chicken nuggets... both correct
+  [16/102] ground beef... both correct
+  [17/102] ribeye steak... both correct
+  [18/102] beef brisket... both correct
+  [19/102] beef jerky... routed wrong
+  [20/102] corned beef... BOTH WRONG
+  [21/102] filet mignon... both correct
+  [22/102] beef stew meat... both correct
+  [23/102] apples... both correct
+  [24/102] bananas... both correct
+  [25/102] oranges... both correct
+  [26/102] strawberries... both correct
+  [27/102] grapes... both correct
+  [28/102] watermelon... both correct
+  [29/102] blueberries... both correct
+  [30/102] mangoes... both correct
+  [31/102] pineapple... both correct
+  [32/102] lemons... both correct
+  [33/102] avocados... omni wrong
+  [34/102] kiwi... both correct
+  [35/102] broccoli... both correct
+  [36/102] carrots... both correct
+  [37/102] spinach... both correct
+  [38/102] potatoes... both correct
+  [39/102] onions... both correct
+  [40/102] celery... both correct
+  [41/102] bell peppers... both correct
+  [42/102] mushrooms... both correct
+  [43/102] tomatoes... both correct
+  [44/102] garlic... both correct
+  [45/102] green beans... routed wrong
+  [46/102] corn on the cob... both correct
+  [47/102] canned corn... both correct
+  [48/102] canned beans... both correct
+  [49/102] canned tomatoes... both correct
+  [50/102] canned peas... both correct
+  [51/102] jarred salsa... both correct
+  [52/102] canned soup... routed wrong
+  [53/102] canned green beans... both correct
+  [54/102] jarred pickles... both correct
+  [55/102] canned tuna... both correct
+  [56/102] canned chicken... both correct
+  [57/102] canned sardines... both correct
+  [58/102] canned salmon... both correct
+  [59/102] spam... both correct
+  [60/102] vienna sausages... both correct
+  [61/102] canned chili... omni wrong
+  [62/102] canned ham... both correct
+  [63/102] snickers bar... both correct
+  [64/102] gummy bears... both correct
+  [65/102] chocolate truffles... both correct
+  [66/102] skittles... both correct
+  [67/102] jolly ranchers... both correct
+  [68/102] twizzlers... both correct
+  [69/102] m&ms... both correct
+  [70/102] peppermints... both correct
+  [71/102] caramels... both correct
+  [72/102] doritos... both correct
+  [73/102] lays potato chips... both correct
+  [74/102] tortilla chips... both correct
+  [75/102] pringles... both correct
+  [76/102] cheetos... both correct
+  [77/102] popcorn... both correct
+  [78/102] pretzels... both correct
+  [79/102] rice cakes... both correct
+  [80/102] veggie straws... both correct
+  [81/102] aspirin... both correct
+  [82/102] vitamin c tablets... both correct
+  [83/102] cough syrup... both correct
+  [84/102] band-aids... both correct
+  [85/102] antacid... both correct
+  [86/102] allergy pills... both correct
+  [87/102] cold medicine... both correct
+  [88/102] ibuprofen... both correct
+  [89/102] eye drops... both correct
+  [90/102] bandage tape... omni wrong
+  [91/102] thermometer... both correct
+  [92/102] hydrogen peroxide... both correct
+  [93/102] paper towels... both correct
+  [94/102] dish soap... both correct
+  [95/102] laundry detergent... both correct
+  [96/102] trash bags... both correct
+  [97/102] aluminum foil... both correct
+  [98/102] light bulbs... both correct
+  [99/102] batteries... both correct
+  [100/102] sponges... both correct
+  [101/102] candy apples... routed wrong
+  [102/102] caramel apples... BOTH WRONG
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+pork chops                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+bacon                     food > meat > pork           food > meat > pork           food > meat > pork           both correct
+ham                       food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork loin                 food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork sausage              food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pulled pork               food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork belly                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork rinds                food > meat > pork           food > snack > chip          food > snack > chip          BOTH WRONG
+chicken breast            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken thighs            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken wings             food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+rotisserie chicken        food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+ground turkey             food > meat > chicken        food > meat > chicken        food > meat > pork           omni wrong
+turkey sausage            food > meat > chicken        food > meat > chicken        food > meat > pork           omni wrong
+chicken nuggets           food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+ground beef               food > meat > beef           food > meat > beef           food > meat > beef           both correct
+ribeye steak              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef brisket              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef jerky                food > meat > beef           food > snack > chip          food > meat > beef           routed wrong
+corned beef               food > meat > beef           food > canned > meat         food > canned > meat         BOTH WRONG
+filet mignon              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef stew meat            food > meat > beef           food > meat > beef           food > meat > beef           both correct
+apples                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+bananas                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+oranges                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+strawberries              food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+grapes                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+watermelon                food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+blueberries               food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+mangoes                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+pineapple                 food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+lemons                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+avocados                  food > produce > fruit       food > produce > fruit       food > produce > vegetable   omni wrong
+kiwi                      food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+broccoli                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+carrots                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+spinach                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+potatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+onions                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+celery                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+bell peppers              food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+mushrooms                 food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+tomatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+garlic                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+green beans               food > produce > vegetable   food > canned > vegetable    food > produce > vegetable   routed wrong
+corn on the cob           food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+canned corn               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned beans              food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned tomatoes           food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned peas               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+jarred salsa              food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned soup               food > canned > vegetable    food > canned > meat         food > canned > vegetable    routed wrong
+canned green beans        food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+jarred pickles            food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned tuna               food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned chicken            food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned sardines           food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned salmon             food > canned > meat         food > canned > meat         food > canned > meat         both correct
+spam                      food > canned > meat         food > canned > meat         food > canned > meat         both correct
+vienna sausages           food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned chili              food > canned > meat         food > canned > meat         food > canned > vegetable    omni wrong
+canned ham                food > canned > meat         food > canned > meat         food > canned > meat         both correct
+snickers bar              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+gummy bears               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+chocolate truffles        food > snack > candy         food > snack > candy         food > snack > candy         both correct
+skittles                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+jolly ranchers            food > snack > candy         food > snack > candy         food > snack > candy         both correct
+twizzlers                 food > snack > candy         food > snack > candy         food > snack > candy         both correct
+m&ms                      food > snack > candy         food > snack > candy         food > snack > candy         both correct
+peppermints               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+caramels                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+doritos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+lays potato chips         food > snack > chip          food > snack > chip          food > snack > chip          both correct
+tortilla chips            food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pringles                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+cheetos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+popcorn                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pretzels                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+rice cakes                food > snack > chip          food > snack > chip          food > snack > chip          both correct
+veggie straws             food > snack > chip          food > snack > chip          food > snack > chip          both correct
+aspirin                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+vitamin c tablets         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cough syrup               non_food > medicine          non_food > medicine          non_food > medicine          both correct
+band-aids                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+antacid                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+allergy pills             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cold medicine             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+ibuprofen                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+eye drops                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+bandage tape              non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+thermometer               non_food > medicine          non_food > medicine          non_food > medicine          both correct
+hydrogen peroxide         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+paper towels              non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+dish soap                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+laundry detergent         non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+trash bags                non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+aluminum foil             non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+light bulbs               non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+batteries                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+sponges                   non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+candy apples              food > snack > candy         food > produce > fruit       food > snack > candy         routed wrong
+caramel apples            food > snack > candy         food > produce > fruit       food > produce > fruit       BOTH WRONG
+
+========================================================================================================================
+Summary for gpt-4.1-nano:
+  grocery-classify (routed): 95/102 correct (93%)
+  omni-classify (single):    94/102 correct (92%)
+
+########################################################################################################################
+# Model: claude-sonnet-4-5-20241022
+# Items: 102
+########################################################################################################################
+
+  [1/102] pork chops... BOTH WRONG
+  [2/102] bacon... BOTH WRONG
+  [3/102] ham... BOTH WRONG
+  [4/102] pork loin... BOTH WRONG
+  [5/102] pork sausage... BOTH WRONG
+  [6/102] pulled pork... BOTH WRONG
+  [7/102] pork belly... BOTH WRONG
+  [8/102] pork rinds... BOTH WRONG
+  [9/102] chicken breast... BOTH WRONG
+  [10/102] chicken thighs... BOTH WRONG
+  [11/102] chicken wings... BOTH WRONG
+  [12/102] rotisserie chicken... BOTH WRONG
+  [13/102] ground turkey... BOTH WRONG
+  [14/102] turkey sausage... BOTH WRONG
+  [15/102] chicken nuggets... BOTH WRONG
+  [16/102] ground beef... BOTH WRONG
+  [17/102] ribeye steak... BOTH WRONG
+  [18/102] beef brisket... BOTH WRONG
+  [19/102] beef jerky... BOTH WRONG
+  [20/102] corned beef... BOTH WRONG
+  [21/102] filet mignon... BOTH WRONG
+  [22/102] beef stew meat... BOTH WRONG
+  [23/102] apples... BOTH WRONG
+  [24/102] bananas... BOTH WRONG
+  [25/102] oranges... BOTH WRONG
+  [26/102] strawberries... BOTH WRONG
+  [27/102] grapes... BOTH WRONG
+  [28/102] watermelon... BOTH WRONG
+  [29/102] blueberries... BOTH WRONG
+  [30/102] mangoes... BOTH WRONG
+  [31/102] pineapple... BOTH WRONG
+  [32/102] lemons... BOTH WRONG
+  [33/102] avocados... BOTH WRONG
+  [34/102] kiwi... BOTH WRONG
+  [35/102] broccoli... BOTH WRONG
+  [36/102] carrots... BOTH WRONG
+  [37/102] spinach... BOTH WRONG
+  [38/102] potatoes... BOTH WRONG
+  [39/102] onions... BOTH WRONG
+  [40/102] celery... BOTH WRONG
+  [41/102] bell peppers... BOTH WRONG
+  [42/102] mushrooms... BOTH WRONG
+  [43/102] tomatoes... BOTH WRONG
+  [44/102] garlic... BOTH WRONG
+  [45/102] green beans... BOTH WRONG
+  [46/102] corn on the cob... BOTH WRONG
+  [47/102] canned corn... BOTH WRONG
+  [48/102] canned beans... BOTH WRONG
+  [49/102] canned tomatoes... BOTH WRONG
+  [50/102] canned peas... BOTH WRONG
+  [51/102] jarred salsa... BOTH WRONG
+  [52/102] canned soup... BOTH WRONG
+  [53/102] canned green beans... BOTH WRONG
+  [54/102] jarred pickles... BOTH WRONG
+  [55/102] canned tuna... BOTH WRONG
+  [56/102] canned chicken... BOTH WRONG
+  [57/102] canned sardines... BOTH WRONG
+  [58/102] canned salmon... BOTH WRONG
+  [59/102] spam... BOTH WRONG
+  [60/102] vienna sausages... BOTH WRONG
+  [61/102] canned chili... BOTH WRONG
+  [62/102] canned ham... BOTH WRONG
+  [63/102] snickers bar... BOTH WRONG
+  [64/102] gummy bears... BOTH WRONG
+  [65/102] chocolate truffles... BOTH WRONG
+  [66/102] skittles... BOTH WRONG
+  [67/102] jolly ranchers... BOTH WRONG
+  [68/102] twizzlers... BOTH WRONG
+  [69/102] m&ms... BOTH WRONG
+  [70/102] peppermints... BOTH WRONG
+  [71/102] caramels... BOTH WRONG
+  [72/102] doritos... BOTH WRONG
+  [73/102] lays potato chips... BOTH WRONG
+  [74/102] tortilla chips... BOTH WRONG
+  [75/102] pringles... BOTH WRONG
+  [76/102] cheetos... BOTH WRONG
+  [77/102] popcorn... BOTH WRONG
+  [78/102] pretzels... BOTH WRONG
+  [79/102] rice cakes... BOTH WRONG
+  [80/102] veggie straws... BOTH WRONG
+  [81/102] aspirin... BOTH WRONG
+  [82/102] vitamin c tablets... BOTH WRONG
+  [83/102] cough syrup... BOTH WRONG
+  [84/102] band-aids... BOTH WRONG
+  [85/102] antacid... BOTH WRONG
+  [86/102] allergy pills... BOTH WRONG
+  [87/102] cold medicine... BOTH WRONG
+  [88/102] ibuprofen... BOTH WRONG
+  [89/102] eye drops... BOTH WRONG
+  [90/102] bandage tape... BOTH WRONG
+  [91/102] thermometer... BOTH WRONG
+  [92/102] hydrogen peroxide... BOTH WRONG
+  [93/102] paper towels... BOTH WRONG
+  [94/102] dish soap... BOTH WRONG
+  [95/102] laundry detergent... BOTH WRONG
+  [96/102] trash bags... BOTH WRONG
+  [97/102] aluminum foil... BOTH WRONG
+  [98/102] light bulbs... BOTH WRONG
+  [99/102] batteries... BOTH WRONG
+  [100/102] sponges... BOTH WRONG
+  [101/102] candy apples... BOTH WRONG
+  [102/102] caramel apples... BOTH WRONG
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+pork chops                food > meat > pork           (none)                       (none)                       BOTH WRONG
+bacon                     food > meat > pork           (none)                       (none)                       BOTH WRONG
+ham                       food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork loin                 food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork sausage              food > meat > pork           (none)                       (none)                       BOTH WRONG
+pulled pork               food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork belly                food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork rinds                food > meat > pork           (none)                       (none)                       BOTH WRONG
+chicken breast            food > meat > chicken        (none)                       (none)                       BOTH WRONG
+chicken thighs            food > meat > chicken        (none)                       (none)                       BOTH WRONG
+chicken wings             food > meat > chicken        (none)                       (none)                       BOTH WRONG
+rotisserie chicken        food > meat > chicken        (none)                       (none)                       BOTH WRONG
+ground turkey             food > meat > chicken        (none)                       (none)                       BOTH WRONG
+turkey sausage            food > meat > chicken        (none)                       (none)                       BOTH WRONG
+chicken nuggets           food > meat > chicken        (none)                       (none)                       BOTH WRONG
+ground beef               food > meat > beef           (none)                       (none)                       BOTH WRONG
+ribeye steak              food > meat > beef           (none)                       (none)                       BOTH WRONG
+beef brisket              food > meat > beef           (none)                       (none)                       BOTH WRONG
+beef jerky                food > meat > beef           (none)                       (none)                       BOTH WRONG
+corned beef               food > meat > beef           (none)                       (none)                       BOTH WRONG
+filet mignon              food > meat > beef           (none)                       (none)                       BOTH WRONG
+beef stew meat            food > meat > beef           (none)                       (none)                       BOTH WRONG
+apples                    food > produce > fruit       (none)                       (none)                       BOTH WRONG
+bananas                   food > produce > fruit       (none)                       (none)                       BOTH WRONG
+oranges                   food > produce > fruit       (none)                       (none)                       BOTH WRONG
+strawberries              food > produce > fruit       (none)                       (none)                       BOTH WRONG
+grapes                    food > produce > fruit       (none)                       (none)                       BOTH WRONG
+watermelon                food > produce > fruit       (none)                       (none)                       BOTH WRONG
+blueberries               food > produce > fruit       (none)                       (none)                       BOTH WRONG
+mangoes                   food > produce > fruit       (none)                       (none)                       BOTH WRONG
+pineapple                 food > produce > fruit       (none)                       (none)                       BOTH WRONG
+lemons                    food > produce > fruit       (none)                       (none)                       BOTH WRONG
+avocados                  food > produce > fruit       (none)                       (none)                       BOTH WRONG
+kiwi                      food > produce > fruit       (none)                       (none)                       BOTH WRONG
+broccoli                  food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+carrots                   food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+spinach                   food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+potatoes                  food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+onions                    food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+celery                    food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+bell peppers              food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+mushrooms                 food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+tomatoes                  food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+garlic                    food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+green beans               food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+corn on the cob           food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+canned corn               food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned beans              food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned tomatoes           food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned peas               food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+jarred salsa              food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned soup               food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned green beans        food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+jarred pickles            food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned tuna               food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned chicken            food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned sardines           food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned salmon             food > canned > meat         (none)                       (none)                       BOTH WRONG
+spam                      food > canned > meat         (none)                       (none)                       BOTH WRONG
+vienna sausages           food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned chili              food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned ham                food > canned > meat         (none)                       (none)                       BOTH WRONG
+snickers bar              food > snack > candy         (none)                       (none)                       BOTH WRONG
+gummy bears               food > snack > candy         (none)                       (none)                       BOTH WRONG
+chocolate truffles        food > snack > candy         (none)                       (none)                       BOTH WRONG
+skittles                  food > snack > candy         (none)                       (none)                       BOTH WRONG
+jolly ranchers            food > snack > candy         (none)                       (none)                       BOTH WRONG
+twizzlers                 food > snack > candy         (none)                       (none)                       BOTH WRONG
+m&ms                      food > snack > candy         (none)                       (none)                       BOTH WRONG
+peppermints               food > snack > candy         (none)                       (none)                       BOTH WRONG
+caramels                  food > snack > candy         (none)                       (none)                       BOTH WRONG
+doritos                   food > snack > chip          (none)                       (none)                       BOTH WRONG
+lays potato chips         food > snack > chip          (none)                       (none)                       BOTH WRONG
+tortilla chips            food > snack > chip          (none)                       (none)                       BOTH WRONG
+pringles                  food > snack > chip          (none)                       (none)                       BOTH WRONG
+cheetos                   food > snack > chip          (none)                       (none)                       BOTH WRONG
+popcorn                   food > snack > chip          (none)                       (none)                       BOTH WRONG
+pretzels                  food > snack > chip          (none)                       (none)                       BOTH WRONG
+rice cakes                food > snack > chip          (none)                       (none)                       BOTH WRONG
+veggie straws             food > snack > chip          (none)                       (none)                       BOTH WRONG
+aspirin                   non_food > medicine          (none)                       (none)                       BOTH WRONG
+vitamin c tablets         non_food > medicine          (none)                       (none)                       BOTH WRONG
+cough syrup               non_food > medicine          (none)                       (none)                       BOTH WRONG
+band-aids                 non_food > medicine          (none)                       (none)                       BOTH WRONG
+antacid                   non_food > medicine          (none)                       (none)                       BOTH WRONG
+allergy pills             non_food > medicine          (none)                       (none)                       BOTH WRONG
+cold medicine             non_food > medicine          (none)                       (none)                       BOTH WRONG
+ibuprofen                 non_food > medicine          (none)                       (none)                       BOTH WRONG
+eye drops                 non_food > medicine          (none)                       (none)                       BOTH WRONG
+bandage tape              non_food > medicine          (none)                       (none)                       BOTH WRONG
+thermometer               non_food > medicine          (none)                       (none)                       BOTH WRONG
+hydrogen peroxide         non_food > medicine          (none)                       (none)                       BOTH WRONG
+paper towels              non_food > merchandise       (none)                       (none)                       BOTH WRONG
+dish soap                 non_food > merchandise       (none)                       (none)                       BOTH WRONG
+laundry detergent         non_food > merchandise       (none)                       (none)                       BOTH WRONG
+trash bags                non_food > merchandise       (none)                       (none)                       BOTH WRONG
+aluminum foil             non_food > merchandise       (none)                       (none)                       BOTH WRONG
+light bulbs               non_food > merchandise       (none)                       (none)                       BOTH WRONG
+batteries                 non_food > merchandise       (none)                       (none)                       BOTH WRONG
+sponges                   non_food > merchandise       (none)                       (none)                       BOTH WRONG
+candy apples              food > snack > candy         (none)                       (none)                       BOTH WRONG
+caramel apples            food > snack > candy         (none)                       (none)                       BOTH WRONG
+
+========================================================================================================================
+Summary for claude-sonnet-4-5-20241022:
+  grocery-classify (routed): 0/102 correct (0%)
+  omni-classify (single):    0/102 correct (0%)
+
+########################################################################################################################
+# Model: claude-haiku-3-5-20241022
+# Items: 102
+########################################################################################################################
+
+  [1/102] pork chops... BOTH WRONG
+  [2/102] bacon... BOTH WRONG
+  [3/102] ham... BOTH WRONG
+  [4/102] pork loin... BOTH WRONG
+  [5/102] pork sausage... BOTH WRONG
+  [6/102] pulled pork... BOTH WRONG
+  [7/102] pork belly... BOTH WRONG
+  [8/102] pork rinds... BOTH WRONG
+  [9/102] chicken breast... BOTH WRONG
+  [10/102] chicken thighs... BOTH WRONG
+  [11/102] chicken wings... BOTH WRONG
+  [12/102] rotisserie chicken... BOTH WRONG
+  [13/102] ground turkey... BOTH WRONG
+  [14/102] turkey sausage... BOTH WRONG
+  [15/102] chicken nuggets... BOTH WRONG
+  [16/102] ground beef... BOTH WRONG
+  [17/102] ribeye steak... BOTH WRONG
+  [18/102] beef brisket... BOTH WRONG
+  [19/102] beef jerky... BOTH WRONG
+  [20/102] corned beef... BOTH WRONG
+  [21/102] filet mignon... BOTH WRONG
+  [22/102] beef stew meat... BOTH WRONG
+  [23/102] apples... BOTH WRONG
+  [24/102] bananas... BOTH WRONG
+  [25/102] oranges... BOTH WRONG
+  [26/102] strawberries... BOTH WRONG
+  [27/102] grapes... BOTH WRONG
+  [28/102] watermelon... BOTH WRONG
+  [29/102] blueberries... BOTH WRONG
+  [30/102] mangoes... BOTH WRONG
+  [31/102] pineapple... BOTH WRONG
+  [32/102] lemons... BOTH WRONG
+  [33/102] avocados... BOTH WRONG
+  [34/102] kiwi... BOTH WRONG
+  [35/102] broccoli... BOTH WRONG
+  [36/102] carrots... BOTH WRONG
+  [37/102] spinach... BOTH WRONG
+  [38/102] potatoes... BOTH WRONG
+  [39/102] onions... BOTH WRONG
+  [40/102] celery... BOTH WRONG
+  [41/102] bell peppers... BOTH WRONG
+  [42/102] mushrooms... BOTH WRONG
+  [43/102] tomatoes... BOTH WRONG
+  [44/102] garlic... BOTH WRONG
+  [45/102] green beans... BOTH WRONG
+  [46/102] corn on the cob... BOTH WRONG
+  [47/102] canned corn... BOTH WRONG
+  [48/102] canned beans... BOTH WRONG
+  [49/102] canned tomatoes... BOTH WRONG
+  [50/102] canned peas... BOTH WRONG
+  [51/102] jarred salsa... BOTH WRONG
+  [52/102] canned soup... BOTH WRONG
+  [53/102] canned green beans... BOTH WRONG
+  [54/102] jarred pickles... BOTH WRONG
+  [55/102] canned tuna... BOTH WRONG
+  [56/102] canned chicken... BOTH WRONG
+  [57/102] canned sardines... BOTH WRONG
+  [58/102] canned salmon... BOTH WRONG
+  [59/102] spam... BOTH WRONG
+  [60/102] vienna sausages... BOTH WRONG
+  [61/102] canned chili... BOTH WRONG
+  [62/102] canned ham... BOTH WRONG
+  [63/102] snickers bar... BOTH WRONG
+  [64/102] gummy bears... BOTH WRONG
+  [65/102] chocolate truffles... BOTH WRONG
+  [66/102] skittles... BOTH WRONG
+  [67/102] jolly ranchers... BOTH WRONG
+  [68/102] twizzlers... BOTH WRONG
+  [69/102] m&ms... BOTH WRONG
+  [70/102] peppermints... BOTH WRONG
+  [71/102] caramels... BOTH WRONG
+  [72/102] doritos... BOTH WRONG
+  [73/102] lays potato chips... BOTH WRONG
+  [74/102] tortilla chips... BOTH WRONG
+  [75/102] pringles... BOTH WRONG
+  [76/102] cheetos... BOTH WRONG
+  [77/102] popcorn... BOTH WRONG
+  [78/102] pretzels... BOTH WRONG
+  [79/102] rice cakes... BOTH WRONG
+  [80/102] veggie straws... BOTH WRONG
+  [81/102] aspirin... BOTH WRONG
+  [82/102] vitamin c tablets... BOTH WRONG
+  [83/102] cough syrup... BOTH WRONG
+  [84/102] band-aids... BOTH WRONG
+  [85/102] antacid... BOTH WRONG
+  [86/102] allergy pills... BOTH WRONG
+  [87/102] cold medicine... BOTH WRONG
+  [88/102] ibuprofen... BOTH WRONG
+  [89/102] eye drops... BOTH WRONG
+  [90/102] bandage tape... BOTH WRONG
+  [91/102] thermometer... BOTH WRONG
+  [92/102] hydrogen peroxide... BOTH WRONG
+  [93/102] paper towels... BOTH WRONG
+  [94/102] dish soap... BOTH WRONG
+  [95/102] laundry detergent... BOTH WRONG
+  [96/102] trash bags... BOTH WRONG
+  [97/102] aluminum foil... BOTH WRONG
+  [98/102] light bulbs... BOTH WRONG
+  [99/102] batteries... BOTH WRONG
+  [100/102] sponges... BOTH WRONG
+  [101/102] candy apples... BOTH WRONG
+  [102/102] caramel apples... BOTH WRONG
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+pork chops                food > meat > pork           (none)                       (none)                       BOTH WRONG
+bacon                     food > meat > pork           (none)                       (none)                       BOTH WRONG
+ham                       food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork loin                 food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork sausage              food > meat > pork           (none)                       (none)                       BOTH WRONG
+pulled pork               food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork belly                food > meat > pork           (none)                       (none)                       BOTH WRONG
+pork rinds                food > meat > pork           (none)                       (none)                       BOTH WRONG
+chicken breast            food > meat > chicken        (none)                       (none)                       BOTH WRONG
+chicken thighs            food > meat > chicken        (none)                       (none)                       BOTH WRONG
+chicken wings             food > meat > chicken        (none)                       (none)                       BOTH WRONG
+rotisserie chicken        food > meat > chicken        (none)                       (none)                       BOTH WRONG
+ground turkey             food > meat > chicken        (none)                       (none)                       BOTH WRONG
+turkey sausage            food > meat > chicken        (none)                       (none)                       BOTH WRONG
+chicken nuggets           food > meat > chicken        (none)                       (none)                       BOTH WRONG
+ground beef               food > meat > beef           (none)                       (none)                       BOTH WRONG
+ribeye steak              food > meat > beef           (none)                       (none)                       BOTH WRONG
+beef brisket              food > meat > beef           (none)                       (none)                       BOTH WRONG
+beef jerky                food > meat > beef           (none)                       (none)                       BOTH WRONG
+corned beef               food > meat > beef           (none)                       (none)                       BOTH WRONG
+filet mignon              food > meat > beef           (none)                       (none)                       BOTH WRONG
+beef stew meat            food > meat > beef           (none)                       (none)                       BOTH WRONG
+apples                    food > produce > fruit       (none)                       (none)                       BOTH WRONG
+bananas                   food > produce > fruit       (none)                       (none)                       BOTH WRONG
+oranges                   food > produce > fruit       (none)                       (none)                       BOTH WRONG
+strawberries              food > produce > fruit       (none)                       (none)                       BOTH WRONG
+grapes                    food > produce > fruit       (none)                       (none)                       BOTH WRONG
+watermelon                food > produce > fruit       (none)                       (none)                       BOTH WRONG
+blueberries               food > produce > fruit       (none)                       (none)                       BOTH WRONG
+mangoes                   food > produce > fruit       (none)                       (none)                       BOTH WRONG
+pineapple                 food > produce > fruit       (none)                       (none)                       BOTH WRONG
+lemons                    food > produce > fruit       (none)                       (none)                       BOTH WRONG
+avocados                  food > produce > fruit       (none)                       (none)                       BOTH WRONG
+kiwi                      food > produce > fruit       (none)                       (none)                       BOTH WRONG
+broccoli                  food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+carrots                   food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+spinach                   food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+potatoes                  food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+onions                    food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+celery                    food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+bell peppers              food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+mushrooms                 food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+tomatoes                  food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+garlic                    food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+green beans               food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+corn on the cob           food > produce > vegetable   (none)                       (none)                       BOTH WRONG
+canned corn               food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned beans              food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned tomatoes           food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned peas               food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+jarred salsa              food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned soup               food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned green beans        food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+jarred pickles            food > canned > vegetable    (none)                       (none)                       BOTH WRONG
+canned tuna               food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned chicken            food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned sardines           food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned salmon             food > canned > meat         (none)                       (none)                       BOTH WRONG
+spam                      food > canned > meat         (none)                       (none)                       BOTH WRONG
+vienna sausages           food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned chili              food > canned > meat         (none)                       (none)                       BOTH WRONG
+canned ham                food > canned > meat         (none)                       (none)                       BOTH WRONG
+snickers bar              food > snack > candy         (none)                       (none)                       BOTH WRONG
+gummy bears               food > snack > candy         (none)                       (none)                       BOTH WRONG
+chocolate truffles        food > snack > candy         (none)                       (none)                       BOTH WRONG
+skittles                  food > snack > candy         (none)                       (none)                       BOTH WRONG
+jolly ranchers            food > snack > candy         (none)                       (none)                       BOTH WRONG
+twizzlers                 food > snack > candy         (none)                       (none)                       BOTH WRONG
+m&ms                      food > snack > candy         (none)                       (none)                       BOTH WRONG
+peppermints               food > snack > candy         (none)                       (none)                       BOTH WRONG
+caramels                  food > snack > candy         (none)                       (none)                       BOTH WRONG
+doritos                   food > snack > chip          (none)                       (none)                       BOTH WRONG
+lays potato chips         food > snack > chip          (none)                       (none)                       BOTH WRONG
+tortilla chips            food > snack > chip          (none)                       (none)                       BOTH WRONG
+pringles                  food > snack > chip          (none)                       (none)                       BOTH WRONG
+cheetos                   food > snack > chip          (none)                       (none)                       BOTH WRONG
+popcorn                   food > snack > chip          (none)                       (none)                       BOTH WRONG
+pretzels                  food > snack > chip          (none)                       (none)                       BOTH WRONG
+rice cakes                food > snack > chip          (none)                       (none)                       BOTH WRONG
+veggie straws             food > snack > chip          (none)                       (none)                       BOTH WRONG
+aspirin                   non_food > medicine          (none)                       (none)                       BOTH WRONG
+vitamin c tablets         non_food > medicine          (none)                       (none)                       BOTH WRONG
+cough syrup               non_food > medicine          (none)                       (none)                       BOTH WRONG
+band-aids                 non_food > medicine          (none)                       (none)                       BOTH WRONG
+antacid                   non_food > medicine          (none)                       (none)                       BOTH WRONG
+allergy pills             non_food > medicine          (none)                       (none)                       BOTH WRONG
+cold medicine             non_food > medicine          (none)                       (none)                       BOTH WRONG
+ibuprofen                 non_food > medicine          (none)                       (none)                       BOTH WRONG
+eye drops                 non_food > medicine          (none)                       (none)                       BOTH WRONG
+bandage tape              non_food > medicine          (none)                       (none)                       BOTH WRONG
+thermometer               non_food > medicine          (none)                       (none)                       BOTH WRONG
+hydrogen peroxide         non_food > medicine          (none)                       (none)                       BOTH WRONG
+paper towels              non_food > merchandise       (none)                       (none)                       BOTH WRONG
+dish soap                 non_food > merchandise       (none)                       (none)                       BOTH WRONG
+laundry detergent         non_food > merchandise       (none)                       (none)                       BOTH WRONG
+trash bags                non_food > merchandise       (none)                       (none)                       BOTH WRONG
+aluminum foil             non_food > merchandise       (none)                       (none)                       BOTH WRONG
+light bulbs               non_food > merchandise       (none)                       (none)                       BOTH WRONG
+batteries                 non_food > merchandise       (none)                       (none)                       BOTH WRONG
+sponges                   non_food > merchandise       (none)                       (none)                       BOTH WRONG
+candy apples              food > snack > candy         (none)                       (none)                       BOTH WRONG
+caramel apples            food > snack > candy         (none)                       (none)                       BOTH WRONG
+
+========================================================================================================================
+Summary for claude-haiku-3-5-20241022:
+  grocery-classify (routed): 0/102 correct (0%)
+  omni-classify (single):    0/102 correct (0%)
+
+########################################################################################################################
+# Model: qwen2.5:7b @ http://localhost:11434/v1
+# Items: 102
+########################################################################################################################
+
+  [1/102] pork chops... both correct
+  [2/102] bacon... both correct
+  [3/102] ham... both correct
+  [4/102] pork loin... both correct
+  [5/102] pork sausage... both correct
+  [6/102] pulled pork... both correct
+  [7/102] pork belly... both correct
+  [8/102] pork rinds... routed wrong
+  [9/102] chicken breast... both correct
+  [10/102] chicken thighs... both correct
+  [11/102] chicken wings... both correct
+  [12/102] rotisserie chicken... both correct
+  [13/102] ground turkey... omni wrong
+  [14/102] turkey sausage... omni wrong
+  [15/102] chicken nuggets... routed wrong
+  [16/102] ground beef... both correct
+  [17/102] ribeye steak... both correct
+  [18/102] beef brisket... both correct
+  [19/102] beef jerky... omni wrong
+  [20/102] corned beef... omni wrong
+  [21/102] filet mignon... both correct
+  [22/102] beef stew meat... omni wrong
+  [23/102] apples... both correct
+  [24/102] bananas... both correct
+  [25/102] oranges... both correct
+  [26/102] strawberries... both correct
+  [27/102] grapes... both correct
+  [28/102] watermelon... both correct
+  [29/102] blueberries... both correct
+  [30/102] mangoes... both correct
+  [31/102] pineapple... both correct
+  [32/102] lemons... both correct
+  [33/102] avocados... omni wrong
+  [34/102] kiwi... both correct
+  [35/102] broccoli... both correct
+  [36/102] carrots... both correct
+  [37/102] spinach... both correct
+  [38/102] potatoes... both correct
+  [39/102] onions... both correct
+  [40/102] celery... both correct
+  [41/102] bell peppers... both correct
+  [42/102] mushrooms... both correct
+  [43/102] tomatoes... both correct
+  [44/102] garlic... both correct
+  [45/102] green beans... both correct
+  [46/102] corn on the cob... both correct
+  [47/102] canned corn... both correct
+  [48/102] canned beans... both correct
+  [49/102] canned tomatoes... both correct
+  [50/102] canned peas... both correct
+  [51/102] jarred salsa... both correct
+  [52/102] canned soup... routed wrong
+  [53/102] canned green beans... both correct
+  [54/102] jarred pickles... both correct
+  [55/102] canned tuna... omni wrong
+  [56/102] canned chicken... both correct
+  [57/102] canned sardines... omni wrong
+  [58/102] canned salmon... omni wrong
+  [59/102] spam... both correct
+  [60/102] vienna sausages... both correct
+  [61/102] canned chili... omni wrong
+  [62/102] canned ham... both correct
+  [63/102] snickers bar... both correct
+  [64/102] gummy bears... both correct
+  [65/102] chocolate truffles... both correct
+  [66/102] skittles... both correct
+  [67/102] jolly ranchers... both correct
+  [68/102] twizzlers... both correct
+  [69/102] m&ms... both correct
+  [70/102] peppermints... both correct
+  [71/102] caramels... both correct
+  [72/102] doritos... both correct
+  [73/102] lays potato chips... both correct
+  [74/102] tortilla chips... both correct
+  [75/102] pringles... both correct
+  [76/102] cheetos... both correct
+  [77/102] popcorn... both correct
+  [78/102] pretzels... both correct
+  [79/102] rice cakes... both correct
+  [80/102] veggie straws... omni wrong
+  [81/102] aspirin... both correct
+  [82/102] vitamin c tablets... both correct
+  [83/102] cough syrup... both correct
+  [84/102] band-aids... omni wrong
+  [85/102] antacid... both correct
+  [86/102] allergy pills... both correct
+  [87/102] cold medicine... both correct
+  [88/102] ibuprofen... both correct
+  [89/102] eye drops... both correct
+  [90/102] bandage tape... omni wrong
+  [91/102] thermometer... omni wrong
+  [92/102] hydrogen peroxide... both correct
+  [93/102] paper towels... both correct
+  [94/102] dish soap... both correct
+  [95/102] laundry detergent... both correct
+  [96/102] trash bags... both correct
+  [97/102] aluminum foil... both correct
+  [98/102] light bulbs... both correct
+  [99/102] batteries... both correct
+  [100/102] sponges... both correct
+  [101/102] candy apples... both correct
+  [102/102] caramel apples... BOTH WRONG
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+pork chops                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+bacon                     food > meat > pork           food > meat > pork           food > meat > pork           both correct
+ham                       food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork loin                 food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork sausage              food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pulled pork               food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork belly                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork rinds                food > meat > pork           food > snack > chip          food > meat > pork           routed wrong
+chicken breast            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken thighs            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken wings             food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+rotisserie chicken        food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+ground turkey             food > meat > chicken        food > meat > chicken        food > meat > pork           omni wrong
+turkey sausage            food > meat > chicken        food > meat > chicken        food > meat > pork           omni wrong
+chicken nuggets           food > meat > chicken        food > canned > meat         food > meat > chicken        routed wrong
+ground beef               food > meat > beef           food > meat > beef           food > meat > beef           both correct
+ribeye steak              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef brisket              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef jerky                food > meat > beef           food > meat > beef           food > meat > canned         omni wrong
+corned beef               food > meat > beef           food > meat > beef           food > meat > pork           omni wrong
+filet mignon              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef stew meat            food > meat > beef           food > meat > beef           food > meat > canned > meat  omni wrong
+apples                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+bananas                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+oranges                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+strawberries              food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+grapes                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+watermelon                food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+blueberries               food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+mangoes                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+pineapple                 food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+lemons                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+avocados                  food > produce > fruit       food > produce > fruit       food > produce > vegetable   omni wrong
+kiwi                      food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+broccoli                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+carrots                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+spinach                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+potatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+onions                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+celery                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+bell peppers              food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+mushrooms                 food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+tomatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+garlic                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+green beans               food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+corn on the cob           food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+canned corn               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned beans              food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned tomatoes           food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned peas               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+jarred salsa              food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned soup               food > canned > vegetable    food > canned                food > canned > vegetable    routed wrong
+canned green beans        food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+jarred pickles            food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned tuna               food > canned > meat         food > canned > meat         food > canned > fish         omni wrong
+canned chicken            food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned sardines           food > canned > meat         food > canned > meat         food > canned > fish         omni wrong
+canned salmon             food > canned > meat         food > canned > meat         food > canned > fish         omni wrong
+spam                      food > canned > meat         food > canned > meat         food > canned > meat         both correct
+vienna sausages           food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned chili              food > canned > meat         food > canned > meat         food > canned > vegetable    omni wrong
+canned ham                food > canned > meat         food > canned > meat         food > canned > meat         both correct
+snickers bar              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+gummy bears               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+chocolate truffles        food > snack > candy         food > snack > candy         food > snack > candy         both correct
+skittles                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+jolly ranchers            food > snack > candy         food > snack > candy         food > snack > candy         both correct
+twizzlers                 food > snack > candy         food > snack > candy         food > snack > candy         both correct
+m&ms                      food > snack > candy         food > snack > candy         food > snack > candy         both correct
+peppermints               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+caramels                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+doritos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+lays potato chips         food > snack > chip          food > snack > chip          food > snack > chip          both correct
+tortilla chips            food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pringles                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+cheetos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+popcorn                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pretzels                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+rice cakes                food > snack > chip          food > snack > chip          food > snack > chip          both correct
+veggie straws             food > snack > chip          food > snack > chip          food > produce > vegetable   omni wrong
+aspirin                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+vitamin c tablets         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cough syrup               non_food > medicine          non_food > medicine          non_food > medicine          both correct
+band-aids                 non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+antacid                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+allergy pills             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cold medicine             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+ibuprofen                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+eye drops                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+bandage tape              non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+thermometer               non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+hydrogen peroxide         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+paper towels              non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+dish soap                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+laundry detergent         non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+trash bags                non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+aluminum foil             non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+light bulbs               non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+batteries                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+sponges                   non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+candy apples              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+caramel apples            food > snack > candy         food > produce > fruit       food > produce > fruit       BOTH WRONG
+
+========================================================================================================================
+Summary for qwen2.5:7b @ http://localhost:11434/v1:
+  grocery-classify (routed): 98/102 correct (96%)
+  omni-classify (single):    87/102 correct (85%)
+
+########################################################################################################################
+# Model: mistral:7b @ http://localhost:11434/v1
+# Items: 102
+########################################################################################################################
+
+  [1/102] pork chops... both correct
+  [2/102] bacon... both correct
+  [3/102] ham... both correct
+  [4/102] pork loin... both correct
+  [5/102] pork sausage... both correct
+  [6/102] pulled pork... both correct
+  [7/102] pork belly... both correct
+  [8/102] pork rinds... BOTH WRONG
+  [9/102] chicken breast... both correct
+  [10/102] chicken thighs... both correct
+  [11/102] chicken wings... both correct
+  [12/102] rotisserie chicken... both correct
+  [13/102] ground turkey... omni wrong
+  [14/102] turkey sausage... omni wrong
+  [15/102] chicken nuggets... routed wrong
+  [16/102] ground beef... both correct
+  [17/102] ribeye steak... both correct
+  [18/102] beef brisket... both correct
+  [19/102] beef jerky... BOTH WRONG
+  [20/102] corned beef... both correct
+  [21/102] filet mignon... both correct
+  [22/102] beef stew meat... both correct
+  [23/102] apples... both correct
+  [24/102] bananas... both correct
+  [25/102] oranges... both correct
+  [26/102] strawberries... both correct
+  [27/102] grapes... both correct
+  [28/102] watermelon... both correct
+  [29/102] blueberries... both correct
+  [30/102] mangoes... both correct
+  [31/102] pineapple... both correct
+  [32/102] lemons... both correct
+  [33/102] avocados... omni wrong
+  [34/102] kiwi... both correct
+  [35/102] broccoli... both correct
+  [36/102] carrots... both correct
+  [37/102] spinach... both correct
+  [38/102] potatoes... both correct
+  [39/102] onions... both correct
+  [40/102] celery... both correct
+  [41/102] bell peppers... both correct
+  [42/102] mushrooms... both correct
+  [43/102] tomatoes... routed wrong
+  [44/102] garlic... routed wrong
+  [45/102] green beans... both correct
+  [46/102] corn on the cob... both correct
+  [47/102] canned corn... routed wrong
+  [48/102] canned beans... routed wrong
+  [49/102] canned tomatoes... routed wrong
+  [50/102] canned peas... routed wrong
+  [51/102] jarred salsa... routed wrong
+  [52/102] canned soup... both correct
+  [53/102] canned green beans... routed wrong
+  [54/102] jarred pickles... BOTH WRONG
+  [55/102] canned tuna... omni wrong
+  [56/102] canned chicken... both correct
+  [57/102] canned sardines... BOTH WRONG
+  [58/102] canned salmon... omni wrong
+  [59/102] spam... both correct
+  [60/102] vienna sausages... both correct
+  [61/102] canned chili... routed wrong
+  [62/102] canned ham... both correct
+  [63/102] snickers bar... both correct
+  [64/102] gummy bears... both correct
+  [65/102] chocolate truffles... omni wrong
+  [66/102] skittles... both correct
+  [67/102] jolly ranchers... routed wrong
+  [68/102] twizzlers... routed wrong
+  [69/102] m&ms... both correct
+  [70/102] peppermints... routed wrong
+  [71/102] caramels... both correct
+  [72/102] doritos... both correct
+  [73/102] lays potato chips... both correct
+  [74/102] tortilla chips... both correct
+  [75/102] pringles... routed wrong
+  [76/102] cheetos... both correct
+  [77/102] popcorn... both correct
+  [78/102] pretzels... both correct
+  [79/102] rice cakes... BOTH WRONG
+  [80/102] veggie straws... routed wrong
+  [81/102] aspirin... both correct
+  [82/102] vitamin c tablets... both correct
+  [83/102] cough syrup... both correct
+  [84/102] band-aids... omni wrong
+  [85/102] antacid... both correct
+  [86/102] allergy pills... both correct
+  [87/102] cold medicine... both correct
+  [88/102] ibuprofen... both correct
+  [89/102] eye drops... both correct
+  [90/102] bandage tape... omni wrong
+  [91/102] thermometer... omni wrong
+  [92/102] hydrogen peroxide... both correct
+  [93/102] paper towels... both correct
+  [94/102] dish soap... both correct
+  [95/102] laundry detergent... both correct
+  [96/102] trash bags... both correct
+  [97/102] aluminum foil... both correct
+  [98/102] light bulbs... both correct
+  [99/102] batteries... both correct
+  [100/102] sponges... both correct
+  [101/102] candy apples... both correct
+  [102/102] caramel apples... both correct
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+pork chops                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+bacon                     food > meat > pork           food > meat > pork           food > meat > pork           both correct
+ham                       food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork loin                 food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork sausage              food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pulled pork               food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork belly                food > meat > pork           food > meat > pork           food > meat > pork           both correct
+pork rinds                food > meat > pork           food > snack > chip          food > snack > chip          BOTH WRONG
+chicken breast            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken thighs            food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+chicken wings             food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+rotisserie chicken        food > meat > chicken        food > meat > chicken        food > meat > chicken        both correct
+ground turkey             food > meat > chicken        food > meat > chicken        food > meat > turkey         omni wrong
+turkey sausage            food > meat > chicken        food > meat > chicken        food > meat > pork           omni wrong
+chicken nuggets           food > meat > chicken        food                         food > meat > chicken        routed wrong
+ground beef               food > meat > beef           food > meat > beef           food > meat > beef           both correct
+ribeye steak              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef brisket              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef jerky                food > meat > beef           food > snack                 food > snack > meat          BOTH WRONG
+corned beef               food > meat > beef           food > meat > beef           food > meat > beef           both correct
+filet mignon              food > meat > beef           food > meat > beef           food > meat > beef           both correct
+beef stew meat            food > meat > beef           food > meat > beef           food > meat > beef           both correct
+apples                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+bananas                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+oranges                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+strawberries              food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+grapes                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+watermelon                food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+blueberries               food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+mangoes                   food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+pineapple                 food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+lemons                    food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+avocados                  food > produce > fruit       food > produce > fruit       food > produce > vegetable   omni wrong
+kiwi                      food > produce > fruit       food > produce > fruit       food > produce > fruit       both correct
+broccoli                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+carrots                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+spinach                   food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+potatoes                  food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+onions                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+celery                    food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+bell peppers              food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+mushrooms                 food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+tomatoes                  food > produce > vegetable   food > canned > vegetable    food > produce > vegetable   routed wrong
+garlic                    food > produce > vegetable   (none)                       food > produce > vegetable   routed wrong
+green beans               food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+corn on the cob           food > produce > vegetable   food > produce > vegetable   food > produce > vegetable   both correct
+canned corn               food > canned > vegetable    (none)                       food > canned > vegetable    routed wrong
+canned beans              food > canned > vegetable    (none)                       food > canned > vegetable    routed wrong
+canned tomatoes           food > canned > vegetable    (none)                       food > canned > vegetable    routed wrong
+canned peas               food > canned > vegetable    (none)                       food > canned > vegetable    routed wrong
+jarred salsa              food > canned > vegetable    (none)                       food > canned > vegetable    routed wrong
+canned soup               food > canned > vegetable    food > canned > vegetable    food > canned > vegetable    both correct
+canned green beans        food > canned > vegetable    (none)                       food > canned > vegetable    routed wrong
+jarred pickles            food > canned > vegetable    (none)                       food > canned > pickle       BOTH WRONG
+canned tuna               food > canned > meat         food > canned > meat         food > canned > fish         omni wrong
+canned chicken            food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned sardines           food > canned > meat         (none)                       food > canned > fish         BOTH WRONG
+canned salmon             food > canned > meat         food > canned > meat         food > canned > fish         omni wrong
+spam                      food > canned > meat         food > canned > meat         food > canned > meat         both correct
+vienna sausages           food > canned > meat         food > canned > meat         food > canned > meat         both correct
+canned chili              food > canned > meat         (none)                       food > canned > meat         routed wrong
+canned ham                food > canned > meat         food > canned > meat         food > canned > meat         both correct
+snickers bar              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+gummy bears               food > snack > candy         food > snack > candy         food > snack > candy         both correct
+chocolate truffles        food > snack > candy         food > snack > candy         food > snack > chocolate     omni wrong
+skittles                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+jolly ranchers            food > snack > candy         non_food > merchandise       food > snack > candy         routed wrong
+twizzlers                 food > snack > candy         (none)                       food > snack > candy         routed wrong
+m&ms                      food > snack > candy         food > snack > candy         food > snack > candy         both correct
+peppermints               food > snack > candy         (none)                       food > snack > candy         routed wrong
+caramels                  food > snack > candy         food > snack > candy         food > snack > candy         both correct
+doritos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+lays potato chips         food > snack > chip          food > snack > chip          food > snack > chip          both correct
+tortilla chips            food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pringles                  food > snack > chip          (none)                       food > snack > chip          routed wrong
+cheetos                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+popcorn                   food > snack > chip          food > snack > chip          food > snack > chip          both correct
+pretzels                  food > snack > chip          food > snack > chip          food > snack > chip          both correct
+rice cakes                food > snack > chip          (none)                       food > snack > cake          BOTH WRONG
+veggie straws             food > snack > chip          (none)                       food > snack > chip          routed wrong
+aspirin                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+vitamin c tablets         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cough syrup               non_food > medicine          non_food > medicine          non_food > medicine          both correct
+band-aids                 non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+antacid                   non_food > medicine          non_food > medicine          non_food > medicine          both correct
+allergy pills             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+cold medicine             non_food > medicine          non_food > medicine          non_food > medicine          both correct
+ibuprofen                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+eye drops                 non_food > medicine          non_food > medicine          non_food > medicine          both correct
+bandage tape              non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+thermometer               non_food > medicine          non_food > medicine          non_food > merchandise       omni wrong
+hydrogen peroxide         non_food > medicine          non_food > medicine          non_food > medicine          both correct
+paper towels              non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+dish soap                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+laundry detergent         non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+trash bags                non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+aluminum foil             non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+light bulbs               non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+batteries                 non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+sponges                   non_food > merchandise       non_food > merchandise       non_food > merchandise       both correct
+candy apples              food > snack > candy         food > snack > candy         food > snack > candy         both correct
+caramel apples            food > snack > candy         food > snack > candy         food > snack > candy         both correct
+
+========================================================================================================================
+Summary for mistral:7b @ http://localhost:11434/v1:
+  grocery-classify (routed): 82/102 correct (80%)
+  omni-classify (single):    88/102 correct (86%)
+
+
+################################################################################
+# CROSS-MODEL SUMMARY
+################################################################################
+
+Model                                    Routed               Omni                 Delta
+------------------------------------------------------------------------------------------
+gpt-4.1-mini                             99/102 (97%)         97/102 (95%)         +2 routed
+gpt-4.1-nano                             95/102 (93%)         94/102 (92%)         +1 routed
+claude-sonnet-4-5-20241022               0/102 (0%)           0/102 (0%)           0 routed
+claude-haiku-3-5-20241022                0/102 (0%)           0/102 (0%)           0 routed
+qwen2.5:7b @ http://localhost:11434/v1   98/102 (96%)         87/102 (85%)         +11 routed
+mistral:7b @ http://localhost:11434/v1   82/102 (80%)         88/102 (86%)         -6 routed
