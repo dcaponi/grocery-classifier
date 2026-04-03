@@ -1,0 +1,17 @@
+name: omni-classify
+version: "1.0"
+description: Classifies grocery items using a single omniscient agent
+
+input:
+  item_name:
+    type: string
+    required: true
+
+steps:
+  - id: classify
+    agent: omni-classifier
+    input:
+      item_name: $.input.item_name
+
+output:
+  classification: $.steps.classify.output

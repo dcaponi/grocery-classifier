@@ -1,0 +1,93 @@
+name: grocery-classify
+version: "1.0"
+description: Classifies grocery items through a hierarchical routing tree
+
+input:
+  item_name:
+    type: string
+    required: true
+
+steps:
+  - route:
+      id: classify
+      router: food-router
+      input:
+        item_name: $.input.item_name
+      routes:
+        food:
+          route:
+            id: food_sub
+            router: food-subtype-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              meat:
+                route:
+                  id: meat_sub
+                  router: meat-router
+                  input:
+                    item_name: $.input.item_name
+                  routes:
+                    pork: classify-leaf
+                    chicken: classify-leaf
+                    beef: classify-leaf
+                    _none:
+                      short_circuit: true
+                      defaults: {}
+              produce:
+                route:
+                  id: produce_sub
+                  router: produce-router
+                  input:
+                    item_name: $.input.item_name
+                  routes:
+                    fruit: classify-leaf
+                    vegetable: classify-leaf
+                    _none:
+                      short_circuit: true
+                      defaults: {}
+              canned:
+                route:
+                  id: canned_sub
+                  router: canned-router
+                  input:
+                    item_name: $.input.item_name
+                  routes:
+                    vegetable: classify-leaf
+                    meat: classify-leaf
+                    _none:
+                      short_circuit: true
+                      defaults: {}
+              snack:
+                route:
+                  id: snack_sub
+                  router: snack-router
+                  input:
+                    item_name: $.input.item_name
+                  routes:
+                    candy: classify-leaf
+                    chip: classify-leaf
+                    _none:
+                      short_circuit: true
+                      defaults: {}
+              _none:
+                short_circuit: true
+                defaults: {}
+        non_food:
+          route:
+            id: non_food_sub
+            router: non-food-subtype-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              medicine: classify-leaf
+              merchandise: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+        _none:
+          short_circuit: true
+          defaults: {}
+
+output:
+  classification: $.steps.classify.output
