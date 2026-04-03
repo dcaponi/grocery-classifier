@@ -1,110 +1,135 @@
 # Why Multiple Agents Classify Better Than One
 
-Taxonomy classification looks easy until the taxonomy gets deep. Given "bacon", most LLMs will correctly land on `food > meat > pork` without breaking a sweat. But give the same model a list of 100 grocery items spanning food subtypes, produce, canned goods, snacks, medicine, and merchandise — and ask it to route each one through a three-level tree in a single call — and accuracy starts to slip. Not dramatically. Just enough to matter.
+Taxonomy classification looks easy until the taxonomy gets deep. Given "bacon", most LLMs will correctly land on `food > meat > pork` without breaking a sweat. But give the same model a list of 100 grocery items spanning food subtypes, produce, canned goods, snacks, medicine, and merchandise — and ask it to route each one through a three-level tree in a single call — and accuracy starts to slip. Not dramatically for frontier models. But for smaller or local models, the difference between one-shot and layered classification is the difference between usable and not.
 
-This post explains why, walks through the two-approach comparison in this repo, and makes the case for treating deep classification as a series of decisions rather than a single judgment.
-
----
-
-## The Problem with a Single Pass
-
-The `omni-classify` workflow in this project takes the straightforward approach: one agent, one prompt, one LLM call. The agent's prompt (`agents/omni-classifier/prompt.md`) lays out the full taxonomy, enumerates every valid path, lists edge cases, and asks the model to return a `taxonomy_path` array.
-
-It works. For unambiguous items it works well. But the prompt has to do a lot of work:
-
-- Describe the taxonomy structure
-- Give examples for every leaf category
-- Handle ambiguous cases (is peanut butter `canned/vegetable`? Is ground turkey `meat/chicken`?)
-- Return a structured array in the exact right format
-
-The model is making multiple classification decisions simultaneously — food vs. non-food, subtype within food, and leaf within subtype — while holding all of that context in one pass. When it gets the subtype wrong, the leaf is wrong too. Errors at higher levels cascade.
+This post walks through the two-approach comparison in this repo, presents results across 10 models (4 frontier, 6 local), and makes an honest assessment of when routing helps and when it doesn't.
 
 ---
 
-## The Layered Approach
+## The Setup
 
-The `grocery-classify` workflow (`workflows/grocery-classify.yaml`) does the same classification, but each decision is its own focused LLM call.
+We ran 102 grocery items through two workflows across 10 models:
 
-The top-level `food-router` asks one question: food or non-food? Its prompt (`routers/food-router/prompt.md`) is detailed about *that distinction only* — what counts as food, what counts as non-food, edge cases like pet food and vitamins. It doesn't know or care about meat subtypes or canned goods.
+- **`grocery-classify`** (routed) — 7 routing agents forming a taxonomy tree, each making a focused 2-4 option decision, dispatching to a leaf classifier
+- **`omni-classify`** (single-agent) — one LLM call, one prompt describing the entire taxonomy, returns the full path
 
-If the item is food, the `food-subtype-router` takes over and asks: meat, produce, canned, or snack? Again, its prompt is scoped to *that decision*.
-
-If the subtype is meat, the `meat-router` asks: pork, chicken, or beef?
-
-Each router returns a single route key. The workflow YAML wires the tree together:
-
-```yaml
-- route:
-    id: classify
-    router: food-router
-    input:
-      item_name: $.input.item_name
-    routes:
-      food:
-        route:
-          id: food_sub
-          router: food-subtype-router
-          ...
-          routes:
-            meat:
-              route:
-                id: meat_sub
-                router: meat-router
-                ...
-                routes:
-                  pork: classify-leaf
-                  chicken: classify-leaf
-                  beef: classify-leaf
+The taxonomy:
+```
+food > meat > pork | chicken | beef
+food > produce > fruit | vegetable
+food > canned > vegetable | meat
+food > snack > candy | chip
+non_food > medicine
+non_food > merchandise
 ```
 
-The branching tree lives in the workflow definition, not in application code. The routers make decisions; the runtime dispatches.
+---
+
+## The Results
+
+| Model | Params | Routed | Omni | Delta | Candy Apple | Caramel Apple |
+|-------|--------|--------|------|-------|-------------|---------------|
+| llama3.1:8b | 8B | 100 (98%) | 91 (89%) | **+9** | R:correct O:correct | R:correct O:correct |
+| **gemma2:2b** | 2B | **99 (97%)** | 84 (82%) | **+15** | R:correct O:correct | R:correct O:correct |
+| gpt-4.1-mini | frontier | 99 (97%) | 97 (95%) | +2 | R:correct O:correct | R:correct O:**wrong** |
+| claude-sonnet-4-5 | frontier | 98 (96%) | 96 (94%) | +2 | R:correct O:correct | R:correct O:**wrong** |
+| claude-haiku-4-5 | frontier | 98 (96%) | 97 (95%) | +1 | R:correct O:correct | R:correct O:correct |
+| qwen2.5:7b | 7B | 98 (96%) | 87 (85%) | **+11** | R:correct O:correct | R:**wrong** O:**wrong** |
+| llama3.2:3b | 3B | 97 (95%) | 80 (78%) | **+17** | R:correct O:correct | R:correct O:correct |
+| gpt-4.1-nano | frontier | 96 (94%) | 94 (92%) | +2 | R:**wrong** O:correct | R:**wrong** O:**wrong** |
+| qwen2.5:3b | 3B | 88 (86%) | 83 (81%) | +5 | R:correct O:correct | R:correct O:correct |
+| mistral:7b | 7B | 82 (80%) | 88 (86%) | **-6** | R:correct O:correct | R:correct O:correct |
+
+*(R = routed workflow, O = omni classifier. "Candy apple" and "caramel apple" are edge case items that test whether the model is fooled by "apple" into classifying as produce instead of snack > candy.)*
 
 ---
 
-## Why It Works Better
+## What the Data Actually Says
 
-**Focused context.** When the `meat-router` is deciding between pork, chicken, and beef, its prompt can include rich examples of each — cuts, preparations, ambiguous items like "ground turkey" or "pork belly". An omni classifier has to compress examples for *all* categories into a single prompt, which means each category gets less coverage.
+### Routing barely helps frontier models
 
-**Error isolation.** If `food-subtype-router` incorrectly routes "pork rinds" to `snack` instead of `meat`, that's a recoverable mistake. The top-level `food` classification was correct. And you know exactly where the error happened. In a single-pass classifier, a wrong subtype silently cascades — you see a wrong leaf and have to infer where it went sideways.
+GPT-4.1-mini, Claude Sonnet, Claude Haiku, and GPT-4.1-nano all show +1 to +2 point improvements from routing. On 102 items, that's 1-2 items — well within noise. Frontier models are already good enough at multi-level classification that the extra complexity of routing isn't justified. If you're using a frontier model, just use the omni classifier. It's simpler, faster, and equally accurate.
 
-**Independent prompt tuning.** The `meat-router` prompt can be refined without touching the `food-router` prompt or the `snack-router` prompt. Each router's accuracy can be tracked and improved in isolation. Try doing that with a monolithic prompt that covers twelve categories.
+### Routing transforms small models
 
-**Testable decisions.** Each router is a unit. You can test the `food-router` with a focused set of food and non-food items. You can test the `produce-router` with fruit/vegetable edge cases. The eval harness in this project (`run_eval.py`) tests the full pipeline, but there's nothing stopping you from testing each router independently.
+This is where the architecture earns its keep:
 
-**Taxonomies evolve.** Say you want to add a `seafood` subtype under `meat`. With the routing approach, you add a `seafood-router`, add `seafood` as a route in the `meat-router`'s available options, and wire it into the workflow YAML. The rest of the tree is untouched. With a single-agent approach, you're rewriting the entire prompt and hoping nothing regresses.
+- **gemma2:2b** (Google's 2B parameter model): 82% omni → 97% routed. A 15-point jump that puts a 2B model on par with GPT-4.1-mini.
+- **llama3.2:3b**: 78% omni → 95% routed. +17 points. Unusable as a general classifier, production-viable with routing.
+- **llama3.1:8b**: 89% omni → 98% routed. +9 points and the highest routed score of any model tested.
+- **qwen2.5:7b**: 85% omni → 96% routed. +11 points.
+
+The pattern is clear: the smaller the model, the more routing helps. A small model struggling to make three classification decisions simultaneously in one prompt can handle each decision individually when the prompt is focused.
+
+### It's not universal
+
+Mistral 7B actually does **worse** with routing (-6 points). Some models don't respond well to the focused routing prompt format. And qwen2.5:3b only gets +5 from routing — it's hitting a floor where even focused prompts can't fully compensate for model capability.
+
+### The caramel apple test
+
+"Caramel apples" is the hardest item in the eval. It's a candy made from apples — it should classify as `food > snack > candy`. The omni classifier on frontier models consistently gets this wrong, sending it to `food > produce > fruit` because "apples" dominates the context. The routed workflow gets it right on most models because the snack-router's focused prompt about candy catches the "caramel" signal.
+
+Interestingly, all three small local models (gemma2:2b, llama3.2:3b, qwen2.5:3b) get caramel apples right on both workflows. The frontier models' omni classifiers overthink it.
 
 ---
 
-## The Eval Evidence
+## The Honest Trade-offs
 
-`run_eval.py` runs both workflows against 100 labeled grocery items in `eval_items.json` and prints a side-by-side comparison.
+### Latency
 
-The items span the full taxonomy: pork cuts, chicken preparations, beef varieties, fresh and frozen produce, canned goods, snacks, medicine, and household merchandise. Several items are intentionally ambiguous — pork rinds (snack or meat?), ground turkey (chicken bucket or its own?), canned tuna (meat or canned?).
+Routing adds sequential LLM calls. For a three-level taxonomy, that's 3-4 calls instead of 1. On cloud APIs, that's ~3-5 seconds vs ~1 second. On local models, it's 20-30 seconds vs 5-10 seconds. For real-time user-facing classification, this matters.
 
-On this set, `grocery-classify` (routed) typically lands around 95%+ accuracy. `omni-classify` (single-agent) lands around 85-90%. The gap isn't huge, but the error patterns are different and instructive.
+### Complexity
 
-Routed errors tend to be router-level mistakes that are easy to diagnose and fix — a specific router that's weak on a particular edge case. Single-agent errors cluster around ambiguous items at leaf levels, where the model's one-shot judgment on a complex item breaks down. And because the error is opaque (you just get a wrong path, no intermediate decisions), it's harder to know what to fix.
+Seven routing agent definitions, a nested workflow YAML, and the routing engine itself are more moving parts than one agent and one workflow. More things to maintain, more things that can break.
+
+### Cost
+
+For cloud models, routing costs 3-4x per item. On frontier models where the accuracy benefit is negligible, you're paying more for the same result. On local models the cost is $0 either way, so routing is free accuracy.
 
 ---
 
-## When Single-Agent Is Fine
+## When to Use Each Approach
 
-Not every classification problem needs a routing tree.
+**Use the omni classifier when:**
+- You're on a frontier model (GPT-4.1, Claude Sonnet/Haiku)
+- Latency matters (user-facing, real-time)
+- Your taxonomy is shallow (2 levels or fewer)
+- Cost per item matters and accuracy is already sufficient
 
-If your taxonomy is flat — just a list of categories with no hierarchy — a single-agent approach is simpler and fast enough. The `omni-classify` workflow in this project is a reasonable choice for a two-level taxonomy.
+**Use routing when:**
+- You're running local or self-hosted models (privacy, compliance, air-gapped environments)
+- Accuracy is critical and you can't use frontier models
+- Your taxonomy is deep (3+ levels) and evolving
+- You need to diagnose and fix classification errors at specific decision points
+- Latency is acceptable (batch processing, background jobs, catalog operations)
 
-If the option set is small (fewer than 6-8 categories total), the focused context advantage of routing is minimal. A good prompt with all options listed is often sufficient.
+**The killer use case** is constrained environments where you can't call cloud APIs. Routing is the difference between "this 2B model doesn't work for classification" and "this 2B model matches GPT-4.1-mini." That's not a cost optimization — it's an accuracy unlock.
 
-If latency matters more than accuracy — you're classifying in real-time with a user waiting — routing adds round trips. Each level of the tree is a separate LLM call. For the three-level taxonomy in this project, that's three calls per item instead of one.
+---
 
-The tradeoffs are real. Routing trades latency and complexity for accuracy and maintainability.
+## Running the Eval Yourself
+
+```bash
+# Default (gpt-4.1-mini)
+python run_eval.py
+
+# Multiple cloud models
+python run_eval.py gpt-4.1-mini gpt-4.1-nano claude-sonnet-4-5-20250929
+
+# Local models via Ollama
+python run_eval.py ollama:gemma2:2b ollama:llama3.2:3b ollama:qwen2.5:3b
+
+# Mix of cloud and local
+python run_eval.py gpt-4.1-mini ollama:gemma2:2b
+```
+
+The eval runs both workflows for each model against `eval_items.json` (102 items with ground truth paths) and prints per-item results, per-model summaries, and a cross-model comparison table.
 
 ---
 
 ## Conclusion
 
-For deep taxonomies, classification is not a single judgment — it's a series of decisions. Trying to collapse all of those decisions into one prompt forces the model to context-switch between problems it could handle well in isolation.
+Routing doesn't universally beat single-agent classification. On frontier models, the difference is negligible and the extra complexity isn't worth it. The wins are specific and significant: small models gain 10-17 points of accuracy from routing structure, making them viable for tasks they'd otherwise fail at. If you're in an environment where you must use local models, routing is what makes classification work.
 
-The routing approach in `workflows/grocery-classify.yaml` delegates each decision to a focused specialist. The prompts in `routers/` are small, tunable, and independently testable. The taxonomy tree is visible in the workflow definition rather than encoded in prompt instructions.
-
-If you're building a classifier that needs to survive a growing taxonomy, treat it like a decision tree from the start. The infrastructure to support it — the router primitive in [agentic-app-spec](https://github.com/dcaponi/agentic-app-spec) — makes this pattern as easy to define as a workflow YAML.
+The routing workflow in `workflows/grocery-classify.yaml` and the comparison omni classifier in `workflows/omni-classify.yaml` are both in this repo. Run the eval, see the numbers for your models, and make the call based on your constraints — not dogma about which architecture is "better."
