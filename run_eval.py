@@ -1,8 +1,18 @@
-"""Eval harness: runs both classification workflows against ground truth items."""
+"""Eval harness: runs both classification workflows against ground truth items.
+
+Supports multiple models — rewrites router/agent YAML files with the target
+model before each run, clears loader caches, and restores originals after.
+
+Usage:
+    python run_eval.py                          # default model only (gpt-4.1-mini)
+    python run_eval.py gpt-4.1-mini gpt-4.1-nano deepseek-chat
+"""
 
 import asyncio
+import glob
 import json
 import os
+import re
 import sys
 
 _dir = os.path.dirname(os.path.abspath(__file__))
@@ -19,7 +29,47 @@ if os.path.exists(_env):
                     os.environ[key] = value
 
 from agentic_engine import orchestrate
+from agentic_engine.loader import clear_caches
 
+
+# -- YAML model swapping -----------------------------------------------------
+
+MODEL_RE = re.compile(r"^(model:\s*)(.+)$", re.MULTILINE)
+
+def find_yaml_files():
+    """Find all router.yaml and agent.yaml files."""
+    files = glob.glob("routers/*/router.yaml") + glob.glob("agents/*/agent.yaml")
+    return sorted(files)
+
+
+def read_originals(yaml_files):
+    """Read and store original contents of all YAML files."""
+    originals = {}
+    for path in yaml_files:
+        with open(path) as f:
+            originals[path] = f.read()
+    return originals
+
+
+def swap_model(yaml_files, originals, model):
+    """Rewrite all YAML files with the given model, clear loader caches."""
+    for path in yaml_files:
+        content = originals[path]
+        new_content = MODEL_RE.sub(rf"\g<1>{model}", content)
+        with open(path, "w") as f:
+            f.write(new_content)
+    clear_caches()
+
+
+def restore_originals(yaml_files, originals):
+    """Restore all YAML files to their original contents."""
+    for path in yaml_files:
+        with open(path, "w") as f:
+            f.write(originals[path])
+    clear_caches()
+
+
+# -- Classification -----------------------------------------------------------
 
 def extract_taxonomy_path(output):
     """Walk nested route output to build taxonomy path from route keys."""
@@ -51,12 +101,10 @@ async def classify_item(item_name, workflow_name):
         return []
 
 
-async def main():
-    with open("eval_items.json") as f:
-        items = json.load(f)
+# -- Single model eval run ----------------------------------------------------
 
-    print(f"Running eval on {len(items)} items with both workflows...\n")
-
+async def run_eval_for_model(items, model_name):
+    """Run eval for a single model. Returns (routed_correct, omni_correct, results)."""
     routed_correct = 0
     omni_correct = 0
     results = []
@@ -98,6 +146,10 @@ async def main():
         })
         print(f" {match_str}")
 
+    return routed_correct, omni_correct, results
+
+
+def print_results_table(results):
     print("\n" + "=" * 120)
     print(f"{'Item':<25} {'Expected':<28} {'Routed':<28} {'Omni':<28} {'Match'}")
     print("-" * 120)
@@ -110,11 +162,63 @@ async def main():
             f"{r['match']}"
         )
 
-    total = len(items)
-    print("\n" + "=" * 120)
-    print(f"Summary:")
-    print(f"  grocery-classify (routed): {routed_correct}/{total} correct ({routed_correct*100//total}%)")
-    print(f"  omni-classify (single):    {omni_correct}/{total} correct ({omni_correct*100//total}%)")
+
+# -- Main ---------------------------------------------------------------------
+
+async def main():
+    models = sys.argv[1:] if len(sys.argv) > 1 else ["gpt-4.1-mini"]
+
+    with open("eval_items.json") as f:
+        items = json.load(f)
+
+    yaml_files = find_yaml_files()
+    originals = read_originals(yaml_files)
+
+    summaries = []
+
+    try:
+        for model in models:
+            print(f"\n{'#' * 120}")
+            print(f"# Model: {model}")
+            print(f"# Items: {len(items)}")
+            print(f"{'#' * 120}\n")
+
+            swap_model(yaml_files, originals, model)
+
+            routed_correct, omni_correct, results = await run_eval_for_model(items, model)
+            total = len(items)
+
+            print_results_table(results)
+
+            print(f"\n{'=' * 120}")
+            print(f"Summary for {model}:")
+            print(f"  grocery-classify (routed): {routed_correct}/{total} correct ({routed_correct*100//total}%)")
+            print(f"  omni-classify (single):    {omni_correct}/{total} correct ({omni_correct*100//total}%)")
+
+            summaries.append({
+                "model": model,
+                "routed_correct": routed_correct,
+                "omni_correct": omni_correct,
+                "total": total,
+            })
+
+    finally:
+        restore_originals(yaml_files, originals)
+
+    # Cross-model summary
+    if len(summaries) > 1:
+        print(f"\n\n{'#' * 80}")
+        print(f"# CROSS-MODEL SUMMARY")
+        print(f"{'#' * 80}\n")
+        print(f"{'Model':<30} {'Routed':<20} {'Omni':<20} {'Delta'}")
+        print("-" * 80)
+        for s in summaries:
+            t = s["total"]
+            rp = f"{s['routed_correct']}/{t} ({s['routed_correct']*100//t}%)"
+            op = f"{s['omni_correct']}/{t} ({s['omni_correct']*100//t}%)"
+            delta = s["routed_correct"] - s["omni_correct"]
+            delta_str = f"+{delta}" if delta > 0 else str(delta)
+            print(f"{s['model']:<30} {rp:<20} {op:<20} {delta_str} routed")
 
 
 if __name__ == "__main__":
