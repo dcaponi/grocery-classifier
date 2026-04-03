@@ -10,21 +10,21 @@ input:
 steps:
   - route:
       id: classify
-      router: food-router
+      routing_agent: food-router
       input:
         item_name: $.input.item_name
       routes:
         food:
           route:
             id: food_sub
-            router: food-subtype-router
+            routing_agent: food-subtype-router
             input:
               item_name: $.input.item_name
             routes:
               meat:
                 route:
                   id: meat_sub
-                  router: meat-router
+                  routing_agent: meat-router
                   input:
                     item_name: $.input.item_name
                   routes:
@@ -37,7 +37,7 @@ steps:
               produce:
                 route:
                   id: produce_sub
-                  router: produce-router
+                  routing_agent: produce-router
                   input:
                     item_name: $.input.item_name
                   routes:
@@ -49,7 +49,7 @@ steps:
               canned:
                 route:
                   id: canned_sub
-                  router: canned-router
+                  routing_agent: canned-router
                   input:
                     item_name: $.input.item_name
                   routes:
@@ -61,7 +61,7 @@ steps:
               snack:
                 route:
                   id: snack_sub
-                  router: snack-router
+                  routing_agent: snack-router
                   input:
                     item_name: $.input.item_name
                   routes:
@@ -76,7 +76,7 @@ steps:
         non_food:
           route:
             id: non_food_sub
-            router: non-food-subtype-router
+            routing_agent: non-food-subtype-router
             input:
               item_name: $.input.item_name
             routes:

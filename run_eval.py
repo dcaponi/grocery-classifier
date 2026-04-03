@@ -1,11 +1,13 @@
 """Eval harness: runs both classification workflows against ground truth items.
 
-Supports multiple models — rewrites router/agent YAML files with the target
-model before each run, clears loader caches, and restores originals after.
+Supports multiple models — rewrites routing-agent/agent YAML files with the
+target model before each run, clears loader caches, and restores originals after.
 
 Usage:
-    python run_eval.py                          # default model only (gpt-4.1-mini)
-    python run_eval.py gpt-4.1-mini gpt-4.1-nano deepseek-chat
+    python run_eval.py                                      # default (gpt-4.1-mini)
+    python run_eval.py gpt-4.1-mini gpt-4.1-nano           # cloud models
+    python run_eval.py ollama:llama3.1:8b                   # local via Ollama
+    python run_eval.py deepseek-r1:8b@http://localhost:11434/v1  # explicit base_url
 """
 
 import asyncio
@@ -32,13 +34,43 @@ from agentic_engine import orchestrate
 from agentic_engine.loader import clear_caches
 
 
-# -- YAML model swapping -----------------------------------------------------
+# -- Model arg parsing --------------------------------------------------------
 
-MODEL_RE = re.compile(r"^(model:\s*)(.+)$", re.MULTILINE)
+def parse_model_arg(arg):
+    """Parse a model argument into (model_name, base_url_or_None).
+
+    Formats:
+      ollama:llama3.1:8b               -> model="llama3.1:8b", base_url="http://localhost:11434/v1"
+      deepseek-r1:8b@http://host/v1    -> model="deepseek-r1:8b", base_url="http://host/v1"
+      gpt-4.1-mini                     -> model="gpt-4.1-mini", base_url=None
+    """
+    if arg.startswith("ollama:"):
+        model = arg[len("ollama:"):]
+        base_url = "http://localhost:11434/v1"
+        return model, base_url
+
+    if "@" in arg:
+        # Split on the last '@' to support models like "deepseek-r1:8b@http://..."
+        at_idx = arg.rfind("@")
+        model = arg[:at_idx]
+        base_url = arg[at_idx + 1:]
+        return model, base_url
+
+    return arg, None
+
+
+# -- YAML model swapping -------------------------------------------------------
+
+MODEL_RE = re.compile(r"^([ \t]*model:\s*)(.+)$", re.MULTILINE)
+BASE_URL_RE = re.compile(r"^[ \t]*base_url:\s*.+\n?", re.MULTILINE)
+
 
 def find_yaml_files():
-    """Find all router.yaml and agent.yaml files."""
-    files = glob.glob("routers/*/router.yaml") + glob.glob("agents/*/agent.yaml")
+    """Find all routing-agent.yaml and agent.yaml files."""
+    files = (
+        glob.glob("agentic-spec/routing-agents/*/routing-agent.yaml")
+        + glob.glob("agentic-spec/agents/*/agent.yaml")
+    )
     return sorted(files)
 
 
@@ -51,11 +83,24 @@ def read_originals(yaml_files):
     return originals
 
 
-def swap_model(yaml_files, originals, model):
-    """Rewrite all YAML files with the given model, clear loader caches."""
+def swap_model(yaml_files, originals, model, base_url=None):
+    """Rewrite all YAML files with the given model (and optional base_url)."""
     for path in yaml_files:
         content = originals[path]
+
+        # Replace the model line
         new_content = MODEL_RE.sub(rf"\g<1>{model}", content)
+
+        # Remove any existing base_url line first (clean slate)
+        new_content = BASE_URL_RE.sub("", new_content)
+
+        # If a base_url is needed, insert it after each model: line
+        if base_url:
+            def insert_base_url(m):
+                indent = re.match(r"^([ \t]*)", m.group(0)).group(1)
+                return m.group(0) + f"\n{indent}base_url: {base_url}"
+            new_content = MODEL_RE.sub(insert_base_url, new_content)
+
         with open(path, "w") as f:
             f.write(new_content)
     clear_caches()
@@ -69,7 +114,7 @@ def restore_originals(yaml_files, originals):
     clear_caches()
 
 
-# -- Classification -----------------------------------------------------------
+# -- Classification ------------------------------------------------------------
 
 def extract_taxonomy_path(output):
     """Walk nested route output to build taxonomy path from route keys."""
@@ -101,7 +146,7 @@ async def classify_item(item_name, workflow_name):
         return []
 
 
-# -- Single model eval run ----------------------------------------------------
+# -- Single model eval run -----------------------------------------------------
 
 async def run_eval_for_model(items, model_name):
     """Run eval for a single model. Returns (routed_correct, omni_correct, results)."""
@@ -163,10 +208,11 @@ def print_results_table(results):
         )
 
 
-# -- Main ---------------------------------------------------------------------
+# -- Main ----------------------------------------------------------------------
 
 async def main():
-    models = sys.argv[1:] if len(sys.argv) > 1 else ["gpt-4.1-mini"]
+    raw_args = sys.argv[1:] if len(sys.argv) > 1 else ["gpt-4.1-mini"]
+    model_configs = [parse_model_arg(a) for a in raw_args]
 
     with open("eval_items.json") as f:
         items = json.load(f)
@@ -177,13 +223,14 @@ async def main():
     summaries = []
 
     try:
-        for model in models:
+        for model, base_url in model_configs:
+            display_name = model if not base_url else f"{model} @ {base_url}"
             print(f"\n{'#' * 120}")
-            print(f"# Model: {model}")
+            print(f"# Model: {display_name}")
             print(f"# Items: {len(items)}")
             print(f"{'#' * 120}\n")
 
-            swap_model(yaml_files, originals, model)
+            swap_model(yaml_files, originals, model, base_url)
 
             routed_correct, omni_correct, results = await run_eval_for_model(items, model)
             total = len(items)
@@ -191,12 +238,12 @@ async def main():
             print_results_table(results)
 
             print(f"\n{'=' * 120}")
-            print(f"Summary for {model}:")
+            print(f"Summary for {display_name}:")
             print(f"  grocery-classify (routed): {routed_correct}/{total} correct ({routed_correct*100//total}%)")
             print(f"  omni-classify (single):    {omni_correct}/{total} correct ({omni_correct*100//total}%)")
 
             summaries.append({
-                "model": model,
+                "model": display_name,
                 "routed_correct": routed_correct,
                 "omni_correct": omni_correct,
                 "total": total,
@@ -210,15 +257,15 @@ async def main():
         print(f"\n\n{'#' * 80}")
         print(f"# CROSS-MODEL SUMMARY")
         print(f"{'#' * 80}\n")
-        print(f"{'Model':<30} {'Routed':<20} {'Omni':<20} {'Delta'}")
-        print("-" * 80)
+        print(f"{'Model':<40} {'Routed':<20} {'Omni':<20} {'Delta'}")
+        print("-" * 90)
         for s in summaries:
             t = s["total"]
             rp = f"{s['routed_correct']}/{t} ({s['routed_correct']*100//t}%)"
             op = f"{s['omni_correct']}/{t} ({s['omni_correct']*100//t}%)"
             delta = s["routed_correct"] - s["omni_correct"]
             delta_str = f"+{delta}" if delta > 0 else str(delta)
-            print(f"{s['model']:<30} {rp:<20} {op:<20} {delta_str} routed")
+            print(f"{s['model']:<40} {rp:<20} {op:<20} {delta_str} routed")
 
 
 if __name__ == "__main__":
