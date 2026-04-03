@@ -1,6 +1,6 @@
 name: omni-classify
-version: "1.0"
-description: Classifies grocery items using a single omniscient agent
+version: "2.0"
+description: Classifies grocery items using a single omniscient agent (Kroger-scale 12-department taxonomy)
 
 input:
   item_name:

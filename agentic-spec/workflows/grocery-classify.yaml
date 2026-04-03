@@ -1,6 +1,6 @@
 name: grocery-classify
-version: "1.0"
-description: Classifies grocery items through a hierarchical routing tree
+version: "2.0"
+description: Classifies grocery items through a Kroger-scale hierarchical routing tree (12 departments, 30 categories)
 
 input:
   item_name:
@@ -10,81 +10,180 @@ input:
 steps:
   - route:
       id: classify
-      routing_agent: food-router
+      routing_agent: department-router
       input:
         item_name: $.input.item_name
       routes:
-        food:
+        produce:
           route:
-            id: food_sub
-            routing_agent: food-subtype-router
+            id: produce_sub
+            routing_agent: produce-router
             input:
               item_name: $.input.item_name
             routes:
-              meat:
-                route:
-                  id: meat_sub
-                  routing_agent: meat-router
-                  input:
-                    item_name: $.input.item_name
-                  routes:
-                    pork: classify-leaf
-                    chicken: classify-leaf
-                    beef: classify-leaf
-                    _none:
-                      short_circuit: true
-                      defaults: {}
-              produce:
-                route:
-                  id: produce_sub
-                  routing_agent: produce-router
-                  input:
-                    item_name: $.input.item_name
-                  routes:
-                    fruit: classify-leaf
-                    vegetable: classify-leaf
-                    _none:
-                      short_circuit: true
-                      defaults: {}
-              canned:
-                route:
-                  id: canned_sub
-                  routing_agent: canned-router
-                  input:
-                    item_name: $.input.item_name
-                  routes:
-                    vegetable: classify-leaf
-                    meat: classify-leaf
-                    _none:
-                      short_circuit: true
-                      defaults: {}
-              snack:
-                route:
-                  id: snack_sub
-                  routing_agent: snack-router
-                  input:
-                    item_name: $.input.item_name
-                  routes:
-                    candy: classify-leaf
-                    chip: classify-leaf
-                    _none:
-                      short_circuit: true
-                      defaults: {}
+              fruit: classify-leaf
+              vegetable: classify-leaf
               _none:
                 short_circuit: true
                 defaults: {}
-        non_food:
+
+        meat_seafood:
           route:
-            id: non_food_sub
-            routing_agent: non-food-subtype-router
+            id: meat_seafood_sub
+            routing_agent: meat-seafood-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              beef: classify-leaf
+              pork: classify-leaf
+              poultry: classify-leaf
+              seafood: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        deli_bakery:
+          route:
+            id: deli_bakery_sub
+            routing_agent: deli-bakery-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              deli: classify-leaf
+              bakery: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        dairy_eggs:
+          route:
+            id: dairy_eggs_sub
+            routing_agent: dairy-eggs-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              milk: classify-leaf
+              cheese: classify-leaf
+              yogurt: classify-leaf
+              eggs_butter: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        frozen:
+          route:
+            id: frozen_sub
+            routing_agent: frozen-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              frozen_meals: classify-leaf
+              frozen_treats: classify-leaf
+              frozen_produce: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        pantry:
+          route:
+            id: pantry_sub
+            routing_agent: pantry-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              canned: classify-leaf
+              dry_goods: classify-leaf
+              condiments: classify-leaf
+              baking: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        snacks:
+          route:
+            id: snacks_sub
+            routing_agent: snacks-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              chips: classify-leaf
+              candy: classify-leaf
+              cookies_crackers: classify-leaf
+              nuts: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        beverages:
+          route:
+            id: beverages_sub
+            routing_agent: beverages-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              soda_water: classify-leaf
+              juice: classify-leaf
+              coffee_tea: classify-leaf
+              alcohol: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        health_wellness:
+          route:
+            id: health_wellness_sub
+            routing_agent: health-wellness-router
             input:
               item_name: $.input.item_name
             routes:
               medicine: classify-leaf
-              merchandise: classify-leaf
+              vitamins: classify-leaf
+              first_aid: classify-leaf
               _none:
                 short_circuit: true
                 defaults: {}
+
+        personal_care:
+          route:
+            id: personal_care_sub
+            routing_agent: personal-care-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              hair: classify-leaf
+              oral: classify-leaf
+              body: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        household:
+          route:
+            id: household_sub
+            routing_agent: household-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              cleaning: classify-leaf
+              paper: classify-leaf
+              kitchen: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
+        baby_pet:
+          route:
+            id: baby_pet_sub
+            routing_agent: baby-pet-router
+            input:
+              item_name: $.input.item_name
+            routes:
+              baby: classify-leaf
+              pet: classify-leaf
+              _none:
+                short_circuit: true
+                defaults: {}
+
         _none:
           short_circuit: true
           defaults: {}
