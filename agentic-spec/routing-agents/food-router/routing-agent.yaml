@@ -1,7 +1,8 @@
 name: Food Router
 description: Decides if a grocery item is food or non-food
 strategy: llm
-model: claude-sonnet-4-5-20250929
+model: mistral:7b
+base_url: http://localhost:11434/v1
 temperature: 0
 
 input:

@@ -1,7 +1,8 @@
 name: Meat Router
 description: Classifies a meat item into pork, chicken, or beef
 strategy: llm
-model: claude-sonnet-4-5-20250929
+model: mistral:7b
+base_url: http://localhost:11434/v1
 temperature: 0
 
 input:

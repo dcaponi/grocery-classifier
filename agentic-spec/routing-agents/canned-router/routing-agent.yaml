@@ -1,7 +1,8 @@
 name: Canned Router
 description: Classifies a canned item by content type into vegetable or meat
 strategy: llm
-model: claude-sonnet-4-5-20250929
+model: mistral:7b
+base_url: http://localhost:11434/v1
 temperature: 0
 
 input:
