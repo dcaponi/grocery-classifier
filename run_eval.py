@@ -67,8 +67,10 @@ async def main():
 
         print(f"  [{i+1}/{len(items)}] {item}...", end="", flush=True)
 
-        routed_path = await classify_item(item, "grocery-classify")
-        omni_path = await classify_item(item, "omni-classify")
+        routed_path, omni_path = await asyncio.gather(
+            classify_item(item, "grocery-classify"),
+            classify_item(item, "omni-classify"),
+        )
 
         routed_match = routed_path == expected
         omni_match = omni_path == expected

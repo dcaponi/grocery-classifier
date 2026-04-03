@@ -98,5 +98,7 @@
   {"item": "aluminum foil", "expected_path": ["non_food", "merchandise"]},
   {"item": "light bulbs", "expected_path": ["non_food", "merchandise"]},
   {"item": "batteries", "expected_path": ["non_food", "merchandise"]},
-  {"item": "sponges", "expected_path": ["non_food", "merchandise"]}
+  {"item": "sponges", "expected_path": ["non_food", "merchandise"]},
+  {"item": "candy apples", "expected_path": ["food", "snack", "candy"]},
+  {"item": "caramel apples", "expected_path": ["food", "snack", "candy"]}
 ]
