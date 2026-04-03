@@ -1,0 +1,12 @@
+name: Leaf Classifier
+description: Provides a brief description of a classified grocery item
+type: llm
+model: gpt-4.1-mini
+temperature: 0.1
+schema: leaf_classification
+user_message: "Describe this grocery item briefly.\n\nItem: {{item_name}}\n\nProvide a JSON response with: description (one sentence about the item), common_brands (array of 2-3 common brands), typical_price_range (string like '$2-5')."
+
+input:
+  item_name:
+    type: string
+    required: true

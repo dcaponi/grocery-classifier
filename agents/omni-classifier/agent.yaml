@@ -1,0 +1,12 @@
+name: Omni Classifier
+description: Classifies a grocery item through the full taxonomy in a single call
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: omni_classification
+user_message: "Classify this grocery item through the full taxonomy.\n\nItem: {{item_name}}\n\nReturn the taxonomy_path as an array from root to leaf, a confidence score, and brief reasoning."
+
+input:
+  item_name:
+    type: string
+    required: true
