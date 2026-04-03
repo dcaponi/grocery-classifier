@@ -1,8 +1,8 @@
-# Why Multiple Agents Classify Better Than One
+# Why Smaller Focused Agents Classify Better Than One Big One
 
-Taxonomy classification looks easy until the taxonomy gets deep. Given "bacon", most LLMs will correctly land on `food > meat > pork` without breaking a sweat. But give the same model a list of 100 grocery items spanning food subtypes, produce, canned goods, snacks, medicine, and merchandise — and ask it to route each one through a three-level tree in a single call — and accuracy starts to slip. Not dramatically for frontier models. But for smaller or local models, the difference between one-shot and layered classification is the difference between usable and not.
+Taxonomy classification looks easy until the taxonomy gets deep. Given "bacon", most LLMs will correctly land on `food > meat > pork` without breaking a sweat. But give the same model a list of 100 grocery items spanning food subtypes, produce, canned goods, snacks, medicine, and merchandise — and ask it to route each one through a three-level tree in a single call — and accuracy starts to slip. Not dramatically for frontier models. But for smaller or local models, the difference between asking one agent to do everything and giving each agent a focused job is the difference between usable and not.
 
-This post walks through the two-approach comparison in this repo, presents results across 10 models (4 frontier, 6 local), and makes an honest assessment of when routing helps and when it doesn't.
+This post walks through the two-approach comparison in this repo, presents results across 10 models (4 frontier, 6 local), and makes an honest assessment of when focused multi-agent decomposition helps and when it doesn't.
 
 ---
 
@@ -46,28 +46,28 @@ non_food > merchandise
 
 ## What the Data Actually Says
 
-### Routing barely helps frontier models
+### Focused agents barely help frontier models
 
-GPT-4.1-mini, Claude Sonnet, Claude Haiku, and GPT-4.1-nano all show +1 to +2 point improvements from routing. On 102 items, that's 1-2 items — well within noise. Frontier models are already good enough at multi-level classification that the extra complexity of routing isn't justified. If you're using a frontier model, just use the omni classifier. It's simpler, faster, and equally accurate.
+GPT-4.1-mini, Claude Sonnet, Claude Haiku, and GPT-4.1-nano all show +1 to +2 point improvements from decomposition. On 102 items, that's 1-2 items — well within noise. Frontier models are already good enough at multi-level classification that the extra complexity isn't justified for accuracy alone. (Though the maintainability and debuggability arguments still apply — see trade-offs below.)
 
-### Routing transforms small models
+### Focused agents transform small models
 
 This is where the architecture earns its keep:
 
-- **gemma2:2b** (Google's 2B parameter model): 82% omni → 97% routed. A 15-point jump that puts a 2B model on par with GPT-4.1-mini.
-- **llama3.2:3b**: 78% omni → 95% routed. +17 points. Unusable as a general classifier, production-viable with routing.
-- **llama3.1:8b**: 89% omni → 98% routed. +9 points and the highest routed score of any model tested.
-- **qwen2.5:7b**: 85% omni → 96% routed. +11 points.
+- **gemma2:2b** (Google's 2B parameter model): 82% single-agent → 97% focused. A 15-point jump that puts a 2B model on par with GPT-4.1-mini.
+- **llama3.2:3b**: 78% single-agent → 95% focused. +17 points. Unusable as a general classifier, production-viable with focused agents.
+- **llama3.1:8b**: 89% single-agent → 98% focused. +9 points and the highest focused score of any model tested.
+- **qwen2.5:7b**: 85% single-agent → 96% focused. +11 points.
 
-The pattern is clear: the smaller the model, the more routing helps. A small model struggling to make three classification decisions simultaneously in one prompt can handle each decision individually when the prompt is focused.
+The pattern is clear: the smaller the model, the more focused decomposition helps. A small model struggling to make three classification decisions simultaneously in one prompt can handle each decision individually when the prompt is scoped to just that decision.
 
 ### It's not universal
 
-Mistral 7B actually does **worse** with routing (-6 points). Some models don't respond well to the focused routing prompt format. And qwen2.5:3b only gets +5 from routing — it's hitting a floor where even focused prompts can't fully compensate for model capability.
+Mistral 7B actually does **worse** with focused agents (-6 points). Some models don't respond well to the focused prompt format. And qwen2.5:3b only gets +5 from decomposition — it's hitting a floor where even focused prompts can't fully compensate for model capability.
 
 ### The caramel apple test
 
-"Caramel apples" is the hardest item in the eval. It's a candy made from apples — it should classify as `food > snack > candy`. The omni classifier on frontier models consistently gets this wrong, sending it to `food > produce > fruit` because "apples" dominates the context. The routed workflow gets it right on most models because the snack-router's focused prompt about candy catches the "caramel" signal.
+"Caramel apples" is the hardest item in the eval. It's a candy made from apples — it should classify as `food > snack > candy`. The single-agent omni classifier on frontier models consistently gets this wrong, sending it to `food > produce > fruit` because "apples" dominates the full-taxonomy context. The focused agents get it right on most models because the snack-routing agent's prompt is scoped to distinguishing candy from chips — in that narrow context, "caramel" is the dominant signal, not "apples."
 
 Interestingly, all three small local models (gemma2:2b, llama3.2:3b, qwen2.5:3b) get caramel apples right on both workflows. The frontier models' omni classifiers overthink it.
 
@@ -77,34 +77,41 @@ Interestingly, all three small local models (gemma2:2b, llama3.2:3b, qwen2.5:3b)
 
 ### Latency
 
-Routing adds sequential LLM calls. For a three-level taxonomy, that's 3-4 calls instead of 1. On cloud APIs, that's ~3-5 seconds vs ~1 second. On local models, it's 20-30 seconds vs 5-10 seconds. For real-time user-facing classification, this matters.
+Focused agents add sequential LLM calls. For a three-level taxonomy, that's 3-4 calls instead of 1. On cloud APIs, that's ~3-5 seconds vs ~1 second. On local models, it's 20-30 seconds vs 5-10 seconds. For real-time user-facing classification, this matters.
+
+**The flip side:** each individual call is simpler and faster than the single complex call. And because decisions are independent, you can profile exactly which level of the tree is slow and optimize it — swap in a faster model for just the top-level decision, or cache common routing paths. With a monolithic call, your only optimization lever is "use a faster model for everything."
 
 ### Complexity
 
-Seven routing agent definitions, a nested workflow YAML, and the routing engine itself are more moving parts than one agent and one workflow. More things to maintain, more things that can break.
+Seven agent definitions, a nested workflow YAML, and the orchestration engine are more moving parts than one agent and one workflow. More things to maintain, more things that can break.
+
+**The flip side:** when something does break, you know exactly where. If meat classification accuracy drops, you look at the meat-routing agent's prompt — not a 200-line monolithic prompt where any change can regress any category. Each agent is independently testable, independently deployable, and independently upgradeable. You can swap a stronger model in for just the decision that's struggling, and keep the cheap model everywhere else. That's not possible with a single-agent approach.
 
 ### Cost
 
-For cloud models, routing costs 3-4x per item. On frontier models where the accuracy benefit is negligible, you're paying more for the same result. On local models the cost is $0 either way, so routing is free accuracy.
+For cloud models, focused agents cost 3-4x per item in API calls. On frontier models where the accuracy benefit is negligible, you're paying more for the same result.
+
+**The flip side:** each call uses a simpler prompt with fewer tokens, so the per-call cost is lower than 1/4 of the monolithic call. And because you can mix models — a cheap model for easy top-level decisions, a stronger model only for the ambiguous leaf classifications — you can tune your cost/accuracy ratio per decision point. On local models the cost is $0 either way, so decomposition is free accuracy.
 
 ---
 
 ## When to Use Each Approach
 
-**Use the omni classifier when:**
-- You're on a frontier model (GPT-4.1, Claude Sonnet/Haiku)
-- Latency matters (user-facing, real-time)
+**Use a single agent when:**
+- You're on a frontier model (GPT-4.1, Claude Sonnet/Haiku) and accuracy is already good enough
+- Latency is your primary constraint (user-facing, real-time)
 - Your taxonomy is shallow (2 levels or fewer)
-- Cost per item matters and accuracy is already sufficient
+- You don't expect the taxonomy to change often
 
-**Use routing when:**
+**Use focused multi-agent decomposition when:**
 - You're running local or self-hosted models (privacy, compliance, air-gapped environments)
-- Accuracy is critical and you can't use frontier models
-- Your taxonomy is deep (3+ levels) and evolving
-- You need to diagnose and fix classification errors at specific decision points
-- Latency is acceptable (batch processing, background jobs, catalog operations)
+- Your taxonomy is deep (3+ levels) and actively evolving
+- You need to diagnose, isolate, and fix classification errors at specific decision points
+- Different levels of the taxonomy have different difficulty — you want to assign model capacity accordingly
+- You want to upgrade or downgrade models for individual decisions without rewriting the whole system
+- Latency is acceptable (batch processing, background jobs, catalog operations, overnight imports)
 
-**The killer use case** is constrained environments where you can't call cloud APIs. Routing is the difference between "this 2B model doesn't work for classification" and "this 2B model matches GPT-4.1-mini." That's not a cost optimization — it's an accuracy unlock.
+**The killer use case** is constrained environments where you can't call cloud APIs. Focused agents are the difference between "this 2B model doesn't work for classification" and "this 2B model matches GPT-4.1-mini." That's not a cost optimization — it's an accuracy unlock that comes from giving small models problems they can actually solve.
 
 ---
 
@@ -130,6 +137,8 @@ The eval runs both workflows for each model against `eval_items.json` (102 items
 
 ## Conclusion
 
-Routing doesn't universally beat single-agent classification. On frontier models, the difference is negligible and the extra complexity isn't worth it. The wins are specific and significant: small models gain 10-17 points of accuracy from routing structure, making them viable for tasks they'd otherwise fail at. If you're in an environment where you must use local models, routing is what makes classification work.
+Decomposing classification into focused agents doesn't universally beat a single-agent approach. On frontier models, the accuracy difference is negligible. But the architecture has value beyond accuracy: each agent is independently testable, independently tunable, and independently upgradeable. When your taxonomy changes — and it will — you modify one agent's prompt instead of rewriting a monolithic one.
 
-The routing workflow in `workflows/grocery-classify.yaml` and the comparison omni classifier in `workflows/omni-classify.yaml` are both in this repo. Run the eval, see the numbers for your models, and make the call based on your constraints — not dogma about which architecture is "better."
+The accuracy wins are specific and dramatic: small models gain 10-17 points from decomposition, making them viable for tasks they'd otherwise fail at. If you're in an environment where you must use local models, focused agents are what makes classification work. And even on frontier models, the ability to isolate errors, swap models per decision point, and evolve the taxonomy incrementally has operational value that doesn't show up in an accuracy number.
+
+The focused workflow in `agentic-spec/workflows/grocery-classify.yaml` and the single-agent baseline in `agentic-spec/workflows/omni-classify.yaml` are both in this repo. Run the eval, see the numbers for your models, and make the call based on your constraints.
