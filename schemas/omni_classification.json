@@ -1,0 +1,24 @@
+{
+  "name": "omni_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "required": ["taxonomy_path", "confidence", "reasoning"],
+    "properties": {
+      "taxonomy_path": {
+        "type": "array",
+        "items": { "type": "string" },
+        "description": "Path from root to leaf, e.g. ['food', 'meat', 'chicken']"
+      },
+      "confidence": {
+        "type": "number",
+        "description": "Confidence score 0.0-1.0"
+      },
+      "reasoning": {
+        "type": "string",
+        "description": "Brief explanation of the classification"
+      }
+    },
+    "additionalProperties": false
+  }
+}
