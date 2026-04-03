@@ -1,0 +1,10 @@
+name: Meat Router
+description: Classifies a meat item into pork, chicken, or beef
+strategy: llm
+model: gpt-4.1-mini
+temperature: 0
+
+input:
+  item_name:
+    type: string
+    required: true

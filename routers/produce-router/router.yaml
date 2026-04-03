@@ -1,0 +1,10 @@
+name: Produce Router
+description: Classifies a produce item into fruit or vegetable
+strategy: llm
+model: gpt-4.1-mini
+temperature: 0
+
+input:
+  item_name:
+    type: string
+    required: true
