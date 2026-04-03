@@ -61,11 +61,12 @@ def classify():
         classification = (envelope.get("result") or envelope.get("output") or {}).get("classification", {})
         taxonomy_path = extract_taxonomy_path(classification)
 
-        # Get leaf agent details from the deepest result
-        details = classification
-        while isinstance(details, dict) and "result" in details and isinstance(details["result"], dict):
-            details = details["result"]
-        leaf_details = details.get("result") if isinstance(details, dict) else {}
+        # Get leaf agent details — walk past all route wrappers to the leaf output
+        leaf_details = classification
+        while isinstance(leaf_details, dict) and "route" in leaf_details:
+            leaf_details = leaf_details.get("result", {})
+        if not isinstance(leaf_details, dict):
+            leaf_details = {}
 
         results.append({
             "item": item,
@@ -104,4 +105,4 @@ def omni_classify():
 
 
 if __name__ == "__main__":
-    app.run(debug=True, port=5000)
+    app.run(debug=True, port=8000)

@@ -63,7 +63,7 @@ OPENAI_API_KEY=sk-...
 python app.py
 ```
 
-Runs on port 5000.
+Runs on port 8000.
 
 ---
 
@@ -74,8 +74,8 @@ Runs on port 5000.
 Routes the item through the full taxonomy tree using the `grocery-classify` workflow.
 
 ```bash
-curl "http://localhost:5000/classify?items=chicken+breast"
-curl "http://localhost:5000/classify?items=bacon,apples,ibuprofen"
+curl "http://localhost:8000/classify?items=chicken+breast"
+curl "http://localhost:8000/classify?items=bacon,apples,ibuprofen"
 ```
 
 ### `GET /omni-classify`
@@ -83,8 +83,8 @@ curl "http://localhost:5000/classify?items=bacon,apples,ibuprofen"
 Classifies in a single LLM pass using the `omni-classify` workflow.
 
 ```bash
-curl "http://localhost:5000/omni-classify?items=chicken+breast"
-curl "http://localhost:5000/omni-classify?items=bacon,apples,ibuprofen"
+curl "http://localhost:8000/omni-classify?items=chicken+breast"
+curl "http://localhost:8000/omni-classify?items=bacon,apples,ibuprofen"
 ```
 
 ---
