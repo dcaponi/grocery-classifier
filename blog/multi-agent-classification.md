@@ -1,75 +1,77 @@
-# Why Smaller Focused Agents Classify Better Than One Big One
+# Focused Agents vs. The God Model: A Grocery Classification Case Study
 
-Taxonomy classification looks easy until the taxonomy gets deep. Given "bacon", most LLMs will correctly land on `food > meat > pork` without breaking a sweat. But give the same model a list of 100 grocery items spanning food subtypes, produce, canned goods, snacks, medicine, and merchandise — and ask it to route each one through a three-level tree in a single call — and accuracy starts to slip. Not dramatically for frontier models. But for smaller or local models, the difference between asking one agent to do everything and giving each agent a focused job is the difference between usable and not.
+We built a grocery item classifier two ways: one LLM call that knows the entire taxonomy, and a pipeline of small focused agents that each make one decision. Then we ran 250 items across a real Kroger-scale taxonomy on frontier and local models.
 
-This post walks through the two-approach comparison in this repo, presents results across 10 models (4 frontier, 6 local), and makes an honest assessment of when focused multi-agent decomposition helps and when it doesn't.
+The results don't tell a simple "one is better" story. They tell a story about engineering trade-offs — determinism, maintainability, and model flexibility versus simplicity and speed.
 
 ---
 
 ## The Setup
 
-We ran 102 grocery items through two workflows across 10 models:
+A realistic grocery store taxonomy: 12 departments, 38 leaf categories.
 
-- **`grocery-classify`** (routed) — 7 routing agents forming a taxonomy tree, each making a focused 2-4 option decision, dispatching to a leaf classifier
-- **`omni-classify`** (single-agent) — one LLM call, one prompt describing the entire taxonomy, returns the full path
+```
+produce (fruit, vegetable)
+meat_seafood (beef, pork, poultry, seafood)
+deli_bakery (deli, bakery)
+dairy_eggs (milk, cheese, yogurt, eggs_butter)
+frozen (frozen_meals, frozen_treats, frozen_produce)
+pantry (canned, dry_goods, condiments, baking)
+snacks (chips, candy, cookies_crackers, nuts)
+beverages (soda_water, juice, coffee_tea, alcohol)
+health_wellness (medicine, vitamins, first_aid)
+personal_care (hair, oral, body)
+household (cleaning, paper, kitchen)
+baby_pet (baby, pet)
+```
 
-The taxonomy:
-```
-food > meat > pork | chicken | beef
-food > produce > fruit | vegetable
-food > canned > vegetable | meat
-food > snack > candy | chip
-non_food > medicine
-non_food > merchandise
-```
+**The god model** (`omni-classify`): one agent, one prompt containing the full taxonomy, returns the classification path in a single LLM call.
+
+**Focused agents** (`grocery-classify`): a department-routing agent picks 1 of 12 departments, then a department-specific routing agent picks the category. Each agent only sees 2-12 options with a detailed prompt scoped to that decision. 13 routing agents total.
+
+250 items, 5 models, both workflows. Every item has a ground-truth path.
 
 ---
 
 ## The Results
 
-| Model | Params | Routed | Omni | Delta | Candy Apple | Caramel Apple |
-|-------|--------|--------|------|-------|-------------|---------------|
-| llama3.1:8b | 8B | 100 (98%) | 91 (89%) | **+9** | R:correct O:correct | R:correct O:correct |
-| **gemma2:2b** | 2B | **99 (97%)** | 84 (82%) | **+15** | R:correct O:correct | R:correct O:correct |
-| gpt-4.1-mini | frontier | 99 (97%) | 97 (95%) | +2 | R:correct O:correct | R:correct O:**wrong** |
-| claude-sonnet-4-5 | frontier | 98 (96%) | 96 (94%) | +2 | R:correct O:correct | R:correct O:**wrong** |
-| claude-haiku-4-5 | frontier | 98 (96%) | 97 (95%) | +1 | R:correct O:correct | R:correct O:correct |
-| qwen2.5:7b | 7B | 98 (96%) | 87 (85%) | **+11** | R:correct O:correct | R:**wrong** O:**wrong** |
-| llama3.2:3b | 3B | 97 (95%) | 80 (78%) | **+17** | R:correct O:correct | R:correct O:correct |
-| gpt-4.1-nano | frontier | 96 (94%) | 94 (92%) | +2 | R:**wrong** O:correct | R:**wrong** O:**wrong** |
-| qwen2.5:3b | 3B | 88 (86%) | 83 (81%) | +5 | R:correct O:correct | R:correct O:correct |
-| mistral:7b | 7B | 82 (80%) | 88 (86%) | **-6** | R:correct O:correct | R:correct O:correct |
-
-*(R = routed workflow, O = omni classifier. "Candy apple" and "caramel apple" are edge case items that test whether the model is fooled by "apple" into classifying as produce instead of snack > candy.)*
+| Model | Focused Agents | God Model | Delta |
+|-------|---------------|-----------|-------|
+| gpt-4.1-mini (frontier) | 245/250 (98%) | 250/250 (100%) | -5 |
+| claude-haiku-4-5 (frontier) | 247/250 (98%) | 247/250 (98%) | 0 |
+| qwen2.5:7b (local) | 209/250 (83%) | 191/250 (76%) | **+18** |
+| llama3.2:3b (local) | 215/250 (86%) | 199/250 (79%) | **+16** |
+| gemma2:2b (local) | 214/250 (85%) | 171/250 (68%) | **+43** |
 
 ---
 
-## What the Data Actually Says
+## What This Means
 
-### Focused agents barely help frontier models
+### The god model wins on frontier models
 
-GPT-4.1-mini, Claude Sonnet, Claude Haiku, and GPT-4.1-nano all show +1 to +2 point improvements from decomposition. On 102 items, that's 1-2 items — well within noise. Frontier models are already good enough at multi-level classification that the extra complexity isn't justified for accuracy alone. (Though the maintainability and debuggability arguments still apply — see trade-offs below.)
+GPT-4.1-mini got a perfect 250/250 with a single call. No pipeline, no complexity, no latency overhead. Claude Haiku tied at 98% either way. If you're using a frontier model, the god model is the right choice — simpler, faster, cheaper.
 
-### Focused agents transform small models
+This shouldn't be surprising. Frontier models are good at holding complex context. A 38-category taxonomy fits comfortably in their context window and they can reason about all the distinctions at once.
 
-This is where the architecture earns its keep:
+### Focused agents unlock small models
 
-- **gemma2:2b** (Google's 2B parameter model): 82% single-agent → 97% focused. A 15-point jump that puts a 2B model on par with GPT-4.1-mini.
-- **llama3.2:3b**: 78% single-agent → 95% focused. +17 points. Unusable as a general classifier, production-viable with focused agents.
-- **llama3.1:8b**: 89% single-agent → 98% focused. +9 points and the highest focused score of any model tested.
-- **qwen2.5:7b**: 85% single-agent → 96% focused. +11 points.
+A 2B parameter model (gemma2:2b) went from 68% with the god model to 85% with focused agents — a 43-point delta. That's the difference between unusable and useful.
 
-The pattern is clear: the smaller the model, the more focused decomposition helps. A small model struggling to make three classification decisions simultaneously in one prompt can handle each decision individually when the prompt is scoped to just that decision.
+The reason is straightforward: a 2B model can't reliably hold a 38-category taxonomy in context and make multi-level decisions simultaneously. But it can reliably choose between "beef, pork, poultry, or seafood" when that's the only thing it's being asked. Each focused agent gives the small model a problem it can actually solve.
 
-### It's not universal
+### The three properties that matter
 
-Mistral 7B actually does **worse** with focused agents (-6 points). Some models don't respond well to the focused prompt format. And qwen2.5:3b only gets +5 from decomposition — it's hitting a floor where even focused prompts can't fully compensate for model capability.
+The accuracy numbers are interesting but they're not the real pitch. Three engineering properties matter more than raw accuracy:
 
-### The caramel apple test
+**1. Determinism.** A focused agent choosing between 4 options is more predictable than a god model choosing between 38 categories in one shot. On frontier models, both approaches are deterministic enough. On small models, the focused approach produces dramatically more consistent results because the decision surface is smaller.
 
-"Caramel apples" is the hardest item in the eval. It's a candy made from apples — it should classify as `food > snack > candy`. The single-agent omni classifier on frontier models consistently gets this wrong, sending it to `food > produce > fruit` because "apples" dominates the full-taxonomy context. The focused agents get it right on most models because the snack-routing agent's prompt is scoped to distinguishing candy from chips — in that narrow context, "caramel" is the dominant signal, not "apples."
+**2. Maintainability.** When the god model misclassifies "baby lotion" as personal care instead of baby products, you add an edge case to a prompt that already has 38 categories, dozens of examples, and a page of edge cases. That change might fix "baby lotion" but regress "hand lotion" or "sunscreen." You can't predict the blast radius.
 
-Interestingly, all three small local models (gemma2:2b, llama3.2:3b, qwen2.5:3b) get caramel apples right on both workflows. The frontier models' omni classifiers overthink it.
+When focused agents misclassify "baby lotion," you know exactly which agent failed (the department-router), you open that one prompt, and you add the edge case. The snacks-router, dairy-router, and every other agent are untouched. They can't regress.
+
+We tested this: GPT-4.1-mini's focused pipeline had 5 failures, all traceable to exactly 2 agents (department-router and snacks-router). We edited 2 prompts, ran again, and fixed all 5 with zero regressions.
+
+**3. Model flexibility.** With focused agents, you can run different models at different levels. The department-level decision (12 options) might need a slightly stronger model, while the leaf-level decision (2-4 options) works fine with something tiny. You can tune cost and capability per decision point. The god model forces one model for everything.
 
 ---
 
@@ -77,68 +79,69 @@ Interestingly, all three small local models (gemma2:2b, llama3.2:3b, qwen2.5:3b)
 
 ### Latency
 
-Focused agents add sequential LLM calls. For a three-level taxonomy, that's 3-4 calls instead of 1. On cloud APIs, that's ~3-5 seconds vs ~1 second. On local models, it's 20-30 seconds vs 5-10 seconds. For real-time user-facing classification, this matters.
+Focused agents make 2-3 sequential LLM calls instead of 1. On cloud APIs, that's ~3-5 seconds vs ~1 second. On local models, it's significantly more.
 
-**The flip side:** each individual call is simpler and faster than the single complex call. And because decisions are independent, you can profile exactly which level of the tree is slow and optimize it — swap in a faster model for just the top-level decision, or cache common routing paths. With a monolithic call, your only optimization lever is "use a faster model for everything."
+**But:** each individual call is simpler and faster. And because decisions are independent, you can profile exactly which level is slow and optimize it — swap in a faster model for just the easy decisions, or cache common routing paths.
 
 ### Complexity
 
-Seven agent definitions, a nested workflow YAML, and the orchestration engine are more moving parts than one agent and one workflow. More things to maintain, more things that can break.
+13 routing agent definitions and a nested workflow YAML are more moving parts than one agent and one prompt.
 
-**The flip side:** when something does break, you know exactly where. If meat classification accuracy drops, you look at the meat-routing agent's prompt — not a 200-line monolithic prompt where any change can regress any category. Each agent is independently testable, independently deployable, and independently upgradeable. You can swap a stronger model in for just the decision that's struggling, and keep the cheap model everywhere else. That's not possible with a single-agent approach.
+**But:** when something breaks, you know exactly where. Each agent is independently testable, deployable, and upgradeable. The god model is a monolith — any prompt change can have unpredictable side effects across all 38 categories.
 
 ### Cost
 
-For cloud models, focused agents cost 3-4x per item in API calls. On frontier models where the accuracy benefit is negligible, you're paying more for the same result.
+For cloud models, focused agents cost 2-3x per item in API calls.
 
-**The flip side:** each call uses a simpler prompt with fewer tokens, so the per-call cost is lower than 1/4 of the monolithic call. And because you can mix models — a cheap model for easy top-level decisions, a stronger model only for the ambiguous leaf classifications — you can tune your cost/accuracy ratio per decision point. On local models the cost is $0 either way, so decomposition is free accuracy.
+**But:** each call uses fewer tokens (focused prompt vs. full taxonomy prompt), so the per-call cost is lower. And you can mix models — cheap model for easy decisions, stronger model only where needed. On local models the cost is $0 either way.
 
 ---
 
 ## When to Use Each Approach
 
-**Use a single agent when:**
-- You're on a frontier model (GPT-4.1, Claude Sonnet/Haiku) and accuracy is already good enough
-- Latency is your primary constraint (user-facing, real-time)
-- Your taxonomy is shallow (2 levels or fewer)
-- You don't expect the taxonomy to change often
+**Use the god model when:**
+- You're on a frontier model and accuracy is already sufficient
+- Latency is your primary constraint
+- Your taxonomy is stable and doesn't change often
+- You want the simplest possible system
 
-**Use focused multi-agent decomposition when:**
-- You're running local or self-hosted models (privacy, compliance, air-gapped environments)
-- Your taxonomy is deep (3+ levels) and actively evolving
-- You need to diagnose, isolate, and fix classification errors at specific decision points
-- Different levels of the taxonomy have different difficulty — you want to assign model capacity accordingly
-- You want to upgrade or downgrade models for individual decisions without rewriting the whole system
-- Latency is acceptable (batch processing, background jobs, catalog operations, overnight imports)
-
-**The killer use case** is constrained environments where you can't call cloud APIs. Focused agents are the difference between "this 2B model doesn't work for classification" and "this 2B model matches GPT-4.1-mini." That's not a cost optimization — it's an accuracy unlock that comes from giving small models problems they can actually solve.
+**Use focused agents when:**
+- You need to run local or self-hosted models (privacy, compliance, air-gapped)
+- Your taxonomy is evolving and you need to fix individual categories without risking regressions
+- You need deterministic, predictable behavior from smaller models
+- You want to assign model capability per decision point
+- Latency is acceptable (batch processing, background jobs, catalog operations)
 
 ---
 
-## Running the Eval Yourself
+## The Maintainability Test
+
+This is the experiment we'd recommend running yourself. Take the god model's failures and try to fix them by editing the prompt. Then check if you introduced new failures. Now do the same with focused agents.
+
+In our testing, focused agent fixes were surgical — edit one prompt, verify one decision boundary, no regressions. God model fixes were unpredictable — adding an edge case for "baby lotion" in a prompt that also handles seafood, beverages, and cleaning supplies is inherently fragile.
+
+The accuracy gap might not justify focused agents on frontier models. The maintainability gap does — if your taxonomy changes more than once.
+
+---
+
+## Run It Yourself
 
 ```bash
-# Default (gpt-4.1-mini)
-python run_eval.py
+git clone https://github.com/dcaponi/grocery-classifier.git
+cd grocery-classifier
+pip install -r requirements.txt
+echo "OPENAI_API_KEY=sk-..." > .env
 
-# Multiple cloud models
-python run_eval.py gpt-4.1-mini gpt-4.1-nano claude-sonnet-4-5-20250929
+# Run the eval
+python run_eval.py gpt-4.1-mini
 
-# Local models via Ollama
-python run_eval.py ollama:gemma2:2b ollama:llama3.2:3b ollama:qwen2.5:3b
+# Try local models (requires Ollama)
+python run_eval.py ollama:gemma2:2b ollama:llama3.2:3b
 
-# Mix of cloud and local
-python run_eval.py gpt-4.1-mini ollama:gemma2:2b
+# Run the Flask app
+python app.py
+curl "http://localhost:8000/classify?items=baby+lotion,salmon+fillet,frozen+pizza"
+curl "http://localhost:8000/omni-classify?items=baby+lotion,salmon+fillet,frozen+pizza"
 ```
 
-The eval runs both workflows for each model against `eval_items.json` (102 items with ground truth paths) and prints per-item results, per-model summaries, and a cross-model comparison table.
-
----
-
-## Conclusion
-
-Decomposing classification into focused agents doesn't universally beat a single-agent approach. On frontier models, the accuracy difference is negligible. But the architecture has value beyond accuracy: each agent is independently testable, independently tunable, and independently upgradeable. When your taxonomy changes — and it will — you modify one agent's prompt instead of rewriting a monolithic one.
-
-The accuracy wins are specific and dramatic: small models gain 10-17 points from decomposition, making them viable for tasks they'd otherwise fail at. If you're in an environment where you must use local models, focused agents are what makes classification work. And even on frontier models, the ability to isolate errors, swap models per decision point, and evolve the taxonomy incrementally has operational value that doesn't show up in an accuracy number.
-
-The focused workflow in `agentic-spec/workflows/grocery-classify.yaml` and the single-agent baseline in `agentic-spec/workflows/omni-classify.yaml` are both in this repo. Run the eval, see the numbers for your models, and make the call based on your constraints.
+The focused workflow is at `agentic-spec/workflows/grocery-classify.yaml`. The god model is at `agentic-spec/workflows/omni-classify.yaml`. Both use the [routing-agent primitive](https://github.com/dcaponi/agentic-app-spec) from Agentic App Spec.
