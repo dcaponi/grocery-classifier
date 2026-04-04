@@ -69,7 +69,7 @@ The accuracy numbers are interesting but they're not the real pitch. Three engin
 
 When focused agents misclassify "baby lotion," you know exactly which agent failed (the department-router), you open that one prompt, and you add the edge case. The snacks-router, dairy-router, and every other agent are untouched. They can't regress.
 
-We tested this: GPT-4.1-mini's focused pipeline had 5 failures, all traceable to exactly 2 agents (department-router and snacks-router). We edited 2 prompts, ran again, and fixed all 5 with zero regressions.
+We tested this: GPT-4.1-mini's focused pipeline had 5 failures, all traceable to exactly 2 agents (department-router and snacks-router). We edited 2 prompts — added "baby lotion, diaper cream → baby_pet" and "K-Cups, hot chocolate → beverages" to the department-router, and moved "Goldfish crackers → cookies_crackers" in the snacks-router. Reran the full 250-item eval: 4 of 5 failures fixed, zero regressions. 98% → 99.6%. The one remaining failure (thermometer) was a different agent entirely — not caused by our changes.
 
 **3. Model flexibility.** With focused agents, you can run different models at different levels. The department-level decision (12 options) might need a slightly stronger model, while the leaf-level decision (2-4 options) works fine with something tiny. You can tune cost and capability per decision point. The god model forces one model for everything.
 
