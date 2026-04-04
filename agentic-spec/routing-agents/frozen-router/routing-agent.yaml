@@ -1,8 +1,7 @@
 name: Frozen Router
 description: Routes a frozen item to frozen_meals, frozen_treats, or frozen_produce
 strategy: llm
-model: qwen2.5:7b
-base_url: http://localhost:11434/v1
+model: gpt-4.1-mini
 temperature: 0
 
 input:

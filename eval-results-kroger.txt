@@ -1,0 +1,2072 @@
+
+########################################################################################################################
+# Model: gpt-4.1-mini
+# Items: 250
+########################################################################################################################
+
+  [1/250] apples... both correct
+  [2/250] bananas... both correct
+  [3/250] strawberries... both correct
+  [4/250] watermelon... both correct
+  [5/250] mangoes... both correct
+  [6/250] avocados... both correct
+  [7/250] lemons... both correct
+  [8/250] broccoli... both correct
+  [9/250] carrots... both correct
+  [10/250] spinach... both correct
+  [11/250] potatoes... both correct
+  [12/250] tomatoes... both correct
+  [13/250] mushrooms... both correct
+  [14/250] fresh basil... both correct
+  [15/250] ground beef... both correct
+  [16/250] ribeye steak... both correct
+  [17/250] beef brisket... both correct
+  [18/250] sirloin steak... both correct
+  [19/250] filet mignon... both correct
+  [20/250] veal cutlets... both correct
+  [21/250] pork chops... both correct
+  [22/250] bacon... both correct
+  [23/250] pork loin... both correct
+  [24/250] bratwurst... both correct
+  [25/250] Italian sausage... both correct
+  [26/250] baby back ribs... both correct
+  [27/250] chicken breast... both correct
+  [28/250] chicken thighs... both correct
+  [29/250] ground turkey... both correct
+  [30/250] whole chicken... both correct
+  [31/250] chicken wings... both correct
+  [32/250] turkey bacon... both correct
+  [33/250] Cornish hen... both correct
+  [34/250] salmon fillet... both correct
+  [35/250] shrimp... both correct
+  [36/250] tilapia... both correct
+  [37/250] crab legs... both correct
+  [38/250] lobster tail... both correct
+  [39/250] cod fillet... both correct
+  [40/250] rotisserie chicken... both correct
+  [41/250] deli sliced turkey... both correct
+  [42/250] deli ham... both correct
+  [43/250] prepared potato salad... both correct
+  [44/250] hummus... both correct
+  [45/250] sub sandwich... both correct
+  [46/250] prepared sushi... both correct
+  [47/250] sourdough bread... both correct
+  [48/250] bagels... both correct
+  [49/250] croissants... both correct
+  [50/250] donuts... both correct
+  [51/250] birthday cake... both correct
+  [52/250] tortillas... both correct
+  [53/250] hamburger buns... both correct
+  [54/250] whole milk... both correct
+  [55/250] 2% milk... both correct
+  [56/250] almond milk... both correct
+  [57/250] oat milk... both correct
+  [58/250] heavy cream... both correct
+  [59/250] coffee creamer... both correct
+  [60/250] chocolate milk... both correct
+  [61/250] cheddar cheese... both correct
+  [62/250] shredded mozzarella... both correct
+  [63/250] cream cheese... both correct
+  [64/250] Swiss cheese... both correct
+  [65/250] Parmesan cheese... both correct
+  [66/250] string cheese... both correct
+  [67/250] Greek yogurt... both correct
+  [68/250] strawberry yogurt... both correct
+  [69/250] kids yogurt tubes... both correct
+  [70/250] kefir... both correct
+  [71/250] plain yogurt... both correct
+  [72/250] non-dairy coconut yogurt... both correct
+  [73/250] eggs... both correct
+  [74/250] butter... both correct
+  [75/250] sour cream... both correct
+  [76/250] margarine... both correct
+  [77/250] egg whites carton... both correct
+  [78/250] French onion dip... both correct
+  [79/250] frozen pizza... both correct
+  [80/250] TV dinner... both correct
+  [81/250] frozen burritos... both correct
+  [82/250] Hot Pockets... both correct
+  [83/250] frozen waffles... both correct
+  [84/250] frozen chicken nuggets... both correct
+  [85/250] frozen french fries... both correct
+  [86/250] ice cream... both correct
+  [87/250] popsicles... both correct
+  [88/250] ice cream sandwiches... both correct
+  [89/250] frozen yogurt... both correct
+  [90/250] sorbet... both correct
+  [91/250] Klondike bars... both correct
+  [92/250] frozen peas... both correct
+  [93/250] frozen broccoli... both correct
+  [94/250] frozen strawberries... both correct
+  [95/250] frozen mixed vegetables... both correct
+  [96/250] frozen corn... both correct
+  [97/250] frozen edamame... both correct
+  [98/250] canned beans... both correct
+  [99/250] canned tomatoes... both correct
+  [100/250] canned soup... both correct
+  [101/250] canned tuna... both correct
+  [102/250] jarred pasta sauce... both correct
+  [103/250] jarred salsa... both correct
+  [104/250] canned chicken broth... both correct
+  [105/250] spaghetti pasta... both correct
+  [106/250] white rice... both correct
+  [107/250] Cheerios cereal... both correct
+  [108/250] instant oatmeal... both correct
+  [109/250] ramen noodles... both correct
+  [110/250] quinoa... both correct
+  [111/250] Kraft mac and cheese... both correct
+  [112/250] ketchup... both correct
+  [113/250] mustard... both correct
+  [114/250] soy sauce... both correct
+  [115/250] hot sauce... both correct
+  [116/250] olive oil... both correct
+  [117/250] peanut butter... both correct
+  [118/250] honey... both correct
+  [119/250] all-purpose flour... both correct
+  [120/250] granulated sugar... both correct
+  [121/250] baking soda... both correct
+  [122/250] vanilla extract... both correct
+  [123/250] chocolate chips... both correct
+  [124/250] cake mix... both correct
+  [125/250] Lay's potato chips... both correct
+  [126/250] Doritos... both correct
+  [127/250] tortilla chips... both correct
+  [128/250] pretzels... both correct
+  [129/250] microwave popcorn... both correct
+  [130/250] Cheetos... both correct
+  [131/250] beef jerky... both correct
+  [132/250] Snickers bar... both correct
+  [133/250] M&Ms... both correct
+  [134/250] gummy bears... both correct
+  [135/250] Skittles... both correct
+  [136/250] Twizzlers... both correct
+  [137/250] Sour Patch Kids... both correct
+  [138/250] fruit snacks... both correct
+  [139/250] Oreos... both correct
+  [140/250] Ritz crackers... both correct
+  [141/250] graham crackers... both correct
+  [142/250] granola bars... both correct
+  [143/250] protein bars... both correct
+  [144/250] Goldfish crackers... routed wrong
+  [145/250] Pop-Tarts... both correct
+  [146/250] almonds... both correct
+  [147/250] cashews... both correct
+  [148/250] trail mix... both correct
+  [149/250] mixed nuts... both correct
+  [150/250] sunflower seeds... both correct
+  [151/250] pistachios... both correct
+  [152/250] Coca-Cola... both correct
+  [153/250] bottled water... both correct
+  [154/250] LaCroix sparkling water... both correct
+  [155/250] Gatorade... both correct
+  [156/250] Red Bull... both correct
+  [157/250] Monster Energy... both correct
+  [158/250] coconut water... both correct
+  [159/250] orange juice... both correct
+  [160/250] apple juice... both correct
+  [161/250] cranberry juice... both correct
+  [162/250] V8 vegetable juice... both correct
+  [163/250] kombucha... both correct
+  [164/250] grape juice... both correct
+  [165/250] Folgers ground coffee... both correct
+  [166/250] K-Cup coffee pods... routed wrong
+  [167/250] Lipton tea bags... both correct
+  [168/250] cold brew coffee... both correct
+  [169/250] green tea... both correct
+  [170/250] hot chocolate mix... routed wrong
+  [171/250] Arizona iced tea... both correct
+  [172/250] Bud Light beer... both correct
+  [173/250] red wine... both correct
+  [174/250] White Claw hard seltzer... both correct
+  [175/250] vodka... both correct
+  [176/250] bourbon... both correct
+  [177/250] champagne... both correct
+  [178/250] ibuprofen... both correct
+  [179/250] Tylenol... both correct
+  [180/250] cough syrup... both correct
+  [181/250] Zyrtec allergy pills... both correct
+  [182/250] Tums antacid... both correct
+  [183/250] DayQuil cold medicine... both correct
+  [184/250] eye drops... both correct
+  [185/250] multivitamin... both correct
+  [186/250] vitamin C tablets... both correct
+  [187/250] fish oil capsules... both correct
+  [188/250] probiotics... both correct
+  [189/250] melatonin... both correct
+  [190/250] prenatal vitamins... both correct
+  [191/250] vitamin D... both correct
+  [192/250] band-aids... both correct
+  [193/250] hydrogen peroxide... both correct
+  [194/250] gauze pads... both correct
+  [195/250] Neosporin antibiotic ointment... both correct
+  [196/250] thermometer... both correct
+  [197/250] rubbing alcohol... both correct
+  [198/250] shampoo... both correct
+  [199/250] conditioner... both correct
+  [200/250] hair gel... both correct
+  [201/250] dry shampoo... both correct
+  [202/250] hair spray... both correct
+  [203/250] Head & Shoulders dandruff shampoo... both correct
+  [204/250] hair dye... both correct
+  [205/250] Crest toothpaste... both correct
+  [206/250] toothbrush... both correct
+  [207/250] Listerine mouthwash... both correct
+  [208/250] dental floss... both correct
+  [209/250] whitening strips... both correct
+  [210/250] floss picks... both correct
+  [211/250] body wash... both correct
+  [212/250] deodorant... both correct
+  [213/250] body lotion... both correct
+  [214/250] sunscreen... both correct
+  [215/250] Gillette razors... both correct
+  [216/250] bar soap... both correct
+  [217/250] lip balm... both correct
+  [218/250] Dawn dish soap... both correct
+  [219/250] Tide laundry detergent... both correct
+  [220/250] Clorox bleach... both correct
+  [221/250] Windex glass cleaner... both correct
+  [222/250] Swiffer pads... both correct
+  [223/250] sponges... both correct
+  [224/250] dryer sheets... both correct
+  [225/250] toilet paper... both correct
+  [226/250] paper towels... both correct
+  [227/250] Kleenex tissues... both correct
+  [228/250] napkins... both correct
+  [229/250] trash bags... both correct
+  [230/250] paper plates... both correct
+  [231/250] aluminum foil... both correct
+  [232/250] plastic wrap... both correct
+  [233/250] Ziploc bags... both correct
+  [234/250] parchment paper... both correct
+  [235/250] batteries... both correct
+  [236/250] light bulbs... both correct
+  [237/250] Pampers diapers... both correct
+  [238/250] baby wipes... both correct
+  [239/250] Enfamil baby formula... both correct
+  [240/250] Gerber baby food... both correct
+  [241/250] sippy cups... both correct
+  [242/250] baby lotion... routed wrong
+  [243/250] diaper cream... routed wrong
+  [244/250] Purina dog food... both correct
+  [245/250] Fancy Feast cat food... both correct
+  [246/250] cat litter... both correct
+  [247/250] Milk-Bone dog treats... both correct
+  [248/250] dog toys... both correct
+  [249/250] flea collar... both correct
+  [250/250] bird seed... both correct
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+apples                    produce > fruit              produce > fruit              produce > fruit              both correct
+bananas                   produce > fruit              produce > fruit              produce > fruit              both correct
+strawberries              produce > fruit              produce > fruit              produce > fruit              both correct
+watermelon                produce > fruit              produce > fruit              produce > fruit              both correct
+mangoes                   produce > fruit              produce > fruit              produce > fruit              both correct
+avocados                  produce > fruit              produce > fruit              produce > fruit              both correct
+lemons                    produce > fruit              produce > fruit              produce > fruit              both correct
+broccoli                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+carrots                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+spinach                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+potatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+tomatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+mushrooms                 produce > vegetable          produce > vegetable          produce > vegetable          both correct
+fresh basil               produce > vegetable          produce > vegetable          produce > vegetable          both correct
+ground beef               meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+ribeye steak              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+beef brisket              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+sirloin steak             meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+filet mignon              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+veal cutlets              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+pork chops                meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bacon                     meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+pork loin                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bratwurst                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+Italian sausage           meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+baby back ribs            meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+chicken breast            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken thighs            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+ground turkey             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+whole chicken             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken wings             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+turkey bacon              meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+Cornish hen               meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+salmon fillet             meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+shrimp                    meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+tilapia                   meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+crab legs                 meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+lobster tail              meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+cod fillet                meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+rotisserie chicken        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli sliced turkey        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli ham                  deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared potato salad     deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+hummus                    deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+sub sandwich              deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared sushi            deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+sourdough bread           deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+bagels                    deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+croissants                deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+donuts                    deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+birthday cake             deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+tortillas                 deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+hamburger buns            deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+whole milk                dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+2% milk                   dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+almond milk               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+oat milk                  dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+heavy cream               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+coffee creamer            dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+chocolate milk            dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+cheddar cheese            dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+shredded mozzarella       dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+cream cheese              dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Swiss cheese              dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Parmesan cheese           dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+string cheese             dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Greek yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+strawberry yogurt         dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+kids yogurt tubes         dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+kefir                     dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+plain yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+non-dairy coconut yogurt  dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+eggs                      dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+butter                    dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+sour cream                dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+margarine                 dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+egg whites carton         dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+French onion dip          dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+frozen pizza              frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+TV dinner                 frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen burritos           frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+Hot Pockets               frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen waffles            frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen chicken nuggets    frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen french fries       frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+ice cream                 frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+popsicles                 frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+ice cream sandwiches      frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+frozen yogurt             frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+sorbet                    frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+Klondike bars             frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+frozen peas               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen broccoli           frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen strawberries       frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen mixed vegetables   frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen corn               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen edamame            frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+canned beans              pantry > canned              pantry > canned              pantry > canned              both correct
+canned tomatoes           pantry > canned              pantry > canned              pantry > canned              both correct
+canned soup               pantry > canned              pantry > canned              pantry > canned              both correct
+canned tuna               pantry > canned              pantry > canned              pantry > canned              both correct
+jarred pasta sauce        pantry > canned              pantry > canned              pantry > canned              both correct
+jarred salsa              pantry > canned              pantry > canned              pantry > canned              both correct
+canned chicken broth      pantry > canned              pantry > canned              pantry > canned              both correct
+spaghetti pasta           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+white rice                pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Cheerios cereal           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+instant oatmeal           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+ramen noodles             pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+quinoa                    pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Kraft mac and cheese      pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+ketchup                   pantry > condiments          pantry > condiments          pantry > condiments          both correct
+mustard                   pantry > condiments          pantry > condiments          pantry > condiments          both correct
+soy sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+hot sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+olive oil                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+peanut butter             pantry > condiments          pantry > condiments          pantry > condiments          both correct
+honey                     pantry > condiments          pantry > condiments          pantry > condiments          both correct
+all-purpose flour         pantry > baking              pantry > baking              pantry > baking              both correct
+granulated sugar          pantry > baking              pantry > baking              pantry > baking              both correct
+baking soda               pantry > baking              pantry > baking              pantry > baking              both correct
+vanilla extract           pantry > baking              pantry > baking              pantry > baking              both correct
+chocolate chips           pantry > baking              pantry > baking              pantry > baking              both correct
+cake mix                  pantry > baking              pantry > baking              pantry > baking              both correct
+Lay's potato chips        snacks > chips               snacks > chips               snacks > chips               both correct
+Doritos                   snacks > chips               snacks > chips               snacks > chips               both correct
+tortilla chips            snacks > chips               snacks > chips               snacks > chips               both correct
+pretzels                  snacks > chips               snacks > chips               snacks > chips               both correct
+microwave popcorn         snacks > chips               snacks > chips               snacks > chips               both correct
+Cheetos                   snacks > chips               snacks > chips               snacks > chips               both correct
+beef jerky                snacks > chips               snacks > chips               snacks > chips               both correct
+Snickers bar              snacks > candy               snacks > candy               snacks > candy               both correct
+M&Ms                      snacks > candy               snacks > candy               snacks > candy               both correct
+gummy bears               snacks > candy               snacks > candy               snacks > candy               both correct
+Skittles                  snacks > candy               snacks > candy               snacks > candy               both correct
+Twizzlers                 snacks > candy               snacks > candy               snacks > candy               both correct
+Sour Patch Kids           snacks > candy               snacks > candy               snacks > candy               both correct
+fruit snacks              snacks > candy               snacks > candy               snacks > candy               both correct
+Oreos                     snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Ritz crackers             snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+graham crackers           snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+granola bars              snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+protein bars              snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Goldfish crackers         snacks > cookies_crackers    snacks > chips               snacks > cookies_crackers    routed wrong
+Pop-Tarts                 snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+almonds                   snacks > nuts                snacks > nuts                snacks > nuts                both correct
+cashews                   snacks > nuts                snacks > nuts                snacks > nuts                both correct
+trail mix                 snacks > nuts                snacks > nuts                snacks > nuts                both correct
+mixed nuts                snacks > nuts                snacks > nuts                snacks > nuts                both correct
+sunflower seeds           snacks > nuts                snacks > nuts                snacks > nuts                both correct
+pistachios                snacks > nuts                snacks > nuts                snacks > nuts                both correct
+Coca-Cola                 beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+bottled water             beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+LaCroix sparkling water   beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Gatorade                  beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Red Bull                  beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Monster Energy            beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+coconut water             beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+orange juice              beverages > juice            beverages > juice            beverages > juice            both correct
+apple juice               beverages > juice            beverages > juice            beverages > juice            both correct
+cranberry juice           beverages > juice            beverages > juice            beverages > juice            both correct
+V8 vegetable juice        beverages > juice            beverages > juice            beverages > juice            both correct
+kombucha                  beverages > juice            beverages > juice            beverages > juice            both correct
+grape juice               beverages > juice            beverages > juice            beverages > juice            both correct
+Folgers ground coffee     beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+K-Cup coffee pods         beverages > coffee_tea       pantry                       beverages > coffee_tea       routed wrong
+Lipton tea bags           beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+cold brew coffee          beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+green tea                 beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+hot chocolate mix         beverages > coffee_tea       pantry > dry_goods           beverages > coffee_tea       routed wrong
+Arizona iced tea          beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+Bud Light beer            beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+red wine                  beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+White Claw hard seltzer   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+vodka                     beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+bourbon                   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+champagne                 beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+ibuprofen                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tylenol                   health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+cough syrup               health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Zyrtec allergy pills      health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tums antacid              health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+DayQuil cold medicine     health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+eye drops                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+multivitamin              health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin C tablets         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+fish oil capsules         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+probiotics                health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+melatonin                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+prenatal vitamins         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin D                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+band-aids                 health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+hydrogen peroxide         health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+gauze pads                health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+Neosporin antibiotic ointment health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+thermometer               health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+rubbing alcohol           health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+shampoo                   personal_care > hair         personal_care > hair         personal_care > hair         both correct
+conditioner               personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair gel                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+dry shampoo               personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair spray                personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Head & Shoulders dandruff shampoo personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair dye                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Crest toothpaste          personal_care > oral         personal_care > oral         personal_care > oral         both correct
+toothbrush                personal_care > oral         personal_care > oral         personal_care > oral         both correct
+Listerine mouthwash       personal_care > oral         personal_care > oral         personal_care > oral         both correct
+dental floss              personal_care > oral         personal_care > oral         personal_care > oral         both correct
+whitening strips          personal_care > oral         personal_care > oral         personal_care > oral         both correct
+floss picks               personal_care > oral         personal_care > oral         personal_care > oral         both correct
+body wash                 personal_care > body         personal_care > body         personal_care > body         both correct
+deodorant                 personal_care > body         personal_care > body         personal_care > body         both correct
+body lotion               personal_care > body         personal_care > body         personal_care > body         both correct
+sunscreen                 personal_care > body         personal_care > body         personal_care > body         both correct
+Gillette razors           personal_care > body         personal_care > body         personal_care > body         both correct
+bar soap                  personal_care > body         personal_care > body         personal_care > body         both correct
+lip balm                  personal_care > body         personal_care > body         personal_care > body         both correct
+Dawn dish soap            household > cleaning         household > cleaning         household > cleaning         both correct
+Tide laundry detergent    household > cleaning         household > cleaning         household > cleaning         both correct
+Clorox bleach             household > cleaning         household > cleaning         household > cleaning         both correct
+Windex glass cleaner      household > cleaning         household > cleaning         household > cleaning         both correct
+Swiffer pads              household > cleaning         household > cleaning         household > cleaning         both correct
+sponges                   household > cleaning         household > cleaning         household > cleaning         both correct
+dryer sheets              household > cleaning         household > cleaning         household > cleaning         both correct
+toilet paper              household > paper            household > paper            household > paper            both correct
+paper towels              household > paper            household > paper            household > paper            both correct
+Kleenex tissues           household > paper            household > paper            household > paper            both correct
+napkins                   household > paper            household > paper            household > paper            both correct
+trash bags                household > paper            household > paper            household > paper            both correct
+paper plates              household > paper            household > paper            household > paper            both correct
+aluminum foil             household > kitchen          household > kitchen          household > kitchen          both correct
+plastic wrap              household > kitchen          household > kitchen          household > kitchen          both correct
+Ziploc bags               household > kitchen          household > kitchen          household > kitchen          both correct
+parchment paper           household > kitchen          household > kitchen          household > kitchen          both correct
+batteries                 household > kitchen          household > kitchen          household > kitchen          both correct
+light bulbs               household > kitchen          household > kitchen          household > kitchen          both correct
+Pampers diapers           baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+baby wipes                baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Enfamil baby formula      baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Gerber baby food          baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+sippy cups                baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+baby lotion               baby_pet > baby              personal_care > body         baby_pet > baby              routed wrong
+diaper cream              baby_pet > baby              personal_care > body         baby_pet > baby              routed wrong
+Purina dog food           baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+Fancy Feast cat food      baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+cat litter                baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+Milk-Bone dog treats      baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+dog toys                  baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+flea collar               baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+bird seed                 baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+
+========================================================================================================================
+Summary for gpt-4.1-mini:
+  grocery-classify (routed): 245/250 correct (98%)
+  omni-classify (single):    250/250 correct (100%)
+
+########################################################################################################################
+# Model: gemma2:2b @ http://localhost:11434/v1
+# Items: 250
+########################################################################################################################
+
+  [1/250] apples... both correct
+  [2/250] bananas... both correct
+  [3/250] strawberries... both correct
+  [4/250] watermelon... both correct
+  [5/250] mangoes... both correct
+  [6/250] avocados... omni wrong
+  [7/250] lemons... both correct
+  [8/250] broccoli... both correct
+  [9/250] carrots... both correct
+  [10/250] spinach... both correct
+  [11/250] potatoes... both correct
+  [12/250] tomatoes... both correct
+  [13/250] mushrooms... both correct
+  [14/250] fresh basil... both correct
+  [15/250] ground beef... omni wrong
+  [16/250] ribeye steak... both correct
+  [17/250] beef brisket... both correct
+  [18/250] sirloin steak... both correct
+  [19/250] filet mignon... omni wrong
+  [20/250] veal cutlets... omni wrong
+  [21/250] pork chops... both correct
+  [22/250] bacon... omni wrong
+  [23/250] pork loin... both correct
+  [24/250] bratwurst... omni wrong
+  [25/250] Italian sausage... omni wrong
+  [26/250] baby back ribs... omni wrong
+  [27/250] chicken breast... both correct
+  [28/250] chicken thighs... both correct
+  [29/250] ground turkey... both correct
+  [30/250] whole chicken... both correct
+  [31/250] chicken wings... both correct
+  [32/250] turkey bacon... both correct
+  [33/250] Cornish hen... both correct
+  [34/250] salmon fillet... omni wrong
+  [35/250] shrimp... omni wrong
+  [36/250] tilapia... omni wrong
+  [37/250] crab legs... both correct
+  [38/250] lobster tail... both correct
+  [39/250] cod fillet... omni wrong
+  [40/250] rotisserie chicken... both correct
+  [41/250] deli sliced turkey... both correct
+  [42/250] deli ham... both correct
+  [43/250] prepared potato salad... both correct
+  [44/250] hummus... BOTH WRONG
+  [45/250] sub sandwich... both correct
+  [46/250] prepared sushi... omni wrong
+  [47/250] sourdough bread... omni wrong
+  [48/250] bagels... omni wrong
+  [49/250] croissants... omni wrong
+  [50/250] donuts... BOTH WRONG
+  [51/250] birthday cake... omni wrong
+  [52/250] tortillas... omni wrong
+  [53/250] hamburger buns... omni wrong
+  [54/250] whole milk... both correct
+  [55/250] 2% milk... both correct
+  [56/250] almond milk... both correct
+  [57/250] oat milk... both correct
+  [58/250] heavy cream... BOTH WRONG
+  [59/250] coffee creamer... BOTH WRONG
+  [60/250] chocolate milk... both correct
+  [61/250] cheddar cheese... both correct
+  [62/250] shredded mozzarella... both correct
+  [63/250] cream cheese... omni wrong
+  [64/250] Swiss cheese... omni wrong
+  [65/250] Parmesan cheese... both correct
+  [66/250] string cheese... omni wrong
+  [67/250] Greek yogurt... both correct
+  [68/250] strawberry yogurt... both correct
+  [69/250] kids yogurt tubes... omni wrong
+  [70/250] kefir... both correct
+  [71/250] plain yogurt... both correct
+  [72/250] non-dairy coconut yogurt... both correct
+  [73/250] eggs... omni wrong
+  [74/250] butter... omni wrong
+  [75/250] sour cream... omni wrong
+  [76/250] margarine... BOTH WRONG
+  [77/250] egg whites carton... both correct
+  [78/250] French onion dip... BOTH WRONG
+  [79/250] frozen pizza... both correct
+  [80/250] TV dinner... both correct
+  [81/250] frozen burritos... both correct
+  [82/250] Hot Pockets... omni wrong
+  [83/250] frozen waffles... both correct
+  [84/250] frozen chicken nuggets... both correct
+  [85/250] frozen french fries... both correct
+  [86/250] ice cream... omni wrong
+  [87/250] popsicles... omni wrong
+  [88/250] ice cream sandwiches... BOTH WRONG
+  [89/250] frozen yogurt... BOTH WRONG
+  [90/250] sorbet... omni wrong
+  [91/250] Klondike bars... BOTH WRONG
+  [92/250] frozen peas... both correct
+  [93/250] frozen broccoli... both correct
+  [94/250] frozen strawberries... omni wrong
+  [95/250] frozen mixed vegetables... both correct
+  [96/250] frozen corn... both correct
+  [97/250] frozen edamame... omni wrong
+  [98/250] canned beans... both correct
+  [99/250] canned tomatoes... both correct
+  [100/250] canned soup... both correct
+  [101/250] canned tuna... both correct
+  [102/250] jarred pasta sauce... both correct
+  [103/250] jarred salsa... routed wrong
+  [104/250] canned chicken broth... routed wrong
+  [105/250] spaghetti pasta... both correct
+  [106/250] white rice... both correct
+  [107/250] Cheerios cereal... omni wrong
+  [108/250] instant oatmeal... omni wrong
+  [109/250] ramen noodles... both correct
+  [110/250] quinoa... both correct
+  [111/250] Kraft mac and cheese... omni wrong
+  [112/250] ketchup... both correct
+  [113/250] mustard... routed wrong
+  [114/250] soy sauce... both correct
+  [115/250] hot sauce... BOTH WRONG
+  [116/250] olive oil... both correct
+  [117/250] peanut butter... both correct
+  [118/250] honey... both correct
+  [119/250] all-purpose flour... omni wrong
+  [120/250] granulated sugar... omni wrong
+  [121/250] baking soda... routed wrong
+  [122/250] vanilla extract... BOTH WRONG
+  [123/250] chocolate chips... BOTH WRONG
+  [124/250] cake mix... both correct
+  [125/250] Lay's potato chips... both correct
+  [126/250] Doritos... both correct
+  [127/250] tortilla chips... both correct
+  [128/250] pretzels... both correct
+  [129/250] microwave popcorn... both correct
+  [130/250] Cheetos... both correct
+  [131/250] beef jerky... both correct
+  [132/250] Snickers bar... both correct
+  [133/250] M&Ms... both correct
+  [134/250] gummy bears... both correct
+  [135/250] Skittles... both correct
+  [136/250] Twizzlers... both correct
+  [137/250] Sour Patch Kids... both correct
+  [138/250] fruit snacks... both correct
+  [139/250] Oreos... both correct
+  [140/250] Ritz crackers... BOTH WRONG
+  [141/250] graham crackers... routed wrong
+  [142/250] granola bars... both correct
+  [143/250] protein bars... both correct
+  [144/250] Goldfish crackers... BOTH WRONG
+  [145/250] Pop-Tarts... both correct
+  [146/250] almonds... routed wrong
+  [147/250] cashews... both correct
+  [148/250] trail mix... both correct
+  [149/250] mixed nuts... both correct
+  [150/250] sunflower seeds... both correct
+  [151/250] pistachios... both correct
+  [152/250] Coca-Cola... both correct
+  [153/250] bottled water... both correct
+  [154/250] LaCroix sparkling water... both correct
+  [155/250] Gatorade... omni wrong
+  [156/250] Red Bull... BOTH WRONG
+  [157/250] Monster Energy... BOTH WRONG
+  [158/250] coconut water... omni wrong
+  [159/250] orange juice... both correct
+  [160/250] apple juice... both correct
+  [161/250] cranberry juice... both correct
+  [162/250] V8 vegetable juice... both correct
+  [163/250] kombucha... both correct
+  [164/250] grape juice... both correct
+  [165/250] Folgers ground coffee... BOTH WRONG
+  [166/250] K-Cup coffee pods... both correct
+  [167/250] Lipton tea bags... omni wrong
+  [168/250] cold brew coffee... both correct
+  [169/250] green tea... omni wrong
+  [170/250] hot chocolate mix... BOTH WRONG
+  [171/250] Arizona iced tea... BOTH WRONG
+  [172/250] Bud Light beer... both correct
+  [173/250] red wine... both correct
+  [174/250] White Claw hard seltzer... omni wrong
+  [175/250] vodka... both correct
+  [176/250] bourbon... both correct
+  [177/250] champagne... both correct
+  [178/250] ibuprofen... both correct
+  [179/250] Tylenol... both correct
+  [180/250] cough syrup... both correct
+  [181/250] Zyrtec allergy pills... both correct
+  [182/250] Tums antacid... routed wrong
+  [183/250] DayQuil cold medicine... both correct
+  [184/250] eye drops... omni wrong
+  [185/250] multivitamin... both correct
+  [186/250] vitamin C tablets... both correct
+  [187/250] fish oil capsules... both correct
+  [188/250] probiotics... both correct
+  [189/250] melatonin... omni wrong
+  [190/250] prenatal vitamins... both correct
+  [191/250] vitamin D... both correct
+  [192/250] band-aids... BOTH WRONG
+  [193/250] hydrogen peroxide... omni wrong
+  [194/250] gauze pads... BOTH WRONG
+  [195/250] Neosporin antibiotic ointment... both correct
+  [196/250] thermometer... both correct
+  [197/250] rubbing alcohol... omni wrong
+  [198/250] shampoo... both correct
+  [199/250] conditioner... both correct
+  [200/250] hair gel... both correct
+  [201/250] dry shampoo... omni wrong
+  [202/250] hair spray... both correct
+  [203/250] Head & Shoulders dandruff shampoo... both correct
+  [204/250] hair dye... both correct
+  [205/250] Crest toothpaste... both correct
+  [206/250] toothbrush... both correct
+  [207/250] Listerine mouthwash... both correct
+  [208/250] dental floss... both correct
+  [209/250] whitening strips... both correct
+  [210/250] floss picks... both correct
+  [211/250] body wash... both correct
+  [212/250] deodorant... both correct
+  [213/250] body lotion... both correct
+  [214/250] sunscreen... omni wrong
+  [215/250] Gillette razors... omni wrong
+  [216/250] bar soap... both correct
+  [217/250] lip balm... both correct
+  [218/250] Dawn dish soap... omni wrong
+  [219/250] Tide laundry detergent... BOTH WRONG
+  [220/250] Clorox bleach... both correct
+  [221/250] Windex glass cleaner... both correct
+  [222/250] Swiffer pads... routed wrong
+  [223/250] sponges... both correct
+  [224/250] dryer sheets... both correct
+  [225/250] toilet paper... both correct
+  [226/250] paper towels... both correct
+  [227/250] Kleenex tissues... BOTH WRONG
+  [228/250] napkins... both correct
+  [229/250] trash bags... both correct
+  [230/250] paper plates... both correct
+  [231/250] aluminum foil... both correct
+  [232/250] plastic wrap... BOTH WRONG
+  [233/250] Ziploc bags... BOTH WRONG
+  [234/250] parchment paper... BOTH WRONG
+  [235/250] batteries... both correct
+  [236/250] light bulbs... both correct
+  [237/250] Pampers diapers... both correct
+  [238/250] baby wipes... both correct
+  [239/250] Enfamil baby formula... both correct
+  [240/250] Gerber baby food... both correct
+  [241/250] sippy cups... routed wrong
+  [242/250] baby lotion... BOTH WRONG
+  [243/250] diaper cream... omni wrong
+  [244/250] Purina dog food... both correct
+  [245/250] Fancy Feast cat food... both correct
+  [246/250] cat litter... both correct
+  [247/250] Milk-Bone dog treats... both correct
+  [248/250] dog toys... both correct
+  [249/250] flea collar... omni wrong
+  [250/250] bird seed... both correct
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+apples                    produce > fruit              produce > fruit              produce > fruit              both correct
+bananas                   produce > fruit              produce > fruit              produce > fruit              both correct
+strawberries              produce > fruit              produce > fruit              produce > fruit              both correct
+watermelon                produce > fruit              produce > fruit              produce > fruit              both correct
+mangoes                   produce > fruit              produce > fruit              produce > fruit              both correct
+avocados                  produce > fruit              produce > fruit              produce > vegetable          omni wrong
+lemons                    produce > fruit              produce > fruit              produce > fruit              both correct
+broccoli                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+carrots                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+spinach                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+potatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+tomatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+mushrooms                 produce > vegetable          produce > vegetable          produce > vegetable          both correct
+fresh basil               produce > vegetable          produce > vegetable          produce > vegetable          both correct
+ground beef               meat_seafood > beef          meat_seafood > beef          meat_seafood > poultry       omni wrong
+ribeye steak              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+beef brisket              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+sirloin steak             meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+filet mignon              meat_seafood > beef          meat_seafood > beef          meat_seafood > poultry       omni wrong
+veal cutlets              meat_seafood > beef          meat_seafood > beef          meat_seafood > poultry       omni wrong
+pork chops                meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bacon                     meat_seafood > pork          meat_seafood > pork          meat_seafood > poultry       omni wrong
+pork loin                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bratwurst                 meat_seafood > pork          meat_seafood > pork          meat_seafood > poultry       omni wrong
+Italian sausage           meat_seafood > pork          meat_seafood > pork          meat_seafood > poultry       omni wrong
+baby back ribs            meat_seafood > pork          meat_seafood > pork          meat_seafood > poultry       omni wrong
+chicken breast            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken thighs            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+ground turkey             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+whole chicken             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken wings             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+turkey bacon              meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+Cornish hen               meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+salmon fillet             meat_seafood > seafood       meat_seafood > seafood       meat_seafood > salmon        omni wrong
+shrimp                    meat_seafood > seafood       meat_seafood > seafood       meat_seafood > shrimp        omni wrong
+tilapia                   meat_seafood > seafood       meat_seafood > seafood       meat_seafood > poultry       omni wrong
+crab legs                 meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+lobster tail              meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+cod fillet                meat_seafood > seafood       meat_seafood > seafood       meat_seafood > poultry       omni wrong
+rotisserie chicken        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli sliced turkey        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli ham                  deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared potato salad     deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+hummus                    deli_bakery > deli           pantry > condiments          pantry > condiments          BOTH WRONG
+sub sandwich              deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared sushi            deli_bakery > deli           deli_bakery > deli           deli_bakery > sushi          omni wrong
+sourdough bread           deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+bagels                    deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+croissants                deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+donuts                    deli_bakery > bakery         snacks > cookies_crackers    snacks > cookies_crackers    BOTH WRONG
+birthday cake             deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+tortillas                 deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+hamburger buns            deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+whole milk                dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+2% milk                   dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+almond milk               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+oat milk                  dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+heavy cream               dairy_eggs > milk            dairy_eggs > eggs_butter     dairy_eggs > heavy cream     BOTH WRONG
+coffee creamer            dairy_eggs > milk            dairy_eggs > eggs_butter     pantry > condiments          BOTH WRONG
+chocolate milk            dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+cheddar cheese            dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+shredded mozzarella       dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+cream cheese              dairy_eggs > cheese          dairy_eggs > cheese          pantry > condiments          omni wrong
+Swiss cheese              dairy_eggs > cheese          dairy_eggs > cheese          meat_seafood > poultry       omni wrong
+Parmesan cheese           dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+string cheese             dairy_eggs > cheese          dairy_eggs > cheese          snacks > nuts                omni wrong
+Greek yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+strawberry yogurt         dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+kids yogurt tubes         dairy_eggs > yogurt          dairy_eggs > yogurt          pantry > condiments          omni wrong
+kefir                     dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+plain yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+non-dairy coconut yogurt  dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+eggs                      dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs            omni wrong
+butter                    dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     pantry > condiments          omni wrong
+sour cream                dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     pantry > condiments          omni wrong
+margarine                 dairy_eggs > eggs_butter     pantry > condiments          pantry > condiments          BOTH WRONG
+egg whites carton         dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+French onion dip          dairy_eggs > eggs_butter     pantry > condiments          pantry > condiments          BOTH WRONG
+frozen pizza              frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+TV dinner                 frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen burritos           frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+Hot Pockets               frozen > frozen_meals        frozen > frozen_meals        snacks > cookies_crackers    omni wrong
+frozen waffles            frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen chicken nuggets    frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen french fries       frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+ice cream                 frozen > frozen_treats       frozen > frozen_treats       snacks > candy               omni wrong
+popsicles                 frozen > frozen_treats       frozen > frozen_treats       snacks > candy               omni wrong
+ice cream sandwiches      frozen > frozen_treats       snacks > cookies_crackers    snacks > cookies_crackers    BOTH WRONG
+frozen yogurt             frozen > frozen_treats       dairy_eggs > yogurt          snacks > candy               BOTH WRONG
+sorbet                    frozen > frozen_treats       frozen > frozen_treats       snacks > candy               omni wrong
+Klondike bars             frozen > frozen_treats       snacks > candy               snacks > candy               BOTH WRONG
+frozen peas               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen broccoli           frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen strawberries       frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_treats       omni wrong
+frozen mixed vegetables   frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen corn               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen edamame            frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_treats       omni wrong
+canned beans              pantry > canned              pantry > canned              pantry > canned              both correct
+canned tomatoes           pantry > canned              pantry > canned              pantry > canned              both correct
+canned soup               pantry > canned              pantry > canned              pantry > canned              both correct
+canned tuna               pantry > canned              pantry > canned              pantry > canned              both correct
+jarred pasta sauce        pantry > canned              pantry > canned              pantry > canned              both correct
+jarred salsa              pantry > canned              pantry > condiments          pantry > canned              routed wrong
+canned chicken broth      pantry > canned              dairy_eggs > eggs_butter     pantry > canned              routed wrong
+spaghetti pasta           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+white rice                pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Cheerios cereal           pantry > dry_goods           pantry > dry_goods           pantry > cereal              omni wrong
+instant oatmeal           pantry > dry_goods           pantry > dry_goods           pantry > baking              omni wrong
+ramen noodles             pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+quinoa                    pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Kraft mac and cheese      pantry > dry_goods           pantry > dry_goods           pantry > canned              omni wrong
+ketchup                   pantry > condiments          pantry > condiments          pantry > condiments          both correct
+mustard                   pantry > condiments          snacks > nuts                pantry > condiments          routed wrong
+soy sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+hot sauce                 pantry > condiments          snacks                       snacks > condiments          BOTH WRONG
+olive oil                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+peanut butter             pantry > condiments          pantry > condiments          pantry > condiments          both correct
+honey                     pantry > condiments          pantry > condiments          pantry > condiments          both correct
+all-purpose flour         pantry > baking              pantry > baking              pantry > dry_goods           omni wrong
+granulated sugar          pantry > baking              pantry > baking              pantry > condiments          omni wrong
+baking soda               pantry > baking              household > kitchen          pantry > baking              routed wrong
+vanilla extract           pantry > baking              health_wellness              pantry > condiments          BOTH WRONG
+chocolate chips           pantry > baking              snacks > chips               snacks > cookies_crackers    BOTH WRONG
+cake mix                  pantry > baking              pantry > baking              pantry > baking              both correct
+Lay's potato chips        snacks > chips               snacks > chips               snacks > chips               both correct
+Doritos                   snacks > chips               snacks > chips               snacks > chips               both correct
+tortilla chips            snacks > chips               snacks > chips               snacks > chips               both correct
+pretzels                  snacks > chips               snacks > chips               snacks > chips               both correct
+microwave popcorn         snacks > chips               snacks > chips               snacks > chips               both correct
+Cheetos                   snacks > chips               snacks > chips               snacks > chips               both correct
+beef jerky                snacks > chips               snacks > chips               snacks > chips               both correct
+Snickers bar              snacks > candy               snacks > candy               snacks > candy               both correct
+M&Ms                      snacks > candy               snacks > candy               snacks > candy               both correct
+gummy bears               snacks > candy               snacks > candy               snacks > candy               both correct
+Skittles                  snacks > candy               snacks > candy               snacks > candy               both correct
+Twizzlers                 snacks > candy               snacks > candy               snacks > candy               both correct
+Sour Patch Kids           snacks > candy               snacks > candy               snacks > candy               both correct
+fruit snacks              snacks > candy               snacks > candy               snacks > candy               both correct
+Oreos                     snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Ritz crackers             snacks > cookies_crackers    pantry > dry_goods           snacks > crackers            BOTH WRONG
+graham crackers           snacks > cookies_crackers    pantry > baking              snacks > cookies_crackers    routed wrong
+granola bars              snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+protein bars              snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Goldfish crackers         snacks > cookies_crackers    snacks > chips               snacks > crackers            BOTH WRONG
+Pop-Tarts                 snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+almonds                   snacks > nuts                pantry > dry_goods           snacks > nuts                routed wrong
+cashews                   snacks > nuts                snacks > nuts                snacks > nuts                both correct
+trail mix                 snacks > nuts                snacks > nuts                snacks > nuts                both correct
+mixed nuts                snacks > nuts                snacks > nuts                snacks > nuts                both correct
+sunflower seeds           snacks > nuts                snacks > nuts                snacks > nuts                both correct
+pistachios                snacks > nuts                snacks > nuts                snacks > nuts                both correct
+Coca-Cola                 beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+bottled water             beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+LaCroix sparkling water   beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Gatorade                  beverages > soda_water       beverages > soda_water       beverages > sports/energy drinks omni wrong
+Red Bull                  beverages > soda_water       beverages > alcohol          beverages > energy drinks    BOTH WRONG
+Monster Energy            beverages > soda_water       beverages > alcohol          beverages > energy drinks    BOTH WRONG
+coconut water             beverages > soda_water       beverages > soda_water       beverages > juice            omni wrong
+orange juice              beverages > juice            beverages > juice            beverages > juice            both correct
+apple juice               beverages > juice            beverages > juice            beverages > juice            both correct
+cranberry juice           beverages > juice            beverages > juice            beverages > juice            both correct
+V8 vegetable juice        beverages > juice            beverages > juice            beverages > juice            both correct
+kombucha                  beverages > juice            beverages > juice            beverages > juice            both correct
+grape juice               beverages > juice            beverages > juice            beverages > juice            both correct
+Folgers ground coffee     beverages > coffee_tea       pantry > baking              pantry > coffee              BOTH WRONG
+K-Cup coffee pods         beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+Lipton tea bags           beverages > coffee_tea       beverages > coffee_tea       beverages > tea              omni wrong
+cold brew coffee          beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+green tea                 beverages > coffee_tea       beverages > coffee_tea       beverages > tea              omni wrong
+hot chocolate mix         beverages > coffee_tea       pantry > baking              pantry > baking              BOTH WRONG
+Arizona iced tea          beverages > coffee_tea       beverages > juice            beverages > juice            BOTH WRONG
+Bud Light beer            beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+red wine                  beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+White Claw hard seltzer   beverages > alcohol          beverages > alcohol          beverages > soda_water       omni wrong
+vodka                     beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+bourbon                   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+champagne                 beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+ibuprofen                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tylenol                   health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+cough syrup               health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Zyrtec allergy pills      health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tums antacid              health_wellness > medicine   health_wellness > first_aid  health_wellness > medicine   routed wrong
+DayQuil cold medicine     health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+eye drops                 health_wellness > medicine   health_wellness > medicine   health_wellness > first_aid  omni wrong
+multivitamin              health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin C tablets         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+fish oil capsules         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+probiotics                health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+melatonin                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > first_aid  omni wrong
+prenatal vitamins         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin D                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+band-aids                 health_wellness > first_aid  personal_care > body         personal_care > body         BOTH WRONG
+hydrogen peroxide         health_wellness > first_aid  health_wellness > first_aid  household > cleaning         omni wrong
+gauze pads                health_wellness > first_aid  personal_care > body         household > cleaning         BOTH WRONG
+Neosporin antibiotic ointment health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+thermometer               health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+rubbing alcohol           health_wellness > first_aid  health_wellness > first_aid  household > cleaning         omni wrong
+shampoo                   personal_care > hair         personal_care > hair         personal_care > hair         both correct
+conditioner               personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair gel                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+dry shampoo               personal_care > hair         personal_care > hair         pantry > condiments          omni wrong
+hair spray                personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Head & Shoulders dandruff shampoo personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair dye                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Crest toothpaste          personal_care > oral         personal_care > oral         personal_care > oral         both correct
+toothbrush                personal_care > oral         personal_care > oral         personal_care > oral         both correct
+Listerine mouthwash       personal_care > oral         personal_care > oral         personal_care > oral         both correct
+dental floss              personal_care > oral         personal_care > oral         personal_care > oral         both correct
+whitening strips          personal_care > oral         personal_care > oral         personal_care > oral         both correct
+floss picks               personal_care > oral         personal_care > oral         personal_care > oral         both correct
+body wash                 personal_care > body         personal_care > body         personal_care > body         both correct
+deodorant                 personal_care > body         personal_care > body         personal_care > body         both correct
+body lotion               personal_care > body         personal_care > body         personal_care > body         both correct
+sunscreen                 personal_care > body         personal_care > body         household > cleaning         omni wrong
+Gillette razors           personal_care > body         personal_care > body         personal_care > hair         omni wrong
+bar soap                  personal_care > body         personal_care > body         personal_care > body         both correct
+lip balm                  personal_care > body         personal_care > body         personal_care > body         both correct
+Dawn dish soap            household > cleaning         household > cleaning         pantry > condiments          omni wrong
+Tide laundry detergent    household > cleaning         household > kitchen          pantry > condiments          BOTH WRONG
+Clorox bleach             household > cleaning         household > cleaning         household > cleaning         both correct
+Windex glass cleaner      household > cleaning         household > cleaning         household > cleaning         both correct
+Swiffer pads              household > cleaning         household > paper            household > cleaning         routed wrong
+sponges                   household > cleaning         household > cleaning         household > cleaning         both correct
+dryer sheets              household > cleaning         household > cleaning         household > cleaning         both correct
+toilet paper              household > paper            household > paper            household > paper            both correct
+paper towels              household > paper            household > paper            household > paper            both correct
+Kleenex tissues           household > paper            personal_care > body         personal_care > body         BOTH WRONG
+napkins                   household > paper            household > paper            household > paper            both correct
+trash bags                household > paper            household > paper            household > paper            both correct
+paper plates              household > paper            household > paper            household > paper            both correct
+aluminum foil             household > kitchen          household > kitchen          household > kitchen          both correct
+plastic wrap              household > kitchen          pantry                       pantry > condiments          BOTH WRONG
+Ziploc bags               household > kitchen          pantry > dry_goods           household > paper            BOTH WRONG
+parchment paper           household > kitchen          pantry > baking              pantry > baking              BOTH WRONG
+batteries                 household > kitchen          household > kitchen          household > kitchen          both correct
+light bulbs               household > kitchen          household > kitchen          household > kitchen          both correct
+Pampers diapers           baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+baby wipes                baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Enfamil baby formula      baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Gerber baby food          baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+sippy cups                baby_pet > baby              household > kitchen          baby_pet > baby              routed wrong
+baby lotion               baby_pet > baby              personal_care > body         personal_care > body         BOTH WRONG
+diaper cream              baby_pet > baby              baby_pet > baby              personal_care > body         omni wrong
+Purina dog food           baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+Fancy Feast cat food      baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+cat litter                baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+Milk-Bone dog treats      baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+dog toys                  baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+flea collar               baby_pet > pet               baby_pet > pet               personal_care > body         omni wrong
+bird seed                 baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+
+========================================================================================================================
+Summary for gemma2:2b @ http://localhost:11434/v1:
+  grocery-classify (routed): 214/250 correct (85%)
+  omni-classify (single):    171/250 correct (68%)
+
+########################################################################################################################
+# Model: llama3.2:3b @ http://localhost:11434/v1
+# Items: 250
+########################################################################################################################
+
+  [1/250] apples... both correct
+  [2/250] bananas... both correct
+  [3/250] strawberries... both correct
+  [4/250] watermelon... both correct
+  [5/250] mangoes... both correct
+  [6/250] avocados... both correct
+  [7/250] lemons... both correct
+  [8/250] broccoli... both correct
+  [9/250] carrots... both correct
+  [10/250] spinach... both correct
+  [11/250] potatoes... both correct
+  [12/250] tomatoes... routed wrong
+  [13/250] mushrooms... both correct
+  [14/250] fresh basil... omni wrong
+  [15/250] ground beef... both correct
+  [16/250] ribeye steak... both correct
+  [17/250] beef brisket... both correct
+  [18/250] sirloin steak... both correct
+  [19/250] filet mignon... both correct
+  [20/250] veal cutlets... both correct
+  [21/250] pork chops... both correct
+  [22/250] bacon... both correct
+  [23/250] pork loin... both correct
+  [24/250] bratwurst... both correct
+  [25/250] Italian sausage... both correct
+  [26/250] baby back ribs... both correct
+  [27/250] chicken breast... both correct
+  [28/250] chicken thighs... both correct
+  [29/250] ground turkey... both correct
+  [30/250] whole chicken... both correct
+  [31/250] chicken wings... both correct
+  [32/250] turkey bacon... both correct
+  [33/250] Cornish hen... both correct
+  [34/250] salmon fillet... omni wrong
+  [35/250] shrimp... both correct
+  [36/250] tilapia... both correct
+  [37/250] crab legs... omni wrong
+  [38/250] lobster tail... omni wrong
+  [39/250] cod fillet... both correct
+  [40/250] rotisserie chicken... both correct
+  [41/250] deli sliced turkey... both correct
+  [42/250] deli ham... both correct
+  [43/250] prepared potato salad... both correct
+  [44/250] hummus... BOTH WRONG
+  [45/250] sub sandwich... both correct
+  [46/250] prepared sushi... both correct
+  [47/250] sourdough bread... omni wrong
+  [48/250] bagels... both correct
+  [49/250] croissants... both correct
+  [50/250] donuts... BOTH WRONG
+  [51/250] birthday cake... omni wrong
+  [52/250] tortillas... omni wrong
+  [53/250] hamburger buns... omni wrong
+  [54/250] whole milk... both correct
+  [55/250] 2% milk... both correct
+  [56/250] almond milk... both correct
+  [57/250] oat milk... both correct
+  [58/250] heavy cream... both correct
+  [59/250] coffee creamer... omni wrong
+  [60/250] chocolate milk... BOTH WRONG
+  [61/250] cheddar cheese... both correct
+  [62/250] shredded mozzarella... omni wrong
+  [63/250] cream cheese... both correct
+  [64/250] Swiss cheese... both correct
+  [65/250] Parmesan cheese... both correct
+  [66/250] string cheese... both correct
+  [67/250] Greek yogurt... both correct
+  [68/250] strawberry yogurt... both correct
+  [69/250] kids yogurt tubes... BOTH WRONG
+  [70/250] kefir... both correct
+  [71/250] plain yogurt... both correct
+  [72/250] non-dairy coconut yogurt... both correct
+  [73/250] eggs... both correct
+  [74/250] butter... both correct
+  [75/250] sour cream... omni wrong
+  [76/250] margarine... BOTH WRONG
+  [77/250] egg whites carton... both correct
+  [78/250] French onion dip... BOTH WRONG
+  [79/250] frozen pizza... both correct
+  [80/250] TV dinner... both correct
+  [81/250] frozen burritos... both correct
+  [82/250] Hot Pockets... routed wrong
+  [83/250] frozen waffles... omni wrong
+  [84/250] frozen chicken nuggets... both correct
+  [85/250] frozen french fries... both correct
+  [86/250] ice cream... omni wrong
+  [87/250] popsicles... omni wrong
+  [88/250] ice cream sandwiches... omni wrong
+  [89/250] frozen yogurt... omni wrong
+  [90/250] sorbet... omni wrong
+  [91/250] Klondike bars... BOTH WRONG
+  [92/250] frozen peas... both correct
+  [93/250] frozen broccoli... both correct
+  [94/250] frozen strawberries... both correct
+  [95/250] frozen mixed vegetables... both correct
+  [96/250] frozen corn... both correct
+  [97/250] frozen edamame... both correct
+  [98/250] canned beans... both correct
+  [99/250] canned tomatoes... both correct
+  [100/250] canned soup... both correct
+  [101/250] canned tuna... both correct
+  [102/250] jarred pasta sauce... both correct
+  [103/250] jarred salsa... routed wrong
+  [104/250] canned chicken broth... both correct
+  [105/250] spaghetti pasta... both correct
+  [106/250] white rice... both correct
+  [107/250] Cheerios cereal... omni wrong
+  [108/250] instant oatmeal... both correct
+  [109/250] ramen noodles... both correct
+  [110/250] quinoa... both correct
+  [111/250] Kraft mac and cheese... both correct
+  [112/250] ketchup... both correct
+  [113/250] mustard... both correct
+  [114/250] soy sauce... both correct
+  [115/250] hot sauce... both correct
+  [116/250] olive oil... both correct
+  [117/250] peanut butter... both correct
+  [118/250] honey... both correct
+  [119/250] all-purpose flour... omni wrong
+  [120/250] granulated sugar... BOTH WRONG
+  [121/250] baking soda... both correct
+  [122/250] vanilla extract... omni wrong
+  [123/250] chocolate chips... routed wrong
+  [124/250] cake mix... both correct
+  [125/250] Lay's potato chips... both correct
+  [126/250] Doritos... both correct
+  [127/250] tortilla chips... both correct
+  [128/250] pretzels... both correct
+  [129/250] microwave popcorn... both correct
+  [130/250] Cheetos... both correct
+  [131/250] beef jerky... both correct
+  [132/250] Snickers bar... both correct
+  [133/250] M&Ms... both correct
+  [134/250] gummy bears... both correct
+  [135/250] Skittles... both correct
+  [136/250] Twizzlers... both correct
+  [137/250] Sour Patch Kids... both correct
+  [138/250] fruit snacks... both correct
+  [139/250] Oreos... both correct
+  [140/250] Ritz crackers... both correct
+  [141/250] graham crackers... omni wrong
+  [142/250] granola bars... both correct
+  [143/250] protein bars... both correct
+  [144/250] Goldfish crackers... both correct
+  [145/250] Pop-Tarts... both correct
+  [146/250] almonds... both correct
+  [147/250] cashews... both correct
+  [148/250] trail mix... omni wrong
+  [149/250] mixed nuts... both correct
+  [150/250] sunflower seeds... omni wrong
+  [151/250] pistachios... both correct
+  [152/250] Coca-Cola... both correct
+  [153/250] bottled water... both correct
+  [154/250] LaCroix sparkling water... both correct
+  [155/250] Gatorade... both correct
+  [156/250] Red Bull... both correct
+  [157/250] Monster Energy... both correct
+  [158/250] coconut water... omni wrong
+  [159/250] orange juice... both correct
+  [160/250] apple juice... both correct
+  [161/250] cranberry juice... both correct
+  [162/250] V8 vegetable juice... both correct
+  [163/250] kombucha... both correct
+  [164/250] grape juice... both correct
+  [165/250] Folgers ground coffee... routed wrong
+  [166/250] K-Cup coffee pods... both correct
+  [167/250] Lipton tea bags... both correct
+  [168/250] cold brew coffee... both correct
+  [169/250] green tea... both correct
+  [170/250] hot chocolate mix... BOTH WRONG
+  [171/250] Arizona iced tea... omni wrong
+  [172/250] Bud Light beer... both correct
+  [173/250] red wine... both correct
+  [174/250] White Claw hard seltzer... both correct
+  [175/250] vodka... both correct
+  [176/250] bourbon... both correct
+  [177/250] champagne... both correct
+  [178/250] ibuprofen... both correct
+  [179/250] Tylenol... both correct
+  [180/250] cough syrup... both correct
+  [181/250] Zyrtec allergy pills... both correct
+  [182/250] Tums antacid... both correct
+  [183/250] DayQuil cold medicine... both correct
+  [184/250] eye drops... both correct
+  [185/250] multivitamin... both correct
+  [186/250] vitamin C tablets... both correct
+  [187/250] fish oil capsules... both correct
+  [188/250] probiotics... both correct
+  [189/250] melatonin... both correct
+  [190/250] prenatal vitamins... both correct
+  [191/250] vitamin D... both correct
+  [192/250] band-aids... omni wrong
+  [193/250] hydrogen peroxide... omni wrong
+  [194/250] gauze pads... omni wrong
+  [195/250] Neosporin antibiotic ointment... BOTH WRONG
+  [196/250] thermometer... omni wrong
+  [197/250] rubbing alcohol... omni wrong
+  [198/250] shampoo... both correct
+  [199/250] conditioner... both correct
+  [200/250] hair gel... both correct
+  [201/250] dry shampoo... BOTH WRONG
+  [202/250] hair spray... both correct
+  [203/250] Head & Shoulders dandruff shampoo... routed wrong
+  [204/250] hair dye... routed wrong
+  [205/250] Crest toothpaste... routed wrong
+  [206/250] toothbrush... both correct
+  [207/250] Listerine mouthwash... routed wrong
+  [208/250] dental floss... routed wrong
+  [209/250] whitening strips... routed wrong
+  [210/250] floss picks... BOTH WRONG
+  [211/250] body wash... both correct
+  [212/250] deodorant... both correct
+  [213/250] body lotion... both correct
+  [214/250] sunscreen... omni wrong
+  [215/250] Gillette razors... omni wrong
+  [216/250] bar soap... both correct
+  [217/250] lip balm... both correct
+  [218/250] Dawn dish soap... both correct
+  [219/250] Tide laundry detergent... routed wrong
+  [220/250] Clorox bleach... both correct
+  [221/250] Windex glass cleaner... both correct
+  [222/250] Swiffer pads... omni wrong
+  [223/250] sponges... omni wrong
+  [224/250] dryer sheets... omni wrong
+  [225/250] toilet paper... both correct
+  [226/250] paper towels... both correct
+  [227/250] Kleenex tissues... both correct
+  [228/250] napkins... both correct
+  [229/250] trash bags... both correct
+  [230/250] paper plates... both correct
+  [231/250] aluminum foil... both correct
+  [232/250] plastic wrap... both correct
+  [233/250] Ziploc bags... BOTH WRONG
+  [234/250] parchment paper... BOTH WRONG
+  [235/250] batteries... both correct
+  [236/250] light bulbs... both correct
+  [237/250] Pampers diapers... both correct
+  [238/250] baby wipes... both correct
+  [239/250] Enfamil baby formula... both correct
+  [240/250] Gerber baby food... both correct
+  [241/250] sippy cups... routed wrong
+  [242/250] baby lotion... routed wrong
+  [243/250] diaper cream... BOTH WRONG
+  [244/250] Purina dog food... routed wrong
+  [245/250] Fancy Feast cat food... both correct
+  [246/250] cat litter... routed wrong
+  [247/250] Milk-Bone dog treats... BOTH WRONG
+  [248/250] dog toys... routed wrong
+  [249/250] flea collar... routed wrong
+  [250/250] bird seed... routed wrong
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+apples                    produce > fruit              produce > fruit              produce > fruit              both correct
+bananas                   produce > fruit              produce > fruit              produce > fruit              both correct
+strawberries              produce > fruit              produce > fruit              produce > fruit              both correct
+watermelon                produce > fruit              produce > fruit              produce > fruit              both correct
+mangoes                   produce > fruit              produce > fruit              produce > fruit              both correct
+avocados                  produce > fruit              produce > fruit              produce > fruit              both correct
+lemons                    produce > fruit              produce > fruit              produce > fruit              both correct
+broccoli                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+carrots                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+spinach                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+potatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+tomatoes                  produce > vegetable          produce > fruit              produce > vegetable          routed wrong
+mushrooms                 produce > vegetable          produce > vegetable          produce > vegetable          both correct
+fresh basil               produce > vegetable          produce > vegetable          produce > herbs              omni wrong
+ground beef               meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+ribeye steak              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+beef brisket              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+sirloin steak             meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+filet mignon              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+veal cutlets              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+pork chops                meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bacon                     meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+pork loin                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bratwurst                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+Italian sausage           meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+baby back ribs            meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+chicken breast            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken thighs            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+ground turkey             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+whole chicken             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken wings             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+turkey bacon              meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+Cornish hen               meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+salmon fillet             meat_seafood > seafood       meat_seafood > seafood       beverages > seafood          omni wrong
+shrimp                    meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+tilapia                   meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+crab legs                 meat_seafood > seafood       meat_seafood > seafood       beverages > seafood          omni wrong
+lobster tail              meat_seafood > seafood       meat_seafood > seafood       beverages > alcohol          omni wrong
+cod fillet                meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+rotisserie chicken        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli sliced turkey        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli ham                  deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared potato salad     deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+hummus                    deli_bakery > deli           snacks > nuts                pantry > condiments          BOTH WRONG
+sub sandwich              deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared sushi            deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+sourdough bread           deli_bakery > bakery         deli_bakery > bakery         household > kitchen          omni wrong
+bagels                    deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+croissants                deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+donuts                    deli_bakery > bakery         snacks > cookies_crackers    snacks > cookies_crackers    BOTH WRONG
+birthday cake             deli_bakery > bakery         deli_bakery > bakery         household > bakery           omni wrong
+tortillas                 deli_bakery > bakery         deli_bakery > bakery         pantry > dry_goods           omni wrong
+hamburger buns            deli_bakery > bakery         deli_bakery > bakery         pantry > baking              omni wrong
+whole milk                dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+2% milk                   dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+almond milk               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+oat milk                  dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+heavy cream               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+coffee creamer            dairy_eggs > milk            dairy_eggs > milk            pantry > condiments          omni wrong
+chocolate milk            dairy_eggs > milk            beverages > soda_water       beverages > milk             BOTH WRONG
+cheddar cheese            dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+shredded mozzarella       dairy_eggs > cheese          dairy_eggs > cheese          pantry > dairy_eggs          omni wrong
+cream cheese              dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Swiss cheese              dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Parmesan cheese           dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+string cheese             dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Greek yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+strawberry yogurt         dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+kids yogurt tubes         dairy_eggs > yogurt          snacks > cookies_crackers    pantry > canned              BOTH WRONG
+kefir                     dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+plain yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+non-dairy coconut yogurt  dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+eggs                      dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+butter                    dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+sour cream                dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > milk            omni wrong
+margarine                 dairy_eggs > eggs_butter     pantry > condiments          pantry > condiments          BOTH WRONG
+egg whites carton         dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+French onion dip          dairy_eggs > eggs_butter     snacks > cookies_crackers    pantry > condiments          BOTH WRONG
+frozen pizza              frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+TV dinner                 frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen burritos           frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+Hot Pockets               frozen > frozen_meals        snacks > cookies_crackers    frozen > frozen_meals        routed wrong
+frozen waffles            frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_treats       omni wrong
+frozen chicken nuggets    frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen french fries       frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+ice cream                 frozen > frozen_treats       frozen > frozen_treats       beverages > frozen_treats    omni wrong
+popsicles                 frozen > frozen_treats       frozen > frozen_treats       beverages > frozen_treats    omni wrong
+ice cream sandwiches      frozen > frozen_treats       frozen > frozen_treats       beverages > frozen_treats    omni wrong
+frozen yogurt             frozen > frozen_treats       frozen > frozen_treats       beverages > frozen_treats    omni wrong
+sorbet                    frozen > frozen_treats       frozen > frozen_treats       beverages > frozen_treats    omni wrong
+Klondike bars             frozen > frozen_treats       snacks > candy               snacks > candy               BOTH WRONG
+frozen peas               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen broccoli           frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen strawberries       frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen mixed vegetables   frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen corn               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen edamame            frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+canned beans              pantry > canned              pantry > canned              pantry > canned              both correct
+canned tomatoes           pantry > canned              pantry > canned              pantry > canned              both correct
+canned soup               pantry > canned              pantry > canned              pantry > canned              both correct
+canned tuna               pantry > canned              pantry > canned              pantry > canned              both correct
+jarred pasta sauce        pantry > canned              pantry > canned              pantry > canned              both correct
+jarred salsa              pantry > canned              pantry > condiments          pantry > canned              routed wrong
+canned chicken broth      pantry > canned              pantry > canned              pantry > canned              both correct
+spaghetti pasta           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+white rice                pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Cheerios cereal           pantry > dry_goods           pantry > dry_goods           pantry > cereal              omni wrong
+instant oatmeal           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+ramen noodles             pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+quinoa                    pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Kraft mac and cheese      pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+ketchup                   pantry > condiments          pantry > condiments          pantry > condiments          both correct
+mustard                   pantry > condiments          pantry > condiments          pantry > condiments          both correct
+soy sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+hot sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+olive oil                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+peanut butter             pantry > condiments          pantry > condiments          pantry > condiments          both correct
+honey                     pantry > condiments          pantry > condiments          pantry > condiments          both correct
+all-purpose flour         pantry > baking              pantry > baking              pantry > dry_goods           omni wrong
+granulated sugar          pantry > baking              pantry > dry_goods           pantry > dry_goods           BOTH WRONG
+baking soda               pantry > baking              pantry > baking              pantry > baking              both correct
+vanilla extract           pantry > baking              pantry > baking              pantry > condiments          omni wrong
+chocolate chips           pantry > baking              snacks > candy               pantry > baking              routed wrong
+cake mix                  pantry > baking              pantry > baking              pantry > baking              both correct
+Lay's potato chips        snacks > chips               snacks > chips               snacks > chips               both correct
+Doritos                   snacks > chips               snacks > chips               snacks > chips               both correct
+tortilla chips            snacks > chips               snacks > chips               snacks > chips               both correct
+pretzels                  snacks > chips               snacks > chips               snacks > chips               both correct
+microwave popcorn         snacks > chips               snacks > chips               snacks > chips               both correct
+Cheetos                   snacks > chips               snacks > chips               snacks > chips               both correct
+beef jerky                snacks > chips               snacks > chips               snacks > chips               both correct
+Snickers bar              snacks > candy               snacks > candy               snacks > candy               both correct
+M&Ms                      snacks > candy               snacks > candy               snacks > candy               both correct
+gummy bears               snacks > candy               snacks > candy               snacks > candy               both correct
+Skittles                  snacks > candy               snacks > candy               snacks > candy               both correct
+Twizzlers                 snacks > candy               snacks > candy               snacks > candy               both correct
+Sour Patch Kids           snacks > candy               snacks > candy               snacks > candy               both correct
+fruit snacks              snacks > candy               snacks > candy               snacks > candy               both correct
+Oreos                     snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Ritz crackers             snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+graham crackers           snacks > cookies_crackers    snacks > cookies_crackers    pantry > cookies_crackers    omni wrong
+granola bars              snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+protein bars              snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Goldfish crackers         snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Pop-Tarts                 snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+almonds                   snacks > nuts                snacks > nuts                snacks > nuts                both correct
+cashews                   snacks > nuts                snacks > nuts                snacks > nuts                both correct
+trail mix                 snacks > nuts                snacks > nuts                snacks > cookies_crackers    omni wrong
+mixed nuts                snacks > nuts                snacks > nuts                snacks > nuts                both correct
+sunflower seeds           snacks > nuts                snacks > nuts                pantry > nuts                omni wrong
+pistachios                snacks > nuts                snacks > nuts                snacks > nuts                both correct
+Coca-Cola                 beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+bottled water             beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+LaCroix sparkling water   beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Gatorade                  beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Red Bull                  beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Monster Energy            beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+coconut water             beverages > soda_water       beverages > soda_water       beverages > juice            omni wrong
+orange juice              beverages > juice            beverages > juice            beverages > juice            both correct
+apple juice               beverages > juice            beverages > juice            beverages > juice            both correct
+cranberry juice           beverages > juice            beverages > juice            beverages > juice            both correct
+V8 vegetable juice        beverages > juice            beverages > juice            beverages > juice            both correct
+kombucha                  beverages > juice            beverages > juice            beverages > juice            both correct
+grape juice               beverages > juice            beverages > juice            beverages > juice            both correct
+Folgers ground coffee     beverages > coffee_tea       pantry > dry_goods           beverages > coffee_tea       routed wrong
+K-Cup coffee pods         beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+Lipton tea bags           beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+cold brew coffee          beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+green tea                 beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+hot chocolate mix         beverages > coffee_tea       pantry > dry_goods           pantry > baking              BOTH WRONG
+Arizona iced tea          beverages > coffee_tea       beverages > coffee_tea       beverages > juice            omni wrong
+Bud Light beer            beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+red wine                  beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+White Claw hard seltzer   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+vodka                     beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+bourbon                   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+champagne                 beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+ibuprofen                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tylenol                   health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+cough syrup               health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Zyrtec allergy pills      health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tums antacid              health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+DayQuil cold medicine     health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+eye drops                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+multivitamin              health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin C tablets         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+fish oil capsules         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+probiotics                health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+melatonin                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+prenatal vitamins         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin D                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+band-aids                 health_wellness > first_aid  health_wellness > first_aid  household > paper            omni wrong
+hydrogen peroxide         health_wellness > first_aid  health_wellness > first_aid  household > first_aid        omni wrong
+gauze pads                health_wellness > first_aid  health_wellness > first_aid  household > first_aid        omni wrong
+Neosporin antibiotic ointment health_wellness > first_aid  health_wellness > medicine   health_wellness > medicine   BOTH WRONG
+thermometer               health_wellness > first_aid  health_wellness > first_aid  household > first_aid        omni wrong
+rubbing alcohol           health_wellness > first_aid  health_wellness > first_aid  household > first_aid        omni wrong
+shampoo                   personal_care > hair         personal_care > hair         personal_care > hair         both correct
+conditioner               personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair gel                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+dry shampoo               personal_care > hair         snacks                       pantry > condiments          BOTH WRONG
+hair spray                personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Head & Shoulders dandruff shampoo personal_care > hair         health_wellness > medicine   personal_care > hair         routed wrong
+hair dye                  personal_care > hair         health_wellness > vitamins   personal_care > hair         routed wrong
+Crest toothpaste          personal_care > oral         beverages                    personal_care > oral         routed wrong
+toothbrush                personal_care > oral         personal_care > oral         personal_care > oral         both correct
+Listerine mouthwash       personal_care > oral         health_wellness > medicine   personal_care > oral         routed wrong
+dental floss              personal_care > oral         health_wellness > first_aid  personal_care > oral         routed wrong
+whitening strips          personal_care > oral         health_wellness > medicine   personal_care > oral         routed wrong
+floss picks               personal_care > oral         snacks > chips               household > paper            BOTH WRONG
+body wash                 personal_care > body         personal_care > body         personal_care > body         both correct
+deodorant                 personal_care > body         personal_care > body         personal_care > body         both correct
+body lotion               personal_care > body         personal_care > body         personal_care > body         both correct
+sunscreen                 personal_care > body         personal_care > body         household > kitchen          omni wrong
+Gillette razors           personal_care > body         personal_care > body         household > kitchen          omni wrong
+bar soap                  personal_care > body         personal_care > body         personal_care > body         both correct
+lip balm                  personal_care > body         personal_care > body         personal_care > body         both correct
+Dawn dish soap            household > cleaning         household > cleaning         household > cleaning         both correct
+Tide laundry detergent    household > cleaning         pantry                       household > cleaning         routed wrong
+Clorox bleach             household > cleaning         household > cleaning         household > cleaning         both correct
+Windex glass cleaner      household > cleaning         household > cleaning         household > cleaning         both correct
+Swiffer pads              household > cleaning         household > cleaning         household > paper            omni wrong
+sponges                   household > cleaning         household > cleaning         household > paper            omni wrong
+dryer sheets              household > cleaning         household > cleaning         household > paper            omni wrong
+toilet paper              household > paper            household > paper            household > paper            both correct
+paper towels              household > paper            household > paper            household > paper            both correct
+Kleenex tissues           household > paper            household > paper            household > paper            both correct
+napkins                   household > paper            household > paper            household > paper            both correct
+trash bags                household > paper            household > paper            household > paper            both correct
+paper plates              household > paper            household > paper            household > paper            both correct
+aluminum foil             household > kitchen          household > kitchen          household > kitchen          both correct
+plastic wrap              household > kitchen          household > kitchen          household > kitchen          both correct
+Ziploc bags               household > kitchen          household > paper            household > paper            BOTH WRONG
+parchment paper           household > kitchen          pantry > dry_goods           household > paper            BOTH WRONG
+batteries                 household > kitchen          household > kitchen          household > kitchen          both correct
+light bulbs               household > kitchen          household > kitchen          household > kitchen          both correct
+Pampers diapers           baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+baby wipes                baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Enfamil baby formula      baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Gerber baby food          baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+sippy cups                baby_pet > baby              beverages > soda_water       baby_pet > baby              routed wrong
+baby lotion               baby_pet > baby              personal_care > body         baby_pet > baby              routed wrong
+diaper cream              baby_pet > baby              personal_care > body         household > kitchen          BOTH WRONG
+Purina dog food           baby_pet > pet               pantry > dry_goods           baby_pet > pet               routed wrong
+Fancy Feast cat food      baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+cat litter                baby_pet > pet               household > cleaning         baby_pet > pet               routed wrong
+Milk-Bone dog treats      baby_pet > pet               snacks > cookies_crackers    snacks > chips               BOTH WRONG
+dog toys                  baby_pet > pet               snacks                       baby_pet > pet               routed wrong
+flea collar               baby_pet > pet               household > kitchen          baby_pet > pet               routed wrong
+bird seed                 baby_pet > pet               pantry > dry_goods           baby_pet > pet               routed wrong
+
+========================================================================================================================
+Summary for llama3.2:3b @ http://localhost:11434/v1:
+  grocery-classify (routed): 215/250 correct (86%)
+  omni-classify (single):    199/250 correct (79%)
+
+########################################################################################################################
+# Model: qwen2.5:7b @ http://localhost:11434/v1
+# Items: 250
+########################################################################################################################
+
+  [1/250] apples... both correct
+  [2/250] bananas... both correct
+  [3/250] strawberries... both correct
+  [4/250] watermelon... both correct
+  [5/250] mangoes... both correct
+  [6/250] avocados... both correct
+  [7/250] lemons... both correct
+  [8/250] broccoli... both correct
+  [9/250] carrots... both correct
+  [10/250] spinach... both correct
+  [11/250] potatoes... both correct
+  [12/250] tomatoes... both correct
+  [13/250] mushrooms... both correct
+  [14/250] fresh basil... both correct
+  [15/250] ground beef... both correct
+  [16/250] ribeye steak... both correct
+  [17/250] beef brisket... both correct
+  [18/250] sirloin steak... both correct
+  [19/250] filet mignon... both correct
+  [20/250] veal cutlets... omni wrong
+  [21/250] pork chops... both correct
+  [22/250] bacon... both correct
+  [23/250] pork loin... both correct
+  [24/250] bratwurst... both correct
+  [25/250] Italian sausage... omni wrong
+  [26/250] baby back ribs... both correct
+  [27/250] chicken breast... both correct
+  [28/250] chicken thighs... both correct
+  [29/250] ground turkey... both correct
+  [30/250] whole chicken... both correct
+  [31/250] chicken wings... both correct
+  [32/250] turkey bacon... omni wrong
+  [33/250] Cornish hen... both correct
+  [34/250] salmon fillet... both correct
+  [35/250] shrimp... both correct
+  [36/250] tilapia... both correct
+  [37/250] crab legs... both correct
+  [38/250] lobster tail... both correct
+  [39/250] cod fillet... both correct
+  [40/250] rotisserie chicken... both correct
+  [41/250] deli sliced turkey... routed wrong
+  [42/250] deli ham... routed wrong
+  [43/250] prepared potato salad... both correct
+  [44/250] hummus... BOTH WRONG
+  [45/250] sub sandwich... both correct
+  [46/250] prepared sushi... both correct
+  [47/250] sourdough bread... routed wrong
+  [48/250] bagels... BOTH WRONG
+  [49/250] croissants... both correct
+  [50/250] donuts... both correct
+  [51/250] birthday cake... both correct
+  [52/250] tortillas... BOTH WRONG
+  [53/250] hamburger buns... BOTH WRONG
+  [54/250] whole milk... both correct
+  [55/250] 2% milk... both correct
+  [56/250] almond milk... both correct
+  [57/250] oat milk... both correct
+  [58/250] heavy cream... both correct
+  [59/250] coffee creamer... both correct
+  [60/250] chocolate milk... both correct
+  [61/250] cheddar cheese... both correct
+  [62/250] shredded mozzarella... both correct
+  [63/250] cream cheese... both correct
+  [64/250] Swiss cheese... both correct
+  [65/250] Parmesan cheese... both correct
+  [66/250] string cheese... BOTH WRONG
+  [67/250] Greek yogurt... both correct
+  [68/250] strawberry yogurt... omni wrong
+  [69/250] kids yogurt tubes... routed wrong
+  [70/250] kefir... BOTH WRONG
+  [71/250] plain yogurt... both correct
+  [72/250] non-dairy coconut yogurt... both correct
+  [73/250] eggs... both correct
+  [74/250] butter... omni wrong
+  [75/250] sour cream... omni wrong
+  [76/250] margarine... both correct
+  [77/250] egg whites carton... both correct
+  [78/250] French onion dip... BOTH WRONG
+  [79/250] frozen pizza... both correct
+  [80/250] TV dinner... both correct
+  [81/250] frozen burritos... both correct
+  [82/250] Hot Pockets... routed wrong
+  [83/250] frozen waffles... both correct
+  [84/250] frozen chicken nuggets... both correct
+  [85/250] frozen french fries... both correct
+  [86/250] ice cream... omni wrong
+  [87/250] popsicles... BOTH WRONG
+  [88/250] ice cream sandwiches... BOTH WRONG
+  [89/250] frozen yogurt... both correct
+  [90/250] sorbet... routed wrong
+  [91/250] Klondike bars... BOTH WRONG
+  [92/250] frozen peas... both correct
+  [93/250] frozen broccoli... both correct
+  [94/250] frozen strawberries... both correct
+  [95/250] frozen mixed vegetables... both correct
+  [96/250] frozen corn... both correct
+  [97/250] frozen edamame... both correct
+  [98/250] canned beans... both correct
+  [99/250] canned tomatoes... both correct
+  [100/250] canned soup... both correct
+  [101/250] canned tuna... both correct
+  [102/250] jarred pasta sauce... omni wrong
+  [103/250] jarred salsa... omni wrong
+  [104/250] canned chicken broth... both correct
+  [105/250] spaghetti pasta... both correct
+  [106/250] white rice... both correct
+  [107/250] Cheerios cereal... omni wrong
+  [108/250] instant oatmeal... omni wrong
+  [109/250] ramen noodles... both correct
+  [110/250] quinoa... both correct
+  [111/250] Kraft mac and cheese... both correct
+  [112/250] ketchup... both correct
+  [113/250] mustard... omni wrong
+  [114/250] soy sauce... both correct
+  [115/250] hot sauce... both correct
+  [116/250] olive oil... both correct
+  [117/250] peanut butter... both correct
+  [118/250] honey... both correct
+  [119/250] all-purpose flour... omni wrong
+  [120/250] granulated sugar... omni wrong
+  [121/250] baking soda... omni wrong
+  [122/250] vanilla extract... omni wrong
+  [123/250] chocolate chips... both correct
+  [124/250] cake mix... both correct
+  [125/250] Lay's potato chips... both correct
+  [126/250] Doritos... both correct
+  [127/250] tortilla chips... omni wrong
+  [128/250] pretzels... both correct
+  [129/250] microwave popcorn... BOTH WRONG
+  [130/250] Cheetos... both correct
+  [131/250] beef jerky... omni wrong
+  [132/250] Snickers bar... both correct
+  [133/250] M&Ms... both correct
+  [134/250] gummy bears... both correct
+  [135/250] Skittles... both correct
+  [136/250] Twizzlers... both correct
+  [137/250] Sour Patch Kids... both correct
+  [138/250] fruit snacks... both correct
+  [139/250] Oreos... omni wrong
+  [140/250] Ritz crackers... omni wrong
+  [141/250] graham crackers... BOTH WRONG
+  [142/250] granola bars... omni wrong
+  [143/250] protein bars... omni wrong
+  [144/250] Goldfish crackers... both correct
+  [145/250] Pop-Tarts... routed wrong
+  [146/250] almonds... BOTH WRONG
+  [147/250] cashews... BOTH WRONG
+  [148/250] trail mix... both correct
+  [149/250] mixed nuts... omni wrong
+  [150/250] sunflower seeds... BOTH WRONG
+  [151/250] pistachios... BOTH WRONG
+  [152/250] Coca-Cola... both correct
+  [153/250] bottled water... both correct
+  [154/250] LaCroix sparkling water... both correct
+  [155/250] Gatorade... both correct
+  [156/250] Red Bull... both correct
+  [157/250] Monster Energy... both correct
+  [158/250] coconut water... omni wrong
+  [159/250] orange juice... both correct
+  [160/250] apple juice... both correct
+  [161/250] cranberry juice... both correct
+  [162/250] V8 vegetable juice... both correct
+  [163/250] kombucha... both correct
+  [164/250] grape juice... both correct
+  [165/250] Folgers ground coffee... routed wrong
+  [166/250] K-Cup coffee pods... both correct
+  [167/250] Lipton tea bags... both correct
+  [168/250] cold brew coffee... both correct
+  [169/250] green tea... omni wrong
+  [170/250] hot chocolate mix... both correct
+  [171/250] Arizona iced tea... omni wrong
+  [172/250] Bud Light beer... both correct
+  [173/250] red wine... both correct
+  [174/250] White Claw hard seltzer... both correct
+  [175/250] vodka... both correct
+  [176/250] bourbon... both correct
+  [177/250] champagne... both correct
+  [178/250] ibuprofen... both correct
+  [179/250] Tylenol... both correct
+  [180/250] cough syrup... both correct
+  [181/250] Zyrtec allergy pills... both correct
+  [182/250] Tums antacid... both correct
+  [183/250] DayQuil cold medicine... both correct
+  [184/250] eye drops... both correct
+  [185/250] multivitamin... both correct
+  [186/250] vitamin C tablets... both correct
+  [187/250] fish oil capsules... both correct
+  [188/250] probiotics... both correct
+  [189/250] melatonin... both correct
+  [190/250] prenatal vitamins... both correct
+  [191/250] vitamin D... both correct
+  [192/250] band-aids... both correct
+  [193/250] hydrogen peroxide... both correct
+  [194/250] gauze pads... routed wrong
+  [195/250] Neosporin antibiotic ointment... routed wrong
+  [196/250] thermometer... both correct
+  [197/250] rubbing alcohol... routed wrong
+  [198/250] shampoo... both correct
+  [199/250] conditioner... both correct
+  [200/250] hair gel... both correct
+  [201/250] dry shampoo... omni wrong
+  [202/250] hair spray... both correct
+  [203/250] Head & Shoulders dandruff shampoo... both correct
+  [204/250] hair dye... both correct
+  [205/250] Crest toothpaste... both correct
+  [206/250] toothbrush... both correct
+  [207/250] Listerine mouthwash... omni wrong
+  [208/250] dental floss... both correct
+  [209/250] whitening strips... both correct
+  [210/250] floss picks... both correct
+  [211/250] body wash... both correct
+  [212/250] deodorant... omni wrong
+  [213/250] body lotion... both correct
+  [214/250] sunscreen... both correct
+  [215/250] Gillette razors... both correct
+  [216/250] bar soap... omni wrong
+  [217/250] lip balm... both correct
+  [218/250] Dawn dish soap... both correct
+  [219/250] Tide laundry detergent... both correct
+  [220/250] Clorox bleach... both correct
+  [221/250] Windex glass cleaner... both correct
+  [222/250] Swiffer pads... omni wrong
+  [223/250] sponges... both correct
+  [224/250] dryer sheets... both correct
+  [225/250] toilet paper... routed wrong
+  [226/250] paper towels... routed wrong
+  [227/250] Kleenex tissues... routed wrong
+  [228/250] napkins... routed wrong
+  [229/250] trash bags... both correct
+  [230/250] paper plates... routed wrong
+  [231/250] aluminum foil... omni wrong
+  [232/250] plastic wrap... BOTH WRONG
+  [233/250] Ziploc bags... BOTH WRONG
+  [234/250] parchment paper... BOTH WRONG
+  [235/250] batteries... omni wrong
+  [236/250] light bulbs... omni wrong
+  [237/250] Pampers diapers... both correct
+  [238/250] baby wipes... both correct
+  [239/250] Enfamil baby formula... both correct
+  [240/250] Gerber baby food... routed wrong
+  [241/250] sippy cups... omni wrong
+  [242/250] baby lotion... BOTH WRONG
+  [243/250] diaper cream... omni wrong
+  [244/250] Purina dog food... routed wrong
+  [245/250] Fancy Feast cat food... omni wrong
+  [246/250] cat litter... both correct
+  [247/250] Milk-Bone dog treats... BOTH WRONG
+  [248/250] dog toys... both correct
+  [249/250] flea collar... routed wrong
+  [250/250] bird seed... BOTH WRONG
+
+========================================================================================================================
+Item                      Expected                     Routed                       Omni                         Match
+------------------------------------------------------------------------------------------------------------------------
+apples                    produce > fruit              produce > fruit              produce > fruit              both correct
+bananas                   produce > fruit              produce > fruit              produce > fruit              both correct
+strawberries              produce > fruit              produce > fruit              produce > fruit              both correct
+watermelon                produce > fruit              produce > fruit              produce > fruit              both correct
+mangoes                   produce > fruit              produce > fruit              produce > fruit              both correct
+avocados                  produce > fruit              produce > fruit              produce > fruit              both correct
+lemons                    produce > fruit              produce > fruit              produce > fruit              both correct
+broccoli                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+carrots                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+spinach                   produce > vegetable          produce > vegetable          produce > vegetable          both correct
+potatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+tomatoes                  produce > vegetable          produce > vegetable          produce > vegetable          both correct
+mushrooms                 produce > vegetable          produce > vegetable          produce > vegetable          both correct
+fresh basil               produce > vegetable          produce > vegetable          produce > vegetable          both correct
+ground beef               meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+ribeye steak              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+beef brisket              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+sirloin steak             meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+filet mignon              meat_seafood > beef          meat_seafood > beef          meat_seafood > beef          both correct
+veal cutlets              meat_seafood > beef          meat_seafood > beef          meat_seafood > poultry       omni wrong
+pork chops                meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bacon                     meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+pork loin                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+bratwurst                 meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+Italian sausage           meat_seafood > pork          meat_seafood > pork          meat_seafood > poultry       omni wrong
+baby back ribs            meat_seafood > pork          meat_seafood > pork          meat_seafood > pork          both correct
+chicken breast            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken thighs            meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+ground turkey             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+whole chicken             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+chicken wings             meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+turkey bacon              meat_seafood > poultry       meat_seafood > poultry       meat_seafood > pork          omni wrong
+Cornish hen               meat_seafood > poultry       meat_seafood > poultry       meat_seafood > poultry       both correct
+salmon fillet             meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+shrimp                    meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+tilapia                   meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+crab legs                 meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+lobster tail              meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+cod fillet                meat_seafood > seafood       meat_seafood > seafood       meat_seafood > seafood       both correct
+rotisserie chicken        deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+deli sliced turkey        deli_bakery > deli           meat_seafood > poultry       deli_bakery > deli           routed wrong
+deli ham                  deli_bakery > deli           meat_seafood > pork          deli_bakery > deli           routed wrong
+prepared potato salad     deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+hummus                    deli_bakery > deli           pantry > condiments          deli_bakery > bakery         BOTH WRONG
+sub sandwich              deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+prepared sushi            deli_bakery > deli           deli_bakery > deli           deli_bakery > deli           both correct
+sourdough bread           deli_bakery > bakery         pantry > baking              deli_bakery > bakery         routed wrong
+bagels                    deli_bakery > bakery         pantry                       pantry > dry_goods           BOTH WRONG
+croissants                deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+donuts                    deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+birthday cake             deli_bakery > bakery         deli_bakery > bakery         deli_bakery > bakery         both correct
+tortillas                 deli_bakery > bakery         pantry > dry_goods           pantry > dry_goods           BOTH WRONG
+hamburger buns            deli_bakery > bakery         pantry > baking              pantry > baking              BOTH WRONG
+whole milk                dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+2% milk                   dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+almond milk               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+oat milk                  dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+heavy cream               dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+coffee creamer            dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+chocolate milk            dairy_eggs > milk            dairy_eggs > milk            dairy_eggs > milk            both correct
+cheddar cheese            dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+shredded mozzarella       dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+cream cheese              dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Swiss cheese              dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+Parmesan cheese           dairy_eggs > cheese          dairy_eggs > cheese          dairy_eggs > cheese          both correct
+string cheese             dairy_eggs > cheese          pantry > condiments          pantry > cheese              BOTH WRONG
+Greek yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+strawberry yogurt         dairy_eggs > yogurt          dairy_eggs > yogurt          produce > fruit              omni wrong
+kids yogurt tubes         dairy_eggs > yogurt          pantry                       dairy_eggs > yogurt          routed wrong
+kefir                     dairy_eggs > yogurt          dairy_eggs > milk            dairy_eggs > milk            BOTH WRONG
+plain yogurt              dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+non-dairy coconut yogurt  dairy_eggs > yogurt          dairy_eggs > yogurt          dairy_eggs > yogurt          both correct
+eggs                      dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+butter                    dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > butter          omni wrong
+sour cream                dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     pantry > condiments          omni wrong
+margarine                 dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+egg whites carton         dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     dairy_eggs > eggs_butter     both correct
+French onion dip          dairy_eggs > eggs_butter     pantry > condiments          pantry > condiments          BOTH WRONG
+frozen pizza              frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+TV dinner                 frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen burritos           frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+Hot Pockets               frozen > frozen_meals        pantry > canned              frozen > frozen_meals        routed wrong
+frozen waffles            frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen chicken nuggets    frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+frozen french fries       frozen > frozen_meals        frozen > frozen_meals        frozen > frozen_meals        both correct
+ice cream                 frozen > frozen_treats       frozen > frozen_treats       beverages > soda_water       omni wrong
+popsicles                 frozen > frozen_treats       snacks                       snacks > candy               BOTH WRONG
+ice cream sandwiches      frozen > frozen_treats       snacks > candy               beverages > soda_water       BOTH WRONG
+frozen yogurt             frozen > frozen_treats       frozen > frozen_treats       frozen > frozen_treats       both correct
+sorbet                    frozen > frozen_treats       beverages                    frozen > frozen_treats       routed wrong
+Klondike bars             frozen > frozen_treats       snacks > candy               snacks > cookies_crackers    BOTH WRONG
+frozen peas               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen broccoli           frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen strawberries       frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen mixed vegetables   frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen corn               frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+frozen edamame            frozen > frozen_produce      frozen > frozen_produce      frozen > frozen_produce      both correct
+canned beans              pantry > canned              pantry > canned              pantry > canned              both correct
+canned tomatoes           pantry > canned              pantry > canned              pantry > canned              both correct
+canned soup               pantry > canned              pantry > canned              pantry > canned              both correct
+canned tuna               pantry > canned              pantry > canned              pantry > canned              both correct
+jarred pasta sauce        pantry > canned              pantry > canned              pantry > condiments          omni wrong
+jarred salsa              pantry > canned              pantry > canned              pantry > condiments          omni wrong
+canned chicken broth      pantry > canned              pantry > canned              pantry > canned              both correct
+spaghetti pasta           pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+white rice                pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Cheerios cereal           pantry > dry_goods           pantry > dry_goods           pantry > cereal              omni wrong
+instant oatmeal           pantry > dry_goods           pantry > dry_goods           pantry > canned              omni wrong
+ramen noodles             pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+quinoa                    pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+Kraft mac and cheese      pantry > dry_goods           pantry > dry_goods           pantry > dry_goods           both correct
+ketchup                   pantry > condiments          pantry > condiments          pantry > condiments          both correct
+mustard                   pantry > condiments          pantry > condiments          dairy_eggs > condiments      omni wrong
+soy sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+hot sauce                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+olive oil                 pantry > condiments          pantry > condiments          pantry > condiments          both correct
+peanut butter             pantry > condiments          pantry > condiments          pantry > condiments          both correct
+honey                     pantry > condiments          pantry > condiments          pantry > condiments          both correct
+all-purpose flour         pantry > baking              pantry > baking              pantry > dry_goods           omni wrong
+granulated sugar          pantry > baking              pantry > baking              pantry > dry_goods           omni wrong
+baking soda               pantry > baking              pantry > baking              pantry > condiments          omni wrong
+vanilla extract           pantry > baking              pantry > baking              pantry > condiments          omni wrong
+chocolate chips           pantry > baking              pantry > baking              pantry > baking              both correct
+cake mix                  pantry > baking              pantry > baking              pantry > baking              both correct
+Lay's potato chips        snacks > chips               snacks > chips               snacks > chips               both correct
+Doritos                   snacks > chips               snacks > chips               snacks > chips               both correct
+tortilla chips            snacks > chips               snacks > chips               pantry > snacks              omni wrong
+pretzels                  snacks > chips               snacks > chips               snacks > chips               both correct
+microwave popcorn         snacks > chips               pantry                       pantry > snacks              BOTH WRONG
+Cheetos                   snacks > chips               snacks > chips               snacks > chips               both correct
+beef jerky                snacks > chips               snacks > chips               meat_seafood > poultry       omni wrong
+Snickers bar              snacks > candy               snacks > candy               snacks > candy               both correct
+M&Ms                      snacks > candy               snacks > candy               snacks > candy               both correct
+gummy bears               snacks > candy               snacks > candy               snacks > candy               both correct
+Skittles                  snacks > candy               snacks > candy               snacks > candy               both correct
+Twizzlers                 snacks > candy               snacks > candy               snacks > candy               both correct
+Sour Patch Kids           snacks > candy               snacks > candy               snacks > candy               both correct
+fruit snacks              snacks > candy               snacks > candy               snacks > candy               both correct
+Oreos                     snacks > cookies_crackers    snacks > cookies_crackers    pantry > cookies_crackers    omni wrong
+Ritz crackers             snacks > cookies_crackers    snacks > cookies_crackers    pantry > snacks              omni wrong
+graham crackers           snacks > cookies_crackers    pantry > dry_goods           pantry > baking              BOTH WRONG
+granola bars              snacks > cookies_crackers    snacks > cookies_crackers    pantry > snacks              omni wrong
+protein bars              snacks > cookies_crackers    snacks > cookies_crackers    pantry > snacks              omni wrong
+Goldfish crackers         snacks > cookies_crackers    snacks > cookies_crackers    snacks > cookies_crackers    both correct
+Pop-Tarts                 snacks > cookies_crackers    pantry > baking              snacks > cookies_crackers    routed wrong
+almonds                   snacks > nuts                pantry > dry_goods           pantry > dry_goods           BOTH WRONG
+cashews                   snacks > nuts                pantry > dry_goods           pantry > dry_goods           BOTH WRONG
+trail mix                 snacks > nuts                snacks > nuts                snacks > nuts                both correct
+mixed nuts                snacks > nuts                snacks > nuts                pantry > snacks              omni wrong
+sunflower seeds           snacks > nuts                pantry > dry_goods           pantry > dry_goods           BOTH WRONG
+pistachios                snacks > nuts                pantry > dry_goods           pantry > dry_goods           BOTH WRONG
+Coca-Cola                 beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+bottled water             beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+LaCroix sparkling water   beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Gatorade                  beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Red Bull                  beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+Monster Energy            beverages > soda_water       beverages > soda_water       beverages > soda_water       both correct
+coconut water             beverages > soda_water       beverages > soda_water       beverages > juice            omni wrong
+orange juice              beverages > juice            beverages > juice            beverages > juice            both correct
+apple juice               beverages > juice            beverages > juice            beverages > juice            both correct
+cranberry juice           beverages > juice            beverages > juice            beverages > juice            both correct
+V8 vegetable juice        beverages > juice            beverages > juice            beverages > juice            both correct
+kombucha                  beverages > juice            beverages > juice            beverages > juice            both correct
+grape juice               beverages > juice            beverages > juice            beverages > juice            both correct
+Folgers ground coffee     beverages > coffee_tea       pantry > dry_goods           beverages > coffee_tea       routed wrong
+K-Cup coffee pods         beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+Lipton tea bags           beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+cold brew coffee          beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+green tea                 beverages > coffee_tea       beverages > coffee_tea       beverages > tea              omni wrong
+hot chocolate mix         beverages > coffee_tea       beverages > coffee_tea       beverages > coffee_tea       both correct
+Arizona iced tea          beverages > coffee_tea       beverages > coffee_tea       beverages > juice            omni wrong
+Bud Light beer            beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+red wine                  beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+White Claw hard seltzer   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+vodka                     beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+bourbon                   beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+champagne                 beverages > alcohol          beverages > alcohol          beverages > alcohol          both correct
+ibuprofen                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tylenol                   health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+cough syrup               health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Zyrtec allergy pills      health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+Tums antacid              health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+DayQuil cold medicine     health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+eye drops                 health_wellness > medicine   health_wellness > medicine   health_wellness > medicine   both correct
+multivitamin              health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin C tablets         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+fish oil capsules         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+probiotics                health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+melatonin                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+prenatal vitamins         health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+vitamin D                 health_wellness > vitamins   health_wellness > vitamins   health_wellness > vitamins   both correct
+band-aids                 health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+hydrogen peroxide         health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+gauze pads                health_wellness > first_aid  personal_care > body         health_wellness > first_aid  routed wrong
+Neosporin antibiotic ointment health_wellness > first_aid  health_wellness > medicine   health_wellness > first_aid  routed wrong
+thermometer               health_wellness > first_aid  health_wellness > first_aid  health_wellness > first_aid  both correct
+rubbing alcohol           health_wellness > first_aid  personal_care                health_wellness > first_aid  routed wrong
+shampoo                   personal_care > hair         personal_care > hair         personal_care > hair         both correct
+conditioner               personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair gel                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+dry shampoo               personal_care > hair         personal_care > hair         pantry > dry_goods           omni wrong
+hair spray                personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Head & Shoulders dandruff shampoo personal_care > hair         personal_care > hair         personal_care > hair         both correct
+hair dye                  personal_care > hair         personal_care > hair         personal_care > hair         both correct
+Crest toothpaste          personal_care > oral         personal_care > oral         personal_care > oral         both correct
+toothbrush                personal_care > oral         personal_care > oral         personal_care > oral         both correct
+Listerine mouthwash       personal_care > oral         personal_care > oral         beverages > oral             omni wrong
+dental floss              personal_care > oral         personal_care > oral         personal_care > oral         both correct
+whitening strips          personal_care > oral         personal_care > oral         personal_care > oral         both correct
+floss picks               personal_care > oral         personal_care > oral         personal_care > oral         both correct
+body wash                 personal_care > body         personal_care > body         personal_care > body         both correct
+deodorant                 personal_care > body         personal_care > body         personal_care > oral         omni wrong
+body lotion               personal_care > body         personal_care > body         personal_care > body         both correct
+sunscreen                 personal_care > body         personal_care > body         personal_care > body         both correct
+Gillette razors           personal_care > body         personal_care > body         personal_care > body         both correct
+bar soap                  personal_care > body         personal_care > body         pantry > personal_care       omni wrong
+lip balm                  personal_care > body         personal_care > body         personal_care > body         both correct
+Dawn dish soap            household > cleaning         household > cleaning         household > cleaning         both correct
+Tide laundry detergent    household > cleaning         household > cleaning         household > cleaning         both correct
+Clorox bleach             household > cleaning         household > cleaning         household > cleaning         both correct
+Windex glass cleaner      household > cleaning         household > cleaning         household > cleaning         both correct
+Swiffer pads              household > cleaning         household > cleaning         pantry > cleaning            omni wrong
+sponges                   household > cleaning         household > cleaning         household > cleaning         both correct
+dryer sheets              household > cleaning         household > cleaning         household > cleaning         both correct
+toilet paper              household > paper            pantry                       household > paper            routed wrong
+paper towels              household > paper            pantry                       household > paper            routed wrong
+Kleenex tissues           household > paper            personal_care                household > paper            routed wrong
+napkins                   household > paper            pantry                       household > paper            routed wrong
+trash bags                household > paper            household > paper            household > paper            both correct
+paper plates              household > paper            pantry                       household > paper            routed wrong
+aluminum foil             household > kitchen          household > kitchen          household > cleaning         omni wrong
+plastic wrap              household > kitchen          pantry                       pantry > condiments          BOTH WRONG
+Ziploc bags               household > kitchen          pantry                       pantry > baking              BOTH WRONG
+parchment paper           household > kitchen          pantry                       pantry > baking              BOTH WRONG
+batteries                 household > kitchen          household > kitchen          household > cleaning         omni wrong
+light bulbs               household > kitchen          household > kitchen          household > cleaning         omni wrong
+Pampers diapers           baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+baby wipes                baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Enfamil baby formula      baby_pet > baby              baby_pet > baby              baby_pet > baby              both correct
+Gerber baby food          baby_pet > baby              pantry                       baby_pet > baby              routed wrong
+sippy cups                baby_pet > baby              baby_pet > baby              personal_care > oral         omni wrong
+baby lotion               baby_pet > baby              personal_care > body         personal_care > body         BOTH WRONG
+diaper cream              baby_pet > baby              baby_pet > baby              health_wellness > first_aid  omni wrong
+Purina dog food           baby_pet > pet               pantry                       baby_pet > pet               routed wrong
+Fancy Feast cat food      baby_pet > pet               baby_pet > pet               meat_seafood > pet           omni wrong
+cat litter                baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+Milk-Bone dog treats      baby_pet > pet               snacks                       snacks > cookies_crackers    BOTH WRONG
+dog toys                  baby_pet > pet               baby_pet > pet               baby_pet > pet               both correct
+flea collar               baby_pet > pet               health_wellness              baby_pet > pet               routed wrong
+bird seed                 baby_pet > pet               pantry                       household > kitchen          BOTH WRONG
+
+========================================================================================================================
+Summary for qwen2.5:7b @ http://localhost:11434/v1:
+  grocery-classify (routed): 209/250 correct (83%)
+  omni-classify (single):    191/250 correct (76%)
+
+
+################################################################################
+# CROSS-MODEL SUMMARY
+################################################################################
+
+Model                                    Routed               Omni                 Delta
+------------------------------------------------------------------------------------------
+gpt-4.1-mini                             245/250 (98%)        250/250 (100%)       -5 routed
+gemma2:2b @ http://localhost:11434/v1    214/250 (85%)        171/250 (68%)        +43 routed
+llama3.2:3b @ http://localhost:11434/v1  215/250 (86%)        199/250 (79%)        +16 routed
+qwen2.5:7b @ http://localhost:11434/v1   209/250 (83%)        191/250 (76%)        +18 routed
