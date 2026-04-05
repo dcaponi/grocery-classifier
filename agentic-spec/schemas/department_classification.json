@@ -1,0 +1,15 @@
+{
+  "name": "department_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "department": {
+        "type": "string",
+        "enum": ["produce", "meat_seafood", "deli_bakery", "dairy_eggs", "frozen", "pantry", "snacks", "beverages", "health_wellness", "personal_care", "household", "baby_pet"]
+      }
+    },
+    "required": ["department"],
+    "additionalProperties": false
+  }
+}

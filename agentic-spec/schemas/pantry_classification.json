@@ -1,0 +1,22 @@
+{
+  "name": "pantry_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "canned",
+          "dry_goods",
+          "condiments",
+          "baking"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

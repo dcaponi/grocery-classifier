@@ -1,0 +1,20 @@
+{
+  "name": "baby_pet_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "baby",
+          "pet"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

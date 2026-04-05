@@ -1,0 +1,14 @@
+name: Dairy & Eggs Classifier
+description: Classifies a dairy/eggs item by sub-category
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: dairy_eggs_classification
+user_message: "Classify this dairy/eggs item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

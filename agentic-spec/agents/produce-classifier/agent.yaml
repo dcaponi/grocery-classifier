@@ -1,0 +1,12 @@
+name: Produce Classifier
+description: Classifies a produce item as fruit or vegetable
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: produce_classification
+user_message: "Classify this produce item.\n\nItem: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

@@ -1,0 +1,22 @@
+{
+  "name": "beverages_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "soda_water",
+          "juice",
+          "coffee_tea",
+          "alcohol"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

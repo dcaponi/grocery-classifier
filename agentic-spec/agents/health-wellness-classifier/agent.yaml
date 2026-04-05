@@ -1,0 +1,14 @@
+name: Health & Wellness Classifier
+description: Classifies a health/wellness item by sub-category
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: health_wellness_classification
+user_message: "Classify this health/wellness item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

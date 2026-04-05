@@ -1,0 +1,21 @@
+{
+  "name": "frozen_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "frozen_meals",
+          "frozen_treats",
+          "frozen_produce"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

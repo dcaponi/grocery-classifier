@@ -1,0 +1,14 @@
+name: Meat & Seafood Classifier
+description: Classifies a meat/seafood item by protein type
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: meat_seafood_classification
+user_message: "Classify this meat or seafood item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

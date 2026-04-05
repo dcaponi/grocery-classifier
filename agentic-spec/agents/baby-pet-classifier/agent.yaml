@@ -1,0 +1,14 @@
+name: Baby & Pet Classifier
+description: Classifies a baby/pet item as baby or pet
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: baby_pet_classification
+user_message: "Classify this baby/pet item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

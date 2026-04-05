@@ -1,0 +1,14 @@
+name: Deli & Bakery Classifier
+description: Classifies a deli/bakery item as deli or bakery
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: deli_bakery_classification
+user_message: "Classify this deli or bakery item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

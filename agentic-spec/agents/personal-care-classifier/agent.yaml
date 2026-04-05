@@ -1,0 +1,14 @@
+name: Personal Care Classifier
+description: Classifies a personal care item by sub-category
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: personal_care_classification
+user_message: "Classify this personal care item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

@@ -1,0 +1,22 @@
+{
+  "name": "snacks_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "chips",
+          "candy",
+          "cookies_crackers",
+          "nuts"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

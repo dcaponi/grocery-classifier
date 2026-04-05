@@ -1,0 +1,14 @@
+name: Pantry Classifier
+description: Classifies a pantry item by sub-category
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: pantry_classification
+user_message: "Classify this pantry item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

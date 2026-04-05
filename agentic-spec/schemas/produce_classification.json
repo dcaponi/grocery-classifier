@@ -1,0 +1,15 @@
+{
+  "name": "produce_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": ["fruit", "vegetable"]
+      }
+    },
+    "required": ["category"],
+    "additionalProperties": false
+  }
+}

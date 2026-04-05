@@ -1,6 +1,6 @@
 name: grocery-classify
-version: "2.0"
-description: Classifies grocery items through a Kroger-scale hierarchical routing tree (12 departments, 30 categories)
+version: "3.0"
+description: Classifies grocery items through a hierarchical taxonomy (12 departments, 30 categories) using switch control flow
 
 input:
   item_name:
@@ -8,185 +8,107 @@ input:
     required: true
 
 steps:
-  - route:
-      id: classify
-      routing_agent: department-router
-      input:
-        item_name: $.input.item_name
-      routes:
-        produce:
-          route:
-            id: produce_sub
-            routing_agent: produce-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              fruit: classify-leaf
-              vegetable: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  # ── Stage 1: Department classification ──
+  - id: department
+    agent: department-classifier
+    input:
+      item_name: $.input.item_name
+    next:
+      switch: output.department
+      cases:
+        produce: produce-category
+        meat_seafood: meat-seafood-category
+        deli_bakery: deli-bakery-category
+        dairy_eggs: dairy-eggs-category
+        frozen: frozen-category
+        pantry: pantry-category
+        snacks: snacks-category
+        beverages: beverages-category
+        health_wellness: health-wellness-category
+        personal_care: personal-care-category
+        household: household-category
+        baby_pet: baby-pet-category
+      default: _end
 
-        meat_seafood:
-          route:
-            id: meat_seafood_sub
-            routing_agent: meat-seafood-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              beef: classify-leaf
-              pork: classify-leaf
-              poultry: classify-leaf
-              seafood: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  # ── Stage 2: Sub-department classification (one per department) ──
+  - id: produce-category
+    agent: produce-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        deli_bakery:
-          route:
-            id: deli_bakery_sub
-            routing_agent: deli-bakery-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              deli: classify-leaf
-              bakery: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: meat-seafood-category
+    agent: meat-seafood-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        dairy_eggs:
-          route:
-            id: dairy_eggs_sub
-            routing_agent: dairy-eggs-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              milk: classify-leaf
-              cheese: classify-leaf
-              yogurt: classify-leaf
-              eggs_butter: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: deli-bakery-category
+    agent: deli-bakery-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        frozen:
-          route:
-            id: frozen_sub
-            routing_agent: frozen-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              frozen_meals: classify-leaf
-              frozen_treats: classify-leaf
-              frozen_produce: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: dairy-eggs-category
+    agent: dairy-eggs-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        pantry:
-          route:
-            id: pantry_sub
-            routing_agent: pantry-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              canned: classify-leaf
-              dry_goods: classify-leaf
-              condiments: classify-leaf
-              baking: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: frozen-category
+    agent: frozen-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        snacks:
-          route:
-            id: snacks_sub
-            routing_agent: snacks-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              chips: classify-leaf
-              candy: classify-leaf
-              cookies_crackers: classify-leaf
-              nuts: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: pantry-category
+    agent: pantry-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        beverages:
-          route:
-            id: beverages_sub
-            routing_agent: beverages-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              soda_water: classify-leaf
-              juice: classify-leaf
-              coffee_tea: classify-leaf
-              alcohol: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: snacks-category
+    agent: snacks-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        health_wellness:
-          route:
-            id: health_wellness_sub
-            routing_agent: health-wellness-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              medicine: classify-leaf
-              vitamins: classify-leaf
-              first_aid: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: beverages-category
+    agent: beverages-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        personal_care:
-          route:
-            id: personal_care_sub
-            routing_agent: personal-care-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              hair: classify-leaf
-              oral: classify-leaf
-              body: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: health-wellness-category
+    agent: health-wellness-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        household:
-          route:
-            id: household_sub
-            routing_agent: household-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              cleaning: classify-leaf
-              paper: classify-leaf
-              kitchen: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: personal-care-category
+    agent: personal-care-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        baby_pet:
-          route:
-            id: baby_pet_sub
-            routing_agent: baby-pet-router
-            input:
-              item_name: $.input.item_name
-            routes:
-              baby: classify-leaf
-              pet: classify-leaf
-              _none:
-                short_circuit: true
-                defaults: {}
+  - id: household-category
+    agent: household-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
 
-        _none:
-          short_circuit: true
-          defaults: {}
+  - id: baby-pet-category
+    agent: baby-pet-classifier
+    input:
+      item_name: $.input.item_name
+    next: leaf
+
+  # ── Stage 3: Leaf description ──
+  - id: leaf
+    agent: classify-leaf
+    input:
+      item_name: $.input.item_name
 
 output:
-  classification: $.steps.classify.output
+  department: $.steps.department.output
+  leaf: $.steps.leaf.output

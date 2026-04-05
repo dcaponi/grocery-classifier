@@ -7,3 +7,4 @@ dist/
 generated/
 .ruff_cache/
 .DS_Store
+tmp/

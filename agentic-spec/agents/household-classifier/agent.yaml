@@ -1,0 +1,14 @@
+name: Household Classifier
+description: Classifies a household item by sub-category
+type: llm
+model: gpt-4.1-mini
+temperature: 0
+schema: household_classification
+user_message: "Classify this household item.
+
+Item: {{item_name}}"
+
+input:
+  item_name:
+    type: string
+    required: true

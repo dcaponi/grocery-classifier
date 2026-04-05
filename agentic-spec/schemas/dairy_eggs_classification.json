@@ -1,0 +1,22 @@
+{
+  "name": "dairy_eggs_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "milk",
+          "cheese",
+          "yogurt",
+          "eggs_butter"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

@@ -66,12 +66,8 @@ BASE_URL_RE = re.compile(r"^[ \t]*base_url:\s*.+\n?", re.MULTILINE)
 
 
 def find_yaml_files():
-    """Find all routing-agent.yaml and agent.yaml files."""
-    files = (
-        glob.glob("agentic-spec/routing-agents/*/routing-agent.yaml")
-        + glob.glob("agentic-spec/agents/*/agent.yaml")
-    )
-    return sorted(files)
+    """Find all agent.yaml files."""
+    return sorted(glob.glob("agentic-spec/agents/*/agent.yaml"))
 
 
 def read_originals(yaml_files):
@@ -116,16 +112,30 @@ def restore_originals(yaml_files, originals):
 
 # -- Classification ------------------------------------------------------------
 
-def extract_taxonomy_path(output):
-    """Walk nested route output to build taxonomy path from route keys."""
+def extract_taxonomy_path_from_envelope(envelope):
+    """Extract [department, category] from v4 envelope step results."""
+    steps = {s["step_id"]: s for s in envelope.get("steps", []) if s.get("status") == "success"}
     path = []
-    current = output
-    while isinstance(current, dict) and "route" in current:
-        route = current["route"]
-        if route == "_none":
+
+    dept_step = steps.get("department")
+    if dept_step and isinstance(dept_step.get("output"), dict):
+        dept = dept_step["output"].get("department", "")
+        if dept:
+            path.append(dept)
+
+    category_ids = [
+        "produce-category", "meat-seafood-category", "deli-bakery-category",
+        "dairy-eggs-category", "frozen-category", "pantry-category",
+        "snacks-category", "beverages-category", "health-wellness-category",
+        "personal-care-category", "household-category", "baby-pet-category",
+    ]
+    for sid in category_ids:
+        if sid in steps and isinstance(steps[sid].get("output"), dict):
+            cat = steps[sid]["output"].get("category", "")
+            if cat:
+                path.append(cat)
             break
-        path.append(route)
-        current = current.get("result")
+
     return path
 
 
@@ -136,10 +146,10 @@ def format_path(path):
 async def classify_item(item_name, workflow_name):
     try:
         envelope = await orchestrate(workflow_name, {"item_name": item_name})
-        classification = (envelope.get("result") or envelope.get("output") or {}).get("classification", {})
         if workflow_name == "grocery-classify":
-            return extract_taxonomy_path(classification)
+            return extract_taxonomy_path_from_envelope(envelope)
         else:
+            classification = envelope.get("output", {}).get("classification", {})
             return classification.get("taxonomy_path", [])
     except Exception as e:
         print(f"  ERROR classifying '{item_name}' with {workflow_name}: {e}", file=sys.stderr)

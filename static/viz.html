@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Grocery Classifier — Workflow Runs</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; background: #0f0f13; color: #e0e0e0; padding: 24px; }
+  h1 { font-size: 22px; font-weight: 600; margin-bottom: 4px; color: #fff; }
+  .subtitle { color: #888; font-size: 13px; margin-bottom: 24px; }
+  .empty { color: #666; text-align: center; padding: 60px 0; font-size: 15px; }
+
+  /* Run cards */
+  .runs { display: flex; flex-direction: column; gap: 16px; }
+  .run-card {
+    background: #1a1a24;
+    border: 1px solid #2a2a3a;
+    border-radius: 10px;
+    padding: 20px;
+    transition: border-color 0.2s;
+  }
+  .run-card:hover { border-color: #4a4a6a; }
+  .run-header {
+    display: flex; justify-content: space-between; align-items: center;
+    margin-bottom: 16px;
+  }
+  .run-item { font-size: 18px; font-weight: 600; color: #fff; }
+  .run-workflow {
+    font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px;
+    padding: 3px 8px; border-radius: 4px; font-weight: 600;
+  }
+  .wf-grocery { background: #1a3a2a; color: #4ade80; }
+  .wf-omni { background: #1a2a3a; color: #60a5fa; }
+  .run-path {
+    display: flex; align-items: center; gap: 0; margin-bottom: 14px; flex-wrap: wrap;
+  }
+  .run-time { font-size: 11px; color: #666; }
+  .run-meta { display: flex; gap: 16px; align-items: center; }
+
+  /* Graph */
+  .graph { display: flex; align-items: stretch; gap: 0; overflow-x: auto; padding: 4px 0; }
+  .graph-node {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 12px;
+    font-weight: 500;
+    white-space: nowrap;
+    min-width: 50px;
+    text-align: center;
+    position: relative;
+  }
+  .graph-node .node-label { font-size: 12px; font-weight: 600; }
+  .graph-node .node-value { font-size: 10px; color: #aaa; margin-top: 2px; }
+
+  .node-executed {
+    background: #1a3a2a; border: 1.5px solid #4ade80; color: #4ade80;
+  }
+  .node-executed .node-value { color: #86efac; }
+  .node-skipped {
+    background: #1a1a24; border: 1.5px solid #333; color: #555;
+  }
+  .node-skipped .node-value { color: #444; }
+
+  .graph-edge {
+    display: flex; align-items: center; justify-content: center;
+    width: 32px; min-width: 32px; position: relative;
+  }
+  .graph-edge svg { width: 32px; height: 20px; }
+  .edge-active line { stroke: #4ade80; stroke-width: 2; }
+  .edge-active polygon { fill: #4ade80; }
+  .edge-dim line { stroke: #333; stroke-width: 1; }
+  .edge-dim polygon { fill: #333; }
+
+  /* Leaf details */
+  .leaf-details {
+    background: #12121a; border: 1px solid #2a2a3a; border-radius: 6px;
+    padding: 12px 14px; margin-top: 10px; font-size: 12px; line-height: 1.5;
+  }
+  .leaf-details dt { color: #888; font-size: 10px; text-transform: uppercase; letter-spacing: 0.3px; margin-top: 6px; }
+  .leaf-details dt:first-child { margin-top: 0; }
+  .leaf-details dd { color: #ccc; }
+
+  /* Trail timeline */
+  .trail-toggle {
+    background: none; border: 1px solid #333; color: #888; border-radius: 4px;
+    padding: 3px 8px; font-size: 11px; cursor: pointer; margin-top: 10px;
+  }
+  .trail-toggle:hover { border-color: #555; color: #aaa; }
+  .trail-list { display: none; margin-top: 8px; }
+  .trail-list.open { display: block; }
+  .trail-entry {
+    font-size: 11px; color: #666; padding: 2px 0; font-family: monospace;
+    border-left: 2px solid #333; padding-left: 8px; margin-left: 4px;
+  }
+  .trail-entry.ev-step_start { border-color: #4a6; }
+  .trail-entry.ev-step_success { border-color: #4ade80; }
+  .trail-entry.ev-step_error { border-color: #f87171; }
+
+  /* Omni card */
+  .omni-result { margin-top: 4px; }
+  .omni-result .confidence {
+    display: inline-block; padding: 2px 6px; border-radius: 3px;
+    font-size: 11px; font-weight: 600;
+  }
+  .conf-high { background: #1a3a2a; color: #4ade80; }
+  .conf-med { background: #3a3a1a; color: #facc15; }
+  .conf-low { background: #3a1a1a; color: #f87171; }
+</style>
+</head>
+<body>
+
+<h1>Grocery Classifier Runs</h1>
+<p class="subtitle">Workflow execution paths — each card shows the route taken through the classification graph</p>
+
+<div id="app" class="runs"></div>
+
+<script>
+const CATEGORY_STEP_IDS = [
+  "produce-category","meat-seafood-category","deli-bakery-category",
+  "dairy-eggs-category","frozen-category","pantry-category",
+  "snacks-category","beverages-category","health-wellness-category",
+  "personal-care-category","household-category","baby-pet-category"
+];
+
+const ALL_STEP_IDS = ["department", ...CATEGORY_STEP_IDS, "leaf"];
+
+function arrow(active) {
+  const cls = active ? "edge-active" : "edge-dim";
+  return `<div class="graph-edge"><svg class="${cls}" viewBox="0 0 32 20">
+    <line x1="0" y1="10" x2="24" y2="10"/>
+    <polygon points="24,5 32,10 24,15"/>
+  </svg></div>`;
+}
+
+function renderGroceryRun(run) {
+  const env = run.envelope;
+  const steps = {};
+  for (const s of (env.steps || [])) {
+    steps[s.step_id] = s;
+  }
+
+  const executed = new Set(
+    (env.trail || []).filter(t => t.event === "step_success").map(t => t.step_id)
+  );
+
+  // Build graph nodes
+  let graphHtml = "";
+  for (let i = 0; i < ALL_STEP_IDS.length; i++) {
+    const sid = ALL_STEP_IDS[i];
+    const isExec = executed.has(sid);
+    const cls = isExec ? "node-executed" : "node-skipped";
+    const step = steps[sid];
+    let value = "";
+    if (isExec && step && step.output) {
+      if (sid === "department") value = step.output.department || "";
+      else if (sid === "leaf") value = "described";
+      else value = step.output.category || "";
+    }
+
+    // Skip non-executed category steps for cleaner display
+    if (!isExec && CATEGORY_STEP_IDS.includes(sid)) continue;
+
+    if (graphHtml) graphHtml += arrow(isExec);
+    graphHtml += `<div class="graph-node ${cls}">
+      <span class="node-label">${sid}</span>
+      ${value ? `<span class="node-value">${value}</span>` : ""}
+    </div>`;
+  }
+
+  // Leaf details
+  const leaf = steps["leaf"];
+  let detailsHtml = "";
+  if (leaf && leaf.status === "success" && leaf.output) {
+    const o = leaf.output;
+    detailsHtml = `<div class="leaf-details"><dl>
+      ${o.description ? `<dt>Description</dt><dd>${esc(o.description)}</dd>` : ""}
+      ${o.common_brands ? `<dt>Common Brands</dt><dd>${esc(Array.isArray(o.common_brands) ? o.common_brands.join(", ") : o.common_brands)}</dd>` : ""}
+      ${o.typical_price_range ? `<dt>Price Range</dt><dd>${esc(o.typical_price_range)}</dd>` : ""}
+    </dl></div>`;
+  }
+
+  return `<div class="graph">${graphHtml}</div>${detailsHtml}`;
+}
+
+function renderOmniRun(run) {
+  const env = run.envelope;
+  const steps = {};
+  for (const s of (env.steps || [])) steps[s.step_id] = s;
+  const cls = steps["classify"] ? "node-executed" : "node-skipped";
+  const out = steps["classify"]?.output || {};
+  const path = out.taxonomy_path || [];
+  const conf = out.confidence || 0;
+  const confCls = conf >= 0.8 ? "conf-high" : conf >= 0.6 ? "conf-med" : "conf-low";
+
+  return `<div class="graph">
+    <div class="graph-node ${cls}">
+      <span class="node-label">classify</span>
+      <span class="node-value">${path.join(" > ") || "—"}</span>
+    </div>
+  </div>
+  <div class="omni-result">
+    <span class="confidence ${confCls}">${(conf * 100).toFixed(0)}% confidence</span>
+    ${out.reasoning ? `<span style="color:#888;font-size:12px;margin-left:8px;">${esc(out.reasoning)}</span>` : ""}
+  </div>`;
+}
+
+function renderTrail(trail) {
+  if (!trail || !trail.length) return "";
+  const id = "trail-" + Math.random().toString(36).slice(2);
+  let items = trail.map(t => {
+    const evCls = "ev-" + (t.event || "").replace(/\s/g, "_");
+    const ts = t.timestamp ? new Date(t.timestamp).toLocaleTimeString() : "";
+    return `<div class="trail-entry ${evCls}">${ts} ${t.step_id} — ${t.event}</div>`;
+  }).join("");
+  return `<button class="trail-toggle" onclick="document.getElementById('${id}').classList.toggle('open')">Show trail (${trail.length} events)</button>
+    <div id="${id}" class="trail-list">${items}</div>`;
+}
+
+function esc(s) {
+  const d = document.createElement("div");
+  d.textContent = String(s);
+  return d.innerHTML;
+}
+
+async function loadRuns() {
+  const app = document.getElementById("app");
+  try {
+    const res = await fetch("/runs");
+    const runs = await res.json();
+    if (!runs.length) {
+      app.innerHTML = `<div class="empty">No runs yet. Hit <code>/classify?items=chicken+breast,bananas</code> to get started.</div>`;
+      return;
+    }
+    app.innerHTML = runs.map(run => {
+      const wf = run.workflow || "";
+      const isOmni = wf.includes("omni");
+      const wfCls = isOmni ? "wf-omni" : "wf-grocery";
+      const wfLabel = isOmni ? "Omni" : "Hierarchical";
+      const ts = run.envelope?.started_at ? new Date(run.envelope.started_at).toLocaleString() : "";
+      const durationMs = run.envelope?.metrics?.total_duration_ms;
+      const duration = durationMs ? `${(durationMs / 1000).toFixed(1)}s` : "";
+      const body = isOmni ? renderOmniRun(run) : renderGroceryRun(run);
+      const trail = renderTrail(run.envelope?.trail);
+
+      return `<div class="run-card">
+        <div class="run-header">
+          <span class="run-item">${esc(run.item_name)}</span>
+          <div class="run-meta">
+            ${duration ? `<span class="run-time">${duration}</span>` : ""}
+            <span class="run-workflow ${wfCls}">${wfLabel}</span>
+          </div>
+        </div>
+        ${body}
+        ${trail}
+      </div>`;
+    }).join("");
+  } catch (e) {
+    app.innerHTML = `<div class="empty">Failed to load runs: ${esc(e.message)}</div>`;
+  }
+}
+
+loadRuns();
+</script>
+</body>
+</html>

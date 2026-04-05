@@ -1,0 +1,21 @@
+{
+  "name": "health_wellness_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "medicine",
+          "vitamins",
+          "first_aid"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}

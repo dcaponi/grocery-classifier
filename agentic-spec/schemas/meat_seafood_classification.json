@@ -1,0 +1,22 @@
+{
+  "name": "meat_seafood_classification",
+  "strict": true,
+  "schema": {
+    "type": "object",
+    "properties": {
+      "category": {
+        "type": "string",
+        "enum": [
+          "beef",
+          "pork",
+          "poultry",
+          "seafood"
+        ]
+      }
+    },
+    "required": [
+      "category"
+    ],
+    "additionalProperties": false
+  }
+}
